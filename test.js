@@ -48,6 +48,7 @@ var b = a / 2; return b;*/
 /**Create a function that takes a number as an argument, 
  * increments the number by +1 and returns the result. */
 function addition(num) {
+   
    return ++num;
 }
 //const addition = (num) => num + 1
@@ -75,9 +76,17 @@ function addition(num) {
 
 //Create a function that takes
 //an array containing only numbers and return the first element.
+//yay!! did it!
 function getFirstValue(arr) {
-	
-}
+   for(i= 0; i < arr.length; i++ ){
+      arr.unshift();
+       or = arr[i];
+       console.log(arr);
+     return or;
+    }
+   
+   }
+
 /**
  * getFirstValue([1, 2, 3]) ➞ 1
 
@@ -91,4 +100,14 @@ Test.assertEquals(getFirstValue([-500, 0, 50]), -500)
 Test.assertEquals(getFirstValue([5, 2, 3]), 5)
 Test.assertEquals(getFirstValue([75675, 5, 100]), 75675)
 Test.assertEquals(getFirstValue([-52320, 0, 50]), -52320)
+
+other solutions:
+   -return arr[0];
+   -const getFirstValue = arr => arr[0];
+   -return arr.shift();
+   -var getFirstValue = arr => Array.isArray(arr) ? arr[0] : "error";
  */
+
+   function lessThanOrEqualToZero(num) {
+	
+   }
