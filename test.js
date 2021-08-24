@@ -108,6 +108,40 @@ other solutions:
    -var getFirstValue = arr => Array.isArray(arr) ? arr[0] : "error";
  */
 
+
+
+   /**
+   Create a function that takes a number as its only
+       argument and returns true if it's less than or equal to zero,
+        otherwise return false.
+       Test.assertEquals(lessThanOrEqualToZero(5), false) 
+    */
    function lessThanOrEqualToZero(num) {
-	
+      let bol = Boolean(false);
+   if(num <= 0 ){
+      console.log("true");
+      num++;
+      return bol = true;
+   }else if(num != 0){
+      console.log("false");
+      return bol
    }
+   }
+
+   /**
+    * Fix the code in the code tab to pass 
+    * this challenge (only syntax errors).
+    *  Look at the examples below to get an 
+    * idea of what the function should do.
+    * 
+    * Test.assertEquals(cubes(2), 8)
+    * cubes(3) ➞ 27
+    */
+
+    function cubes(a) {
+      return a ** 3;
+   }
+   /**other solutions 
+    * cubes=a=>a**3
+    * return a * a * a;
+    */
