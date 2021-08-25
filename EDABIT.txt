@@ -1,0 +1,15 @@
+function calcAge(age) {
+	age = 0; 
+	let days = 365;
+	let ageInDays = 0;
+	
+	if(age ){
+		for(i = 0; i <= age; i++){
+		
+		ageInDays = age[i] * days;
+			console.log(ageInDays);
+		}
+	}
+	return ageInDays;
+
+}
