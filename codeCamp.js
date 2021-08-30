@@ -76,7 +76,7 @@ myArray.unshift(["Paul",35]);
 //**************************Shopping List***********************
 
 var myList = [["q",2],["q",2],["q",2],["q",2],["q",2]];
-console.log(myList);
+//console.log(myList);
 
 //***********Write Reusable JavaScript with Functions***************
 function reusableFunction(){
@@ -89,11 +89,152 @@ function reusableFunction(){
 function testFun(param1, param2) {
     console.log(param1, param2);
   }
-  testFun("Hello", "World");
+  //testFun("Hello", "World");
 
   function functionWithArgs(a,b){
-      console.log(a + b);
+     console.log(a + b);
   } 
-  functionWithArgs(2,3);
+  //functionWithArgs(2,3);
 
   //*********Global Scope and Functions**************
+  // Declare the myGlobal variable below this line
+var myGlobal = 10;
+
+function fun1() {
+  // Assign 5 to oopsGlobal Here
+  oopsGlobal = 5;
+}
+
+// Only change code above this line
+
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+//fun2();
+
+//*******Local Scope and Functions*********
+
+function myLocalScope() {
+
+    // Only change code below this line => "var"
+     myVar = "";
+    console.log('inside myLocalScope', myVar);
+  }
+  myLocalScope();
+  
+  // Run and check the console
+  // myVar is not defined outside of myLocalScope
+  console.log('outside myLocalScope', myVar);
+
+  //***Global vs. Local Scope in Functions******
+
+  var someVar = "Hat";
+function myFun() {
+  var someVar = "Head";
+  console.log(someVar);
+  return someVar;
+}
+myFun();
+// Setup
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+
+    var outerWear = "sweater";
+
+  // Only change code above this line
+  return outerWear;
+}
+
+myOutfit();
+
+/*-----Return a Value from a Function with Return------*/
+function plusThree(num) {
+    return num + 3;
+    
+  }
+  var answer = plusThree(5);
+
+function timesFive(nim){
+    return nim * 5;
+}
+    var s = timesFive(4)
+
+  //console.log(answer, s);
+
+  /**Understanding Undefined Value returned from a Function */
+var sum = 0;
+function addSum(num) {
+  sum = sum + num;
+ // console.log(sum);
+}
+addSum(3);
+
+// Setup
+var sum = 0;
+
+function addThree() {
+  sum = sum + 3;
+}
+
+// Only change code below this line
+function addFive(){
+    sum = sum + 5;
+}
+
+// Only change code above this line
+
+addThree();
+addFive();
+
+
+/*******Assignment with a Returned Value****** */
+// Setup
+var processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+// Only change code below this line
+processed = processArg(7);
+//console.log(processed);
+
+
+
+/*******Stand in Line  QUEUE*****''''''''''''''''''*** */
+/*Write a function nextInLine which takes an array (arr)
+ and a number (item) as arguments.
+Add the number to the end of the array, 
+then remove the first element of the array.
+The nextInLine function should then return 
+the element that was removed.*/
+
+function nextInLine(arr, item) {
+ // Only change code below this line
+ arr.push(item);
+ item = arr.shift();
+ 
+return item;
+// Only change code above this line
+
+
+  }
+  
+  // Setup
+  var testArr = [1,2,3,4,5];
+  
+  // Display code
+  console.log("Before: " + JSON.stringify(testArr));
+  console.log(nextInLine(testArr, 6));
+  console.log("After: " + JSON.stringify(testArr));
+
+
