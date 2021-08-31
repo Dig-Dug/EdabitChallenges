@@ -40,3 +40,65 @@ function animals(chickens, cows, pigs) {
  * return chickens*2+(cows+pigs)*4;
  * const animals = (chickens, cows, pigs) => chickens * 2 + cows * 4 + pigs * 4;
  */
+
+
+
+
+/**
+ * Basic Variable Assignment
+ * 
+ * A student learning JavaScript was trying to make a function.
+ * His code should concatenate a passed string name with string
+ * "Edabit" and store it in a variable called result.
+ *  He needs your help to fix this code.
+ * 
+	nameString("Mubashir") ➞ "MubashirEdabit"
+
+	nameString("Matt") ➞ "MattEdabit"
+
+	nameString("javaScript") ➞ "javaScriptEdabit"
+ */
+
+	function nameString(name){
+		var b = "Edabit"
+		var result = name + b
+		console.log(result);
+		  return result
+	}
+//const nameString = name => `${name}Edabit`;
+
+
+
+//Buggy Code (Part 7)
+/**
+ Mubashir wants to swap two given numbers!
+ It is not returning the right values. Can you help him fix it?
+
+a = 100
+b = 200
+a, b = swap(a, b)
+print(a, b) // Should print out "200, 100", 
+but the function prints out "100, 100"
+ */
+
+let a = 100;
+let b = 200;
+function swap(a, b) {
+	let tmp = b // 200
+	b = a
+	a = b
+	console.log(b, a);
+	return [a, b]
+}
+console.log(4.0 / 2.0);
+
+var myNoun = "dog";
+var myAdjective = "big";
+var myVerb = "ran";
+var myAdverb = "quickly";
+
+// Only change code below this line
+var wordBlanks = myNoun + ", " + myAdjective + ", " + myVerb + ", " + myAdverb+ ", " + "wordBlanks"; 
+// Change this line
+// Only change code above this line
+console.log(wordBlanks);
