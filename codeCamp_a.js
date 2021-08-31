@@ -208,7 +208,6 @@ return "Between 5 and 10";
   }
 testElseIf(7);
  */
-
 /**Logical Order in If Else Statements;;;;;;;;;;;;;;;;;;;;;;; */
 
 function orderMyLogic(val) {
