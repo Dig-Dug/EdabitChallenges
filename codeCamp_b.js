@@ -123,7 +123,7 @@ function chainToSwitch(val) {
 
   /****Return Early Pattern for Functionsoooooooooooooooooooo */
  
-myFun();
+
 // Setup
     function abTest(a, b) {
     // Only change code below this line
@@ -136,4 +136,18 @@ myFun();
   abTest(2,2);
 
   /********************Counting Cards*************** */
-  
+  /***********Counting Cards******************* */
+
+var count = 0;
+function cc(card) {
+  // Only change code below this line 
+  switch(card){
+    case card = 2, 3, 4, 5, 6 : return 5 + " Bet";  
+        case card = 7, 8, 9 : return 0 + " Hold";
+        case card = 10, 'J', 'Q', 'K', 'A' : return -5 +  "Hold"; break; 
+      }
+  return "Change Me";
+  // Only change code above this line
+}
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
