@@ -139,3 +139,86 @@ console.log(arr2);
 
 
 /**((((Use Destructuring Assignment to Extract Values from Objects() **/
+const user = { name: 'John Doe', age: 34 };
+const { name, age } = user;
+
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+// Only change code below this line
+const { today,tomorrow} = HIGH_TEMPERATURES;
+// Only change code above this line
+
+
+
+
+/**((((((Use Destructuring Assignment to Assign Variables from Objects)))))) */
+const usert = { name: 'John Doe', age: 34 };
+const { name: userName, age: userAge } = usert;
+
+const HIGH_TEMPERATURES1 = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// Only change code below this line
+const { today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES1;
+// Only change code above this line
+
+
+/**(Use Destructuring Assignment to Assign Variables from Nested Objects)))))) */
+const user2 = {
+  johnDoe: {agee: 34,email: 'johnDoe@freeCodeCamp.com'}
+};
+//extract
+const { johnDoe: { agee, email }} = user2;
+//extract and assign variables
+const { johnDoe: { agee: userAgee, email: userEmail }} = user2;
+
+
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+
+// Only change code below this line
+const {today :{low:lowToday , high:highTodayy }} = LOCAL_FORECAST;
+// Only change code above this line
+
+
+
+/******((((Use Destructuring Assignment to Assign Variables from Arrays)))))))))) */
+/*const [a, b,,,,c] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c);  // 1 2
+
+  let a = 8, b = 6;
+
+[a, b] = [b, a];*/
+
+
+/*********(Use Destructuring Assignment with the Rest Parameter
+   *******************to Reassign Array Elements)*/
+  //proto slicing
+ const [e, d, ...arrp] = [1, 2, 3, 4, 5, 7];
+ console.log(e, d); //1,2
+ console.log(arrp); //3,4,5,7
+
+
+ const source = [1,2,3,4,5,6,7,8,9,10];
+   function removeFirstTwo(list) {
+   // Only change code below this line  //const arr = list;
+   const [,, ...arri] = list ;
+   // Change this line
+   console.log("this -->" , arri);
+   // Only change code above this line
+   return arri;
+ }
+ const arri = removeFirstTwo(source);
+
+
+ /**((((Use Destructuring Assignment to Pass an Object as a Function's Parameters)))) */
