@@ -247,4 +247,6 @@ const half = ({  min , max}) => {
   console.log((min + max)/ 2.0);
  return (min + max)/ 2.0;
   }
+
+// const half = ({ max, min }) => (max + min) / 2.0;
 // Only change code above this line
