@@ -222,3 +222,29 @@ console.log(a, b, c);  // 1 2
 
 
  /**((((Use Destructuring Assignment to Pass an Object as a Function's Parameters)))) */
+
+/* const profileUpdate = (profileData) => {
+  const { name, age, nationality, location } = profileData;
+
+}
+const profileUpdate = ({ name, age, nationality, location }) => {
+ 
+}
+const profileUpdate = (stats) => {
+ const  { min,max } = stats;
+}*/
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+//const half = (stats) => (stats.max + stats.min) / 2.0; 
+// Only change code below this line
+const half = ({  min , max}) => {
+  console.log((min + max)/ 2.0);
+ return (min + max)/ 2.0;
+  }
+// Only change code above this line
