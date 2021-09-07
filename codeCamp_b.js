@@ -142,12 +142,194 @@ var count = 0;
 function cc(card) {
   // Only change code below this line 
   switch(card){
-    case card = 2, 3, 4, 5, 6 : return 5 + " Bet";  
-        case card = 7, 8, 9 : return 0 + " Hold";
-        case card = 10, 'J', 'Q', 'K', 'A' : return -5 +  "Hold"; break; 
-      }
-  return "Change Me";
+    case 2:
+      case 3:
+      case 4:
+      case 5:
+      case 6:
+      count++; break;
+      case 10:
+      case "J":
+      case "Q":
+      case "K":
+      case "A":
+      count--; break;
+    }
+    if (count > 0) {
+      return count + " Bet";
+    } else {
+      return count + " Hold";
+    }
   // Only change code above this line
 }
 
 cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+
+
+//***********Build JavaScript Objects****************** 
+var cat = {
+  "name": "Whiskers",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Water", "Dogs"]
+};
+var otherObj = {make:"foe", 5 : "five", model: "focus"};
+var myDog = {"name": "Fido", legs: 3, tails: 1, friends:[]};
+
+var k = cat.name;
+ let ko = myDog.name;
+
+console.log(k,ko);
+
+//**Accessing Object Properties with Dot Notation */
+// Setup
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+// Only change code below this line
+var hatValue = testObj.hat;      // Change this line
+var shirtValue = testObj.shirt;    // Change this line
+
+
+//***Accessing Object Properties with Bracket Notation */
+var ny ={ "q r" : "QR", "d f": "DF", "k w": "KW"};
+console.log(ny["q r"]);
+// Setup
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+// Only change code below this line
+var entreeValue = testObj["an entree"];
+var drinkValue = testObj['the drink'];  // Change this line
+
+
+//*************Accessing Object Properties with Variables */
+var dogs = {
+  Fido: "Mutt",  Hunter: "Doberman",  Snoopie: "Beagle"
+};
+//accessing props
+var myDog = "Snoopie";
+var myBreed = dogs[myDog];
+console.log(myBreed);
+//other way
+var someObj = {
+  propName: "John"
+};
+function propPrefix(str) {
+  var s = "prop";
+  return s + str;
+}
+var someProp = propPrefix("Name");
+console.log(someObj[someProp]);
+
+// Setup
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+// Only change code below this line
+
+var playerNumber = 16;       // Change this line
+var player = testObj[playerNumber];   // Change this line
+
+
+//**************Updating Object Properties *
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+//changing
+ourDog.name = "Happy Camper"; //or
+ourDog["name"] = "Happy Camper";
+
+// Setup
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.name = "Happy Coder";
+// Only change code below this line
+
+
+//*******Add New Properties to a JavaScript Object */
+
+
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.bark = "woof";
+
+////*************Delete Properties from a JavaScript Object */
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+// Only change code below this line
+delete myDog.tails;
+
+
+//**************Using Objects for Lookups******************** */
+var alpha = {1:"Z",2:"Y",3:"X",4:"W",24:"C",25:"B",26:"A"};
+alpha[2];
+alpha[24];
+
+var value = 2;
+alpha[value];
+/**alpha[2] is the string Y,
+  alpha[24] is the string C, 
+and alpha[value] is the string Y. */
+
+function phoneticLookup(val) {
+  var result = "";
+
+  // Only change code below this line
+  var lookup = {"alpha": "Adams","bravo":"Boston",
+  "charlie":"Chicago", "delta": "Denver","echo":"Easy",
+  "foxtrot":"Frank"}
+  /*switch(val) {
+    case "alpha":
+      result = "Adams";
+      break;
+    case "bravo":
+      result = "bravo":
+      break;
+    case "charlie":
+      result = "Chicago";
+      break;
+    case "delta":
+      result = "Denver";
+      break;
+    case "echo":
+      result = "Easy";
+      break;
+    case "foxtrot":
+      result = "Frank";
+  }*/
+  result = lookup[val];
+  console.log(result );
+console.log(result);
+
+  // Only change code above this line
+  return result;
+}
+
+phoneticLookup("charlie");
