@@ -12,7 +12,7 @@ console.log(c.hasOwnProperty("zop"));
      .mMMMMMMMM)                          .MMMMMMMMMMMMMMM/'
    (MMMMMMMMMM/                          .MMMMMMMMMMMM"'
   mMMMMMMMMMM/                           (MMMMMMMMM"'
- /MMMMMMMMMM/                            |MMMMMMMM/
+ /MMMMMMMMMM/                            |MMMMMMM/
  MMMMMMMMMM/                             MMMMMMMM/
 (MMMMMMMMMM(                            /MMMMMMM/                        
  MMMMMMMMMM|                            |MMMMMM"
