@@ -165,14 +165,15 @@ var recordCollection = {
   // Only change code below this line
   //obj literal"records" ,id, prop:artist|| track, value
   function updateRecords(records, id, prop, value) {
-    records[id][prop] = recordCollection
-     if(prop != id.tracks && value != "" ){
-    value = recordCollection.tracks;
+    //prop != "tracks" && value != "" <-update/prop = value
+    if(prop != records.hasOwnProperty("tracks") && value != "") {
+      prop = value;
+      console.log(prop);
+      }
+    //console.log(recordCollection);
     
-    console.log(records[id][prop]);
-    
-    return records;
-  }}
+    return recordCollection;
+  }
   
   //updateRecords(recordCollection, 5439, 'artist', 'ABBA');
   updateRecords(recordCollection, 5439,'artist','ABBA' );
