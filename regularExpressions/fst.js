@@ -206,17 +206,134 @@ console.log(rosti) //[ 'ss', 'ss' ]
  ///////******************Match Beginning String Patterns */
 
 
+ let firstString = "Ricky is first and can be found.";
+ let firstRegex = /^Ricky/;
+ firstRegex.test(firstString); //true Ricky is there
+ let notFirst = "You can't find Ricky now.";
+ firstRegex.test(notFirst);
+ console.log(firstRegex.test(firstString));
+
+//Use the caret (^)character in a regex to find Cal only 
+//in the beginning of the string rickyAndCal.
+ let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; // Change this line
+let resultO = calRegex.test(rickyAndCal); //true
+
+
+
+/*****************Match Ending String Patterns________________ */
+
+
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/; // True is at the end
+//let result = lastRegex.test(caboose);
+
+
+/*************Match All Letters and Numbers_______SHORTHAND____________ */
+//shortcut for [a-z]   "\w => [A-Za-z0-9_]"" <-This character class matches upper 
+//and lowercase letters plus numbers
+
+let quoteSamplew = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g; // 36 alphanumeric characters in strings
+//123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ
+let resulty = quoteSamplew.match(alphabetRegexV2).length;
+
+
+/*************Match Everything But Letters and Numbers_______________ */
+//  \W  <- [^A-Za-z0-9_]
+
+let quoteSampleA = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // find 12 non-alphanumeric characters in the string
+// 123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ
+let resultB = quoteSampleA.match(nonAlphabetRegex).length;
+
+
+
+/**************Match All Numbers____________________________ */
+//.looking for just digits or[0-9] numbers. <- \d 
+
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // Change this line
+let resultN = movieName.match(numRegex).length;
+
+
+/************Match All Non-Numbers_______\D  <- [^0-9]________________ */
+let movieNamea = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+let resultOp = movieNamea.match(noNumRegex).length;
+
+
+
+/*************Restrict Possible Usernames____________________ */
+//requirements for username 
+
+/*
+ 1 Usernames can only use alpha-numeric characters.
+
+ 2 The only numbers in the username have to be at the end. 
+There can be zero or more of them at the end. 
+Username cannot start with the number.
+
+3 Username letters can be lowercase and uppercase.
+
+4 Usernames have to be at least two characters long. 
+A two-character username can only use alphabet letters as
+ characters. */
+ let username = "JackOfAllTrades";
+ let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Change this line
+ let resutttlt = userCheck.test(username);
 
 
 
 
+ /**************Match Whitespace_________\s_____________ */
+
+ //return, tab, form feed, and new line characters <-[ \r\t\f\n\v]
+
+ let whiteSpace = "Whitespace. Whitespace everywhere!"
+let spaceRegex = /\s/g;
+whiteSpace.match(spaceRegex); //returns [" ", " "].
 
 
 
+/**************Match Non-Whitespace Characters____\S_______ */
+// [^ \r\t\f\n\v]
+let whiteSpace = "Whitespace. Whitespace everywhere!"
+let nonSpaceRegex = /\S/g;
+whiteSpace.match(nonSpaceRegex).length; //returns .length(32)
 
 
+/*******Specify Upper and Lower Number of Matches */
+
+//range of patterns. Quantity specifier /a{3,5}h/ <- match letter a in string "ah"
+
+let A4 = "aaaah";
+let A2 = "aah";
+let multipleA = /a{3,5}h/;
+multipleA.test(A4);//true
+multipleA.test(A2);//false
+
+/* Change the regex ohRegex
+ to match the entire phrase Oh no only 
+ when it has 3 to 6 letter h's. */
+
+ let ohStr = "Ohhh no";
+let ohRegex = /h{3,6}/; // Change this line
+let result = ohRegex.test(ohStr);
+
+console.log(result);
 
 
+/* Change the regex ohRegex to match
+ the entire phrase Oh no only when
+  it has 3 to 6 letter h's. */
 
+
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/ig; // \s <- to include a white space, 
+//followed by no to pass all test cases
+let result = ohRegex.test(ohStr);
+
+console.log(result);
 
 
