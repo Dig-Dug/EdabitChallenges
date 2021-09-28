@@ -298,20 +298,20 @@ whiteSpace.match(spaceRegex); //returns [" ", " "].
 
 /**************Match Non-Whitespace Characters____\S_______ */
 // [^ \r\t\f\n\v]
-let whiteSpace = "Whitespace. Whitespace everywhere!"
+let whiteSpace1 = "Whitespace. Whitespace everywhere!"
 let nonSpaceRegex = /\S/g;
-whiteSpace.match(nonSpaceRegex).length; //returns .length(32)
+whiteSpace1.match(nonSpaceRegex).length; //returns .length(32)
 
 
 /*******Specify Upper and Lower Number of Matches */
 
 //range of patterns. Quantity specifier /a{3,5}h/ <- match letter a in string "ah"
 
-let A4 = "aaaah";
-let A2 = "aah";
+let A4l = "aaaah";
+let A2l = "aah";
 let multipleA = /a{3,5}h/;
-multipleA.test(A4);//true
-multipleA.test(A2);//false
+multipleA.test(A4l);//true
+multipleA.test(A2l);//false
 
 /* Change the regex ohRegex
  to match the entire phrase Oh no only 
@@ -319,9 +319,9 @@ multipleA.test(A2);//false
 
  let ohStr = "Ohhh no";
 let ohRegex = /h{3,6}/; // Change this line
-let result = ohRegex.test(ohStr);
+let resultio = ohRegex.test(ohStr);
 
-console.log(result);
+console.log(resultio);
 
 
 /* Change the regex ohRegex to match
@@ -329,11 +329,113 @@ console.log(result);
   it has 3 to 6 letter h's. */
 
 
-let ohStr = "Ohhh no";
-let ohRegex = /Oh{3,6}\sno/ig; // \s <- to include a white space, 
+let ohStr1 = "Ohhh no";
+let ohRegexX = /Oh{3,6}\sno/ig; // \s <- to include a white space, 
 //followed by no to pass all test cases
-let result = ohRegex.test(ohStr);
+let resultuu = ohRegexX.test(ohStr1);
 
-console.log(result);
+console.log(resultuu);
 
 
+
+/***********Specify Only the Lower Number of Matches::_________*/
+let A4 = "haaaah";
+let A2 = "haah";
+let A100 = "h" + "a".repeat(100) + "h"; //haaaaaaaaaaaaa x 100 h
+let multipleAb = /ha{3,}h/;
+multipleAb.test(A4); //true
+multipleAb.test(A2); //false
+multipleAb.test(A100); //true
+console.log(multipleAb.test(A100));
+
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/; 
+let reslt = haRegex.test(haStr); //true
+
+
+
+
+
+/********************Specify Exact Number of Matches__________ */
+let A4j = "haaaah";
+let A3j = "haaah";
+let A100j = "h" + "a".repeat(100) + "h";
+let multipleHA = /ha{3}h/;
+multipleHA.test(A4j); //false
+multipleHA.test(A3j); //true
+multipleHA.test(A100j); //false
+
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/; 
+let esult = timRegex.test(timStr); //true
+
+
+/************Check for All or None____________________ */
+
+let american = "color";
+let british = "colour";
+let rainbowRegex= /colou?r/;
+rainbowRegex.test(american); //true
+rainbowRegex.test(british);  //true
+
+let favWord = "favorite";
+let favRegex = /favou?rite?/; // Change this line
+let rsult = favRegex.test(favWord);
+
+
+/******Positive and Negative Lookahead__________?=... || ?!... */
+
+let password = "abc123";
+let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+checkPass.test(password);
+console.log(checkPass.test(password)) //true
+
+
+
+
+/********Check For Mixed Grouping of Characters________() */
+
+let testStr = "Pumpkin";
+let testRegex = /P(engu|umpk)in/; //true penguin or pumpkin
+testRegex.test(testStr);
+
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Franklin|Eleanor).*Roosevelt/; 
+let result = myRegex.test(myString);
+
+
+
+/*********Reuse Patterns Using Capture Groups________________ */
+
+let repeatRegex = /(\w+) \1 \1/;
+repeatRegex.test(repeatStr); // Returns true
+repeatStr.match(repeatRegex); // Returns ["row row row", "row"]
+
+
+
+let repeatNum = "42 42 42";
+let reRegex = /(\w+)(\d+) \.3\3\s/g; // Change this line
+let result = reRegex.test(repeatNum);
+repeatNum.match(reRegex);
+
+
+
+
+/********Use Capture Groups to Search and Replace______.replace()_____ */
+let wrongText = "The sky is silver.";
+let silverRegex = /silver/;
+wrongText.replace(silverRegex, "blue"); //The sky is blue.
+
+"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
+
+let str = "one two three";
+let fixRegex = /(one)(two)(three)/; // Change this line
+let replaceText = /three two one/; 
+// Change this line
+let result = str.replace(fixRegex, replaceText);
+
+
+/********Remove Whitespace from Start and End_______________ */
+let hello = "   Hello, World!  ";
+let wsRegex = /change/; // Change this line
+let result = hello; // Change this line

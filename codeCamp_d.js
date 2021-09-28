@@ -1,52 +1,5 @@
 /////*****Profile Lookup       ****** */
 
-/**Yakko
-                                                  .mMMMMm.
-                                               .mMMMMMMMMMMMm
-          ....                               .mMMMMMMMMMMMMMM.
-       .mMMMMMm.                           .mMMMMMMMMMMMMMMMM'
-     .mMMMMMMMM)                          .MMMMMMMMMMMMMMM/'
-   (MMMMMMMMMM/                          .MMMMMMMMMMMM"'
-  mMMMMMMMMMM/                           (MMMMMMMMM"'
- /MMMMMMMMMM/                            |MMMMMMMM/
- MMMMMMMMMM/                             MMMMMMMM/
-(MMMMMMMMMM(                            /MMMMMMM/                        
- MMMMMMMMMM|                            |MMMMMM"
- \MMMMMMMMM\              .mmmm..      |MMMMM`
-  \MMMMMMMMMM.          .mMMMMMMMMm..mMMMm.MM/
-   \MMMMMMMMM\.       mMMMMMMMMMMMMMMMMMMMMMm`
-     \MMMMMMMMM.    .mMMMMMMMM"""MMMMMMMMMMMMMm
-      `?MMMMMMMMm  mMMMMMMMM"'    "MMMMMMMMMMMMm.
-        `"MMMMMMMm/MMMMMMM/'        \MMMMMMMMMMMM.
-          `\MMMMM/MMMMMM"'           `MMMMMMM"""Mm.
-            `\MM/MMMMMM/             `MMMM"'   '\M.
-              ./MMMMMM/'               `"'        '\
-              /MMMMMMM'                             \
-             /MMMMMMM/                              `,
-            /MMMMMMMM                                |
-           .MMMMMMMMM                                )
-           (MMMMMMMM|                                |
-           |MMMMMMMM|.                               )
-           |MMMMMMMMM|          oOo    oOo.         .'                  
-           |MMMMMMMMM|         (OOOo   OOOO.        /
-           (MMMMMMMMM\          OOOO.  OOOO).      '
-           \MMMMMMMMMM         `OOOO   `OOO'      /
-     x..   `\MMMMMMMMMm         `OO"    _"'__    ./Mm._______
-     \MMMmm.MM"'     '\           ..**"""""***. <"""",MMMM/'  .
-      \MMMMMM'                   .**"     ,'****        ')mMMMM'
-       `\MMM(                    (**.__.******"'         )MMM/
-      xmm>MMM\                   `********""'           )M/'
-       `\MMMMMm,                    """                ,'M'
-            `-"Mm.                                   ./"'
-                  `\.                              ,/'
-                     `\.                       _,/'
-                        `.        /`     _,-/"'
-                         M\      ( \   /'
-                         MMm.     `'  /
-                         MMMMm.     ,'
-                         MMMMMMMmmmMM                                                                                   
-                         MMMMMMMmmmMM
-                         MMMMMMMMMMMM */
 
 // Setup
 var contacts = [
@@ -79,20 +32,22 @@ var contacts = [
 
 function lookUpProfile(name, prop) {
   // Only change code below this line
-for( var i =0; i < contacts.length -1; i++){
-    if(name = contacts[i].hasOwnProperty("firstName")){
-        if(name = prop[i]) { 
-            console.log("@@@")
-        return contacts[i];
-        
-        }
-   
+  for (let x = 0; x < contacts.length; x++) {
+    if (contacts[x].firstName === name) {
+      if (contacts[x].hasOwnProperty(prop)) {
+        console.log("here")
+        return contacts[x][prop];
+      } else {
+        console.log("No such property")
+        return "No such property";
+      }
     }
+  }
+  console.log("No such contact");
+  return "No such contact";
 }
-console.log(name, prop);
-return "No such property";
-  // Only change code above this line
-}
+
+
 
 lookUpProfile("Akira", "likes");
 /*
@@ -270,13 +225,13 @@ countdown(10) should return [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
                          MMMMMMMMMMMM */
 
 function rangeOfNumbers(startNum, endNum){
-  //a <= b  //a = b
-  if(startNum <= endNum){
-    let c = rangeOfNumbers(startNum, --endNum);
-  c.push(startNum)
-    return c;
+  if (endNum - startNum === 0) {
+    return [startNum];
+  } else {
+    var numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
   }
-    return [];
 }
 console.log(rangeOfNumbers(1,5))
 
