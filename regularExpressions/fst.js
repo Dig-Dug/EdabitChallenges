@@ -389,8 +389,16 @@ let password = "abc123";
 let checkPass = /(?=\w{3,6})(?=\D*\d)/;
 checkPass.test(password);
 console.log(checkPass.test(password)) //true
+/**
+ * Use lookaheads in the pwRegex to match passwords
+ *  that are greater than 5 characters long,
+ *  and have two consecutive digits.
+ */
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6})(?=\w*\d{2})/; 
+let result = pwRegex.test(sampleWord);
 
-
+console.log(result);
 
 
 /********Check For Mixed Grouping of Characters________() */
@@ -411,10 +419,14 @@ let repeatRegex = /(\w+) \1 \1/;
 repeatRegex.test(repeatStr); // Returns true
 repeatStr.match(repeatRegex); // Returns ["row row row", "row"]
 
-
+/**
+ * Use capture groups in reRegex to match a string that
+ *  consists of only the same number repeated exactly 
+ * three times separated by single spaces.
+ */
 
 let repeatNum = "42 42 42";
-let reRegex = /(\w+)(\d+) \.3\3\s/g; // Change this line
+let reRegex = /^(\d+)\s\1\s\1$/;
 let result = reRegex.test(repeatNum);
 repeatNum.match(reRegex);
 
@@ -428,14 +440,18 @@ wrongText.replace(silverRegex, "blue"); //The sky is blue.
 
 "Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
 
+
 let str = "one two three";
-let fixRegex = /(one)(two)(three)/; // Change this line
-let replaceText = /three two one/; 
-// Change this line
+let fixRegex = /(one)\s(two)\s(three)/ ; // Change this line
+let replaceText = "$3 $2 $1"; // three two one
 let result = str.replace(fixRegex, replaceText);
 
 
 /********Remove Whitespace from Start and End_______________ */
+/**
+ * Write a regex and use the appropriate string methods 
+ * to remove whitespace at the beginning and end of strings.
+ */
 let hello = "   Hello, World!  ";
-let wsRegex = /change/; // Change this line
-let result = hello; // Change this line
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result = hello.replace(wsRegex, ""); // Change this line
