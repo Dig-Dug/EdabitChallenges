@@ -111,7 +111,15 @@ function htmlColorNames(arr) {
 
 
    /**********Copy an Array with the Spread Operator_________ */
-
+/**
+ * The code above will copy all of the elements into newArr but
+ *  will also reinitialise newArr with every new iteration of
+ *  the while loop.
+A new variable should first be initialised using 
+the spread operator - let obj = [...arr];
+ - then this variable should be added to the newArr
+  for every iteration of the while loop.
+ */
   //copying an array
    let thisArray = [true, true, undefined, false, null];
    let thatArray = [...thisArray]; 
@@ -121,14 +129,17 @@ function htmlColorNames(arr) {
     let newArr = [];
     while (num >= 1) {
       // Only change code below this line
-  let obj = [...arr];
-  obj.push(arr)
-  
-  let newArr = obj.splice(0,5);
-  //newArr.splice(0,1,num)
-      // Only change code above this line
-      num--;
-      console.log(newArr);
+      let obj = [...arr];
+      obj.splice(0,0)
+      //obj.push(num); 
+      newArr = [obj ];
+      //newArr.push( num)
+      //newArr.push(num);
+      
+        // Only change code above this line
+        num--;
+        //console.log(obj)
+        return newArr;
     }
     return newArr;
   }
@@ -164,10 +175,15 @@ fruits.indexOf('pears'); 1
  */
 function quickCheck(arr, elem){
 // Only change code below this line
-if(arr.indexOf() == String && elem ==  Number || String){
-  return true;
-}
-return false;
+if(arr.indexOf() ? elem: "arr" ? "squash": elem? false: true){
+
+  /*if(arr.indexOf() ?"squash": elem ? false: true){
+  return false;
+  }*/
+  console.log(arr)
+    return true;
+  }
+  return false;
   // Only change code above this line
 }
 console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
@@ -189,8 +205,24 @@ console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 
 greaterThanTen([2, 12, 8, 14, 80, 0, 1]); // 12,14,8 */
 
+
 function filteredArray(arr,elem){
   let newArr =[];
+   // Only change code below this line
+for(let i = 0; i < arr.length-1; i++){
+  if (arr[i].indexOf(elem) == -1) {
+    newArr.pop(i);
+    console.log(newArr, "wot")
+    //return []
+}
+newArr.push(arr[i]);
+console.log("eee")
+//newArr.push(elem)
+//console.log(newArr);
+
+}
+//console.log(newArr);
+  // Only change code above this line
   return newArr;
 }
 console.log(filteredArray([[3, 2, 3], [1, 6, 3],
@@ -387,3 +419,6 @@ return i;
 }
 
 console.log(getArrayOfUsers(users));
+
+
+/***********Modify an Array Stored in an Object------------ */
