@@ -107,7 +107,7 @@ function htmlColorNames(arr) {
   
   // Only change code above this line
   console.log(forecast(['cold', 'rainy', 'warm', 'sunny',
-   'cool', 'thunderstorms']));
+   'cool', 'thunderstorms']));  // warm, sunny
 
 
    /**********Copy an Array with the Spread Operator_________ */
@@ -134,3 +134,256 @@ function htmlColorNames(arr) {
   }
   
   console.log(copyMachine([true, false, true], 2));
+
+
+
+  /*********__*******Combine Arrays with the Spread Operator______ */
+/**
+ let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
+ let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
+ 
+ //thatArray would have the value ['basil', 'cilantro', 'sage', 
+                    'rosemary', 'parsley', 'thyme', 'coriander'].
+ */
+
+function spreadOut(){
+  let fragment = ['to','code'];
+  let sentence = ['learning', ...fragment, 'is','fun'];
+  return sentence;
+}
+console.log(spreadOut());
+
+/****Check For The Presence of an Element With indexOf()__________ */
+
+/**
+ let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+
+fruits.indexOf('dates'); -1
+fruits.indexOf('oranges'); 2
+fruits.indexOf('pears'); 1
+ */
+function quickCheck(arr, elem){
+// Only change code below this line
+if(arr.indexOf() == String && elem ==  Number || String){
+  return true;
+}
+return false;
+  // Only change code above this line
+}
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+
+
+
+/**********Iterate Through All an Array's Items Using For Loops::::::. */
+/* function greaterThanTen(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 10) {
+      newArr.push(arr[i]);
+    }
+  }
+  console.log(newArr);
+  return newArr;
+}
+
+greaterThanTen([2, 12, 8, 14, 80, 0, 1]); // 12,14,8 */
+
+function filteredArray(arr,elem){
+  let newArr =[];
+  return newArr;
+}
+console.log(filteredArray([[3, 2, 3], [1, 6, 3],
+                           [3, 13, 26], [19, 3, 9]], 3));
+
+                      
+
+/***Create complex multi-dimensional arrays______________ */
+let nestedArray = [
+  ['deep'], [['deeper'], ['deeper'] ],
+  [
+    [['deepest'], ['deepest']],
+    [[['deepest-est?']]]
+  ]
+];
+/**
+ * The deep array is nested 2 levels deep.
+ *  The deeper arrays are 3 levels deep. 
+ * The deepest arrays are 4 levels,
+ *  and the deepest-est? is 5.
+ */
+ console.log(nestedArray[2][1][0][0][0]); //deepest-est?
+ nestedArray[2][1][0][0][0] = 'deeper still'; //<- reset it
+ console.log(nestedArray[2][1][0][0][0]); //<- deeper still
+
+
+/* We have defined a variable, myNestedArray, set equal to an array. 
+Modify myNestedArray, using any combination of strings, numbers, 
+and booleans for data elements, so that it has exactly
+ five levels of depth (remember, the outer-most array is level 1).
+  Somewhere on the third level, include the string deep, 
+  on the fourth level, include the string deeper,
+  and on the fifth level, include the string deepest. */
+//
+
+let myNestedArray = [ //1
+  // Only change code below this line
+ [   //2
+   ['deep', false, 1, 2, 3, 'complex', 'nested'], // 3
+  [ ['deeper', 'shift', 6, 7, 1000, 'method'], 
+   
+      [ 
+        ['deepest', false, true, 'spread', 'array'] //5 
+      ],
+     ['', 1327.98, '', 'slice', 'push']
+    ],
+   ['', 1.3849, 7, '8.4876', '', 'depth']
+  ]
+  // Only change code above this line
+];
+
+console.log(myNestedArray);
+
+
+/******Add Key-Value Pairs to JavaScript Objects**************** */
+
+const tekkenCharacter = {
+  player: 'Hwoarang',
+  fightingStyle: 'Tae Kwon Doe',
+  human: true
+};
+//add an additional property
+tekkenCharacter.originCountry = 'south korea';
+//add this property with bracket notation
+tekkenCharacter['loco'] = 'esquizo';
+// with variable
+const eyes = 'eye color';
+tekkenCharacter[eyes] = 'blue';
+
+console.log(tekkenCharacter);
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+}
+// Only change code below this line
+foods.bananas = 13;
+foods['grapes'] = 35;
+const wot = 'strawberries';
+foods[wot] = 27;
+// Only change code above this line
+
+console.log(foods);
+
+/************Modify an Object Nested Within an Object */
+
+let nestedObject = {  // 3 props id,date,data
+  id: 28802695164,
+  date: 'December 31, 2016',
+  data: {
+    totalUsers: 99,
+    online: 80,
+    onlineStatus: {
+      active: 67,
+      away: 13,
+      busy: 8  // <- to update
+    }
+  }
+};
+
+nestedObject.data.onlineStatus.busy = 10;
+console.log(nestedObject);
+
+let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
+};
+userActivity.data.online = 45;
+
+
+///*********Access Property Names with Bracket Notation__________ */
+
+/* let selectedFood = getCurrentFood(scannedItem);
+let inventory = foods[selectedFood]; */
+
+
+
+/********Use the delete Keyword to Remove Object Properties______ */
+/**
+ * several common operations you can perform on objects so you 
+ * can become comfortable applying these useful data structures 
+ * in your programs
+ */
+ let foods1 = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+// Only change code below this line
+delete foods1.oranges; 
+delete foods1.plums;
+delete foods1.strawberries;
+// Only change code above this line
+
+console.log(foods1);
+
+
+
+
+
+/******Check if an Object has a Property______________ */
+//hasOwnProperty() || 'in'
+/**
+ * users.hasOwnProperty('Alan');
+   'Alan' in users;
+ */
+
+
+/*Iterate Through the Keys of an Object with a for...in Statement___ */
+
+//for...in statemen
+
+
+
+
+
+/******Generate an Array of All Object Keys with Object.keys() */
+
+//generate an array which contains all the keys stored
+// in an object using the Object.keys()
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function getArrayOfUsers(obj) {
+  // Only change code below this line
+let i = Object.keys(obj);
+return i;
+  // Only change code above this line
+}
+
+console.log(getArrayOfUsers(users));
