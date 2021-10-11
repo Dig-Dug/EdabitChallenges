@@ -129,13 +129,7 @@ the spread operator - let obj = [...arr];
     let newArr = [];
     while (num >= 1) {
       // Only change code below this line
-      let obj = [...arr];
-      obj.splice(0,0)
-      //obj.push(num); 
-      newArr = [obj ];
-      //newArr.push( num)
-      //newArr.push(num);
-      
+      newArr.push([...arr]);
         // Only change code above this line
         num--;
         //console.log(obj)
@@ -175,15 +169,16 @@ fruits.indexOf('pears'); 1
  */
 function quickCheck(arr, elem){
 // Only change code below this line
-if(arr.indexOf() ? elem: "arr" ? "squash": elem? false: true){
-
-  /*if(arr.indexOf() ?"squash": elem ? false: true){
+if(arr.indexOf() ? elem: "arr" ?  false: true){
+  console.log("33-----------------------")
+  if(elem == "mushrooms" ) {
+      console.log("22-----------------------")
   return false;
-  }*/
+    }
   console.log(arr)
-    return true;
-  }
-  return false;
+      return true;
+    }
+    return false;
   // Only change code above this line
 }
 console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
@@ -205,24 +200,20 @@ console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 
 greaterThanTen([2, 12, 8, 14, 80, 0, 1]); // 12,14,8 */
 
-
+/**
+Modify the function, using a for loop, to return a filtered version 
+of the passed array such that any array nested within arr containing
+elem has been removed.
+ */
 function filteredArray(arr,elem){
   let newArr =[];
    // Only change code below this line
-for(let i = 0; i < arr.length-1; i++){
+for(let i = 0; i < arr.length; i++){
   if (arr[i].indexOf(elem) == -1) {
-    newArr.pop(i);
-    console.log(newArr, "wot")
-    //return []
+    newArr.push(arr[i]);
+  }
 }
-newArr.push(arr[i]);
-console.log("eee")
-//newArr.push(elem)
-//console.log(newArr);
-
-}
-//console.log(newArr);
-  // Only change code above this line
+// Only change code above this line
   return newArr;
 }
 console.log(filteredArray([[3, 2, 3], [1, 6, 3],
@@ -342,7 +333,22 @@ userActivity.data.online = 45;
 
 /* let selectedFood = getCurrentFood(scannedItem);
 let inventory = foods[selectedFood]; */
+let foodsz = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
 
+function checkInventory(scannedItem) {
+  // Only change code below this line
+return foodsz[scannedItem];
+  // Only change code above this line
+}
+
+console.log(checkInventory("apples"));
 
 
 /********Use the delete Keyword to Remove Object Properties______ */
@@ -372,27 +378,93 @@ console.log(foods1);
 
 
 
-/******Check if an Object has a Property______________ */
-//hasOwnProperty() || 'in'
+/******Check if an Object has a Property_______in_______ */
 /**
  * users.hasOwnProperty('Alan');
-   'Alan' in users;
+  'Alan' in users; <------Both of these would return true.
  */
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(userObj) {
+  // Only change code below this line
+  if ('Alan' in userObj &&
+    'Jeff' in userObj &&
+    'Sarah' in userObj &&
+    'Ryan' in userObj) {
+    console.log("e******** e")
+    return true;
+  }
+
+  return false;
+}
+// Only change code above this line
+console.log(isEveryoneHere(users));
 
 
 /*Iterate Through the Keys of an Object with a for...in Statement___ */
 
 //for...in statemen
+/**
+ for (let user in users) {
+  console.log(user);
+} */
+/* for (let user in obj) {
+  if (obj[user].online === true) {
+    //code
+  }
+} */
+
+let usersObj ={
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+};
+function countOnline(usersObj) {
+  // Only change code below this line
+  let result = 0;
+for(let user in usersObj){
+  if(usersObj[user].online === true){
+    console.log("----------1")  
+  result++;
+  
+}
+}console.log("-----------0")
+return result 
+};
+console.log(countOnline(usersObj));
 
 
-
+  // Only change code above this line
 
 
 /******Generate an Array of All Object Keys with Object.keys() */
 
 //generate an array which contains all the keys stored
 // in an object using the Object.keys()
-let users = {
+let usersz = {
   Alan: {
     age: 27,
     online: false
@@ -418,7 +490,44 @@ return i;
   // Only change code above this line
 }
 
-console.log(getArrayOfUsers(users));
+console.log(getArrayOfUsers(usersz));
 
 
 /***********Modify an Array Stored in an Object------------ */
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
+  }
+};
+/**The function can be written in just two lines of code.
+The first line should just use the push() function to add 
+the friendparameter to the array found in user.data.friend.
+ The second line will return the modified array.
+Remember that user must be referenced with the first parameter
+ given to the addFriend() function. */
+
+function addFriend(userObj, friend) {
+  // Only change code below this line
+  userObj = user.data.friends;
+  userObj.push(friend);
+  console.log(friend);
+  return userObj;
+  // Only change code above this line
+}
+
+console.log(addFriend(user, 'Pedro'));
+console.log(user);
