@@ -447,14 +447,12 @@ function countOnline(usersObj) {
   let result = 0;
 for(let user in usersObj){
   if(usersObj[user].online === true){
-    console.log("----------1")  
-  result++;
-  
+   result++; // 1 if false,true,false || 2 if true,false,true
 }
-}console.log("-----------0")
-return result 
+}
+return result  // 0 if false,false,false
 };
-console.log(countOnline(usersObj));
+
 
 
   // Only change code above this line
