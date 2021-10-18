@@ -40,14 +40,14 @@ function convertToF(celsius) {
 // # = n <- factorial = n+ <- <= n
 
 
-function factorialize(num){
+/* function factorialize(num){
     
     let n = 0
     for (let i = 0; i <= num; i++){
     n++;
     i * n
     //num = i * n; 
-    console.log( i * n, num)
+    console.log( i , n, num)
     
     
     }
@@ -55,4 +55,79 @@ function factorialize(num){
     return num;
     }
     
+    factorialize(5); */
+    function factorialize(num) {
+      let n = 0;
+      for(let i = 0; i <= num; i++){
+       if(i == 0) { n = 1;
+       return n;}
+       
+      } 
+      n++; 
+      console.log(n," w")
+      return n;
+    }
+    
     factorialize(5);
+
+/********Find the Longest Word in a String******* */
+/**Hints
+Hint 1
+You will need to loop through the words in the string.
+
+Hint 2
+You will need to figure out a way to keep track globally of the greatest current length.
+
+Hint 3
+Do you remember how to get the length of strings?
+
+const str = 'Life, the universe and everything. Answer:';
+
+console.log(`${str} ${str.length}`);
+// expected output: "Life, the universe and everything. Answer: 42"
+
+
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+const words = str.split(' ');
+console.log(words[3]);
+// expected output: "fox"
+
+const chars = str.split('');
+console.log(chars[8]);
+// expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// expected output: Array ["The quick brown fox jumps over the lazy dog."]
+*/
+
+/* function findLongestWordLength(str) {
+  return str.length;
+} */
+
+function findLongestWordLength(str) {
+  for(let i =0; i <= str.length;i++){
+    let word = str.split(' ');
+  str = word[i];
+       if(str == 19){
+        console.log(word, " www")
+        return str.length;
+      }
+     console.log(word,"qq")
+      return str.length;
+ }
+  console.log(str.length)
+  return str.length;
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+
+
+/***_________________**Return Largest Numbers in Arrays */
+function largestOfFour(arr) {
+  return arr;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
