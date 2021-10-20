@@ -58,15 +58,22 @@ function convertToF(celsius) {
     factorialize(5); */
     function factorialize(num) {
       let n = 0;
-      for(let i = 0; i <= num; i++){
-       if(i == 0) { n = 1;
-       return n;}
+      for(let i = 0; i <= num.length; i++){
        
-      } 
-      n++; 
-      console.log(n," w")
-      return n;
-    }
+        num = num * factorialize(num[i] -1)
+        console.log(num);
+        n =  num--;
+        factorialize(num)
+      // console.log(n);
+        let o = n * num
+ console.log(o);
+      return o;
+       
+ } 
+       n++; 
+       console.log(n," w")
+       return n;
+     }
     
     factorialize(5);
 
@@ -107,18 +114,22 @@ console.log(strCopy);
 } */
 
 function findLongestWordLength(str) {
-  for(let i =0; i <= str.length;i++){
+  let stro = "";
+for(let i =0; i <= str.length;i++){
     let word = str.split(' ');
-  str = word[i];
-       if(str == 19){
-        console.log(word, " www")
-        return str.length;
+  str = word[i]; 
+  console.log(str.length, " www")
+       if(str != 0){
+         console.log(word.length, " w0ww");
+let glob = Math.max(str.length);
+stro++;
+str = glob; return str
+      }else {
+ stro = str[i];
+console.log(stro,"ee")
+ return Math.max(stro.length);
       }
-     console.log(word,"qq")
-      return str.length;
- }
-  console.log(str.length)
-  return str.length;
+ } 
 }
 
 findLongestWordLength("The quick brown fox jumped over the lazy dog");
@@ -127,6 +138,20 @@ findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
 /***_________________**Return Largest Numbers in Arrays */
 function largestOfFour(arr) {
+  let i =0;let j = 0;
+  for( i  in arr){
+   //let u = Math.max(i);
+   //console.log(i)
+     for(j in arr){
+       let r = arr[i][j]
+console.log(r,"nope")
+//return r
+ //console.log(Math.max(i))
+ //return  Math.max(r);
+    } 
+    
+  }
+  //console.log(arr)
   return arr;
 }
 
