@@ -59,7 +59,7 @@ function convertToF(celsius) {
 function factorialize(num) {
   let n = 0;
   if (num == 0) {
-    console.log("a")
+    console.log("ako")
     return 1;
   }
   for (let i = 0; i <= num; i - 1) {
@@ -129,3 +129,62 @@ function largestOfFour(arr) {
 }
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+
+
+/*************Confirm the Ending ***********/
+/**const str = 'Mozilla';
+
+console.log(str.substring(1, 3));
+// expected output: "oz"
+
+console.log(str.substring(2));
+// expected output: "zilla" */
+
+function confirmEnding(str, target) {
+  str = target.substring("") ? true : false;
+  return str;
+  }
+
+confirmEnding("Bastian", "n");
+
+
+/***********Repeat a String Repeat a String */
+function repeatStringNumTimes(str, num) {
+  let i = "";
+  for(i in str){
+   let i = str + str+ str;
+    console.log(i);
+    return i
+  }
+  return str;
+}
+
+
+/**********Truncate a String*********** */
+
+/**Truncate a string (first argument) if it is longer
+ *  than the given maximum string length (second argument). 
+ * Return the truncated string with a ... ending. */
+
+ function truncateString(str, num) {
+  return str;
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+
+/**Finders Keepers_________________________
+Create a function that looks through an array arr 
+and returns the first element in it that passes a 'truth test'.
+ This means that given an element x, the 'truth test' is passed
+ if func(x) is true. If no element passes the test, 
+ return undefined. */
+
+ function findElement(arr, func) {
+  let num = 0;
+  return num;
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
