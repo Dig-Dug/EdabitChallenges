@@ -118,19 +118,14 @@ function findLongestWordLength(str) {
 function largestOfFour(arr) {
   let i =0;let j = 0;
   for( i  in arr){
-   //let u = Math.max(i);
-   //console.log(i)
-     for(j in arr){
-       let r = arr[i][j]
-console.log(r,"nope")
-//return r
- //console.log(Math.max(i))
- //return  Math.max(r);
-    } 
-    
-  }
-  //console.log(arr)
-  return arr;
+   for(j in arr){
+     
+ arr == arr[i][j];
+ console.log(arr[i][Math.max(j)])
+  return arr
+} 
+ }
+
 }
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
