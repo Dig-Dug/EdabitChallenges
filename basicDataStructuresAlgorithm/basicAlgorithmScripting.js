@@ -6,15 +6,15 @@ To convert temperatures in degrees Celsius to Fahrenheit,
  Example: (30°C x 1.8) + 32 = 86°F
  */
 function convertToF(celsius) {
-    let farenheit = (celsius * 1.8)+32; 
-    console.log(farenheit);
-    return farenheit;
-    }
-    
-    convertToF(30);
+  let farenheit = (celsius * 1.8) + 32;
+  console.log(farenheit);
+  return farenheit;
+}
+
+convertToF(30);
 
 
-/***********Reverse a String----------- */   
+/***********Reverse a String----------- */
 /**Hint 1
 
  You can solve this challenge by creating a new string
@@ -25,16 +25,16 @@ function convertToF(celsius) {
  After iterating through all the characters in the string,
   you return the new string. */
 
-  function reverseString(str) {
-    /**
-     * split ["h", "e", "l", "l", "o"]
-     * reverse  ["o", "l", "l", "e", "h"]
-     * join "olleh"
-     */
-    return str.split("").reverse().join("");
-   }
-   
-  console.log(reverseString("hello")); 
+function reverseString(str) {
+  /**
+   * split ["h", "e", "l", "l", "o"]
+   * reverse  ["o", "l", "l", "e", "h"]
+   * join "olleh"
+   */
+  return str.split("").reverse().join("");
+}
+
+console.log(reverseString("hello"));
 
 /********Factorialize a Number************_____n! */
 // # = n <- factorial = n+ <- <= n
@@ -109,22 +109,27 @@ console.log(strCopy);
 } */
 
 function findLongestWordLength(str) {
-  
-  return Math.max(...str.split(' ').map((word) => word.length));}
-  
-  findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+  return Math.max(...str.split(' ').map((word) => word.length));
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+
+
 
 /***_________________**Return Largest Numbers in Arrays */
 function largestOfFour(arr) {
-  let i =0;let j = 0;
-  for( i  in arr){
-   for(j in arr){
-     
- arr == arr[i][j];
- console.log(arr[i][Math.max(j)])
-  return arr
-} 
- }
+   let i = 0; let j = 0;
+  for (i in arr) {
+    for (j in arr) {
+
+      arr == arr[i][j];
+      //or = arr[i,Math.max.apply(null,[j])];
+      console.log(arr[i][Math.max(j)])
+      return arr
+    }
+  } 
 
 }
 
@@ -144,7 +149,7 @@ console.log(str.substring(2));
 function confirmEnding(str, target) {
   str = target.substring("") ? true : false;
   return str;
-  }
+}
 
 confirmEnding("Bastian", "n");
 
@@ -152,8 +157,8 @@ confirmEnding("Bastian", "n");
 /***********Repeat a String Repeat a String */
 function repeatStringNumTimes(str, num) {
   let i = "";
-  for(i in str){
-   let i = str + str+ str;
+  for (i in str) {
+    let i = str + str + str;
     console.log(i);
     return i
   }
@@ -167,7 +172,7 @@ function repeatStringNumTimes(str, num) {
  *  than the given maximum string length (second argument). 
  * Return the truncated string with a ... ending. */
 
- function truncateString(str, num) {
+function truncateString(str, num) {
   return str;
 }
 
@@ -181,10 +186,37 @@ and returns the first element in it that passes a 'truth test'.
  if func(x) is true. If no element passes the test, 
  return undefined. */
 
- function findElement(arr, func) {
+function findElement(arr, func) {
   let num = 0;
   return num;
 }
 
 findElement([1, 2, 3, 4], num => num % 2 === 0);
 
+
+/**Boo who__________________________________________
+Check if a value is classified as a boolean primitive.
+Return true or false.
+
+Boolean primitives are true and false. */
+function booWho(bool) {
+  if (bool == true) { return true; }
+  return false;
+}
+
+booWho(null);
+
+
+/**Title Case a Sentence___________________________
+Return the provided string with the first letter of each word
+ capitalized. Make sure the rest of the word is in lower case.
+
+For the purpose of this exercise,
+ you should also capitalize connecting words 
+ like the and of. */
+
+function titleCase(str) {
+  return str;
+}
+
+titleCase("I'm a little tea pot");
