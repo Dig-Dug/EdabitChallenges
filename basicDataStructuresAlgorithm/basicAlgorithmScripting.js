@@ -150,30 +150,43 @@ function confirmEnding(str, target) {
   str = target.substring("") ? true : false;
   return str;
 }
+/**if( str =  str.substr(str-1) && target == target.substring(target-1) ) {
+   console.log( str, target)
+return true;   
+ }
+ //console.log(str,target)
+ return false; */
 
 confirmEnding("Bastian", "n");
 
 
 /***********Repeat a String Repeat a String */
 function repeatStringNumTimes(str, num) {
-  let i = "";
-  for (i in str) {
-    let i = str + str + str;
+  let i = ""
+  for ( i in str) {
+   
+   i = Array(num + 1).join(str);
     console.log(i);
     return i
   }
-  return str;
 }
-
-
+repeatStringNumTimes("abc", 3);
+//for(var word = ''; word.length < 10 * 3; word += 'foo'){}
+//Array(11).join("a")
 /**********Truncate a String*********** */
 
 /**Truncate a string (first argument) if it is longer
  *  than the given maximum string length (second argument). 
  * Return the truncated string with a ... ending. */
 
-function truncateString(str, num) {
-  return str;
+ function truncateString(str, num) {
+  if(str.length > num){
+ 
+    return str.slice(0, num) + "...";
+  //A-tisket...
+  } else {
+    return str;
+}
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
@@ -186,9 +199,20 @@ and returns the first element in it that passes a 'truth test'.
  if func(x) is true. If no element passes the test, 
  return undefined. */
 
-function findElement(arr, func) {
+ function findElement(arr, func) {
   let num = 0;
-  return num;
+  for(num in arr){
+if(arr.length & num % 2 == 0){
+    console.log("w")
+    return num;
+  } else {
+    console.log("we")
+    return undefined;
+  }
+
+  }
+  
+  
 }
 
 findElement([1, 2, 3, 4], num => num % 2 === 0);
