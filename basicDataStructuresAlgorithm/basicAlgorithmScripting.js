@@ -224,11 +224,17 @@ Return true or false.
 
 Boolean primitives are true and false. */
 function booWho(bool) {
-  if (bool == true) { return true; }
-  return false;
-}
-
+  if( typeof bool === NaN ? true : false ){
+    return true;
+     }
+       return false;
+     }
 booWho(null);
+
+/**if( typeof null === 'object' ? true : false ){
+    console.log("uiu")
+    return true;
+     } */
 
 
 /**Title Case a Sentence___________________________
@@ -239,8 +245,12 @@ For the purpose of this exercise,
  you should also capitalize connecting words 
  like the and of. */
 
-function titleCase(str) {
-  return str;
-}
+ function titleCase(str) {
 
-titleCase("I'm a little tea pot");
+  let  o = str.toLowerCase().split("")
+ //TODOOOOO
+ console.log(str, o)
+   return str;
+ }
+ 
+ titleCase("I'm a little tea pot");
