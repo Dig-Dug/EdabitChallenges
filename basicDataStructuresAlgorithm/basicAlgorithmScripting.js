@@ -247,10 +247,31 @@ For the purpose of this exercise,
 
  function titleCase(str) {
 
-  let  o = str.toLowerCase().split("")
- //TODOOOOO
- console.log(str, o)
-   return str;
+//str.replace(charAt , up);
+let o = str.split(" ");
+o = str.toLowerCase();
+let i = str.charAt(0).toUpperCase();
+str.replace(i, str) 
+//o.charo();
+
+//o.split("");
+//o.replace(charAt, up);
+console.log(str,  o, i)
+ return str;
  }
  
  titleCase("I'm a little tea pot");
+
+
+ //_________________________Slice and Splice___________________
+
+ function frankenSplice(arr1, arr2, n) {
+
+  console.log(arr1,arr2,n)
+  arr2 = [...arr1];
+  return arr2;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+
