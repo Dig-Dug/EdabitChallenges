@@ -275,3 +275,22 @@ console.log(str,  o, i)
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
 
 
+/**_______________Falsy Bouncer ______________________*/
+/**Falsy values in JavaScript are
+ false, null, 0, "", undefined, and NaN. */
+
+ function bouncer(arr) {
+  console.log(arr)
+  if (arr.includes(NaN,undefined,null,0,"",false)){
+    console.log(arr,"ww ")
+       return arr.splice(NaN,undefined,null,0,"");
+     }
+  console.log(arr,"qq")
+  return arr;
+}
+      
+
+
+
+bouncer([7, "ate", "", false, 9]);
+
