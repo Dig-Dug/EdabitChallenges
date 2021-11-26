@@ -175,12 +175,15 @@ confirmEnding("Bastian", "n");
 /***********Repeat a String Repeat a String */
 function repeatStringNumTimes(str, num) {
   let i = ""
-  for ( i in str) {
-   
-   i = Array(num + 1).join(str);
-    console.log(i);
-    return i
-  }
+for ( i in str) {
+ if(num < 0){
+  return "";
+}
+ i = Array(num + 1).join(str);
+  console.log(i);
+  return i
+}
+
 }
 repeatStringNumTimes("abc", 3);
 //for(var word = ''; word.length < 10 * 3; word += 'foo'){}
