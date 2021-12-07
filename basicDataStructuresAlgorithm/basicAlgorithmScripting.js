@@ -141,7 +141,8 @@ largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 85
 
 
 
-/*************Confirm the Ending ***********/
+/*************Confirm the Ending ********regular expressions***/
+//str.substring("",target.length == 13)) <--
 /**const str = 'Mozilla';
 
 console.log(str.substring(1, 3));
