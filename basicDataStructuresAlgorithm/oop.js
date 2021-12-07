@@ -352,3 +352,61 @@ let beeagle = new Dwog();
 
 
 //Override Inherited Methods____OOOOO_________________
+
+function Bird() { }
+
+Bird.prototype.fly = function() { return "I am flying!"; };
+
+function Penguin() { }
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+// Only change code below this line
+Penguin.prototype.fly = function()
+ { return "Alas, this is a flightless bird."; }; 
+// Only change code above this line
+
+let penguin = new Penguin();
+console.log(penguin.fly());
+
+//Use a Mixin to Add Common Behavior Between Unrelated Objects
+/**For unrelated objects, it's better to use mixins.
+ A mixin allows other objects to use a collection of functions. */
+ let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+// Only change code below this line
+let glideMixin = function(obj){
+  obj.glide = function()  {
+    console.log();
+  }
+}
+glideMixin(boat)
+glideMixin(bird)
+boat.glide();
+bird.glide();
+
+//Use Closure to Protect Properties Within an Object from Being Modified Externally
+
+function Bird() {
+//closure, making this let private
+  let weight = 15;
+
+this.getWeight = function(){
+  return weight;
+};
+}
+
+//Understand the Immediately Invoked Function Expression (IIFE)
+(function () {
+  console.log("A cozy nest is ready");
+})();
+
+//makeNest();

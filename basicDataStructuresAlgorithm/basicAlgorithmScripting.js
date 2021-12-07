@@ -186,8 +186,8 @@ for ( i in str) {
 
 }
 repeatStringNumTimes("abc", 3);
-//for(var word = ''; word.length < 10 * 3; word += 'foo'){}
-//Array(11).join("a")
+
+
 /**********Truncate a String*********** */
 
 /**Truncate a string (first argument) if it is longer
@@ -229,7 +229,16 @@ if(arr.length & num % 2 == 0){
   
   
 }
+/**We need to return the element from an array that passes a function.
+ Both the function and the array are passed into our function 
+findElement(arr, func). Looking through the array can be done
+ with a for loop. */
 
+ /**num is passed to the function. We will need to set 
+ it to the elements we want to check with the function. */
+
+/**Do not forget, if none of the numbers in the array pass the test,
+  it should return undefined. */
 findElement([1, 2, 3, 4], num => num % 2 === 0);
 
 
@@ -238,6 +247,9 @@ Check if a value is classified as a boolean primitive.
 Return true or false.
 
 Boolean primitives are true and false. */
+
+/**You will need to check for the type of the parameter to see if
+ *  it is a boolean. */
 function booWho(bool) {
   if( typeof bool === NaN ? true : false ){
     return true;
