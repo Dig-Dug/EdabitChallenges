@@ -306,9 +306,12 @@ const watchList = [
   
   // Only change code below this line
   
-  const ratings = [...watchList];
-  ratings.map(titles => titles.title);
-  ratings.map(rating => rating.imdbRating)
+  let ratings = [...watchList];
+  const z = ratings.map(title => title.Title); 
+  let r = ratings.map(rating => rating.imdbRating);
+  let zr = [z , r];
+   
+  console.log(JSON.stringify(zr))
   // Only change code above this line
   
   console.log(JSON.stringify(ratings));
