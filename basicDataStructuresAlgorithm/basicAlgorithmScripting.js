@@ -361,6 +361,18 @@ alert("Max value is: "+p.max()+"\nMin value is: "+ p.min()); */
 
 
 
+//Mutations-----------------------------
+//true(if string.contains(0, 1))
 
+function mutation(arr) {
+  let r = arr.split(" ")
+  console.log(arr, r)
+  return arr;
+}
 
+mutation(["hello", "hey"]);
 
+/**
+ * let text = "How are you doing today?";
+   const myArray = text.split(" ");
+ */
