@@ -322,3 +322,45 @@ frankenSplice([1, 2, 3], [4, 5, 6], 1);
 
 bouncer([7, "ate", "", false, 9]);
 
+
+//Where do I Belong___________________________
+// sort -> where value(, i ) [i,] return #
+
+function getIndexToIns(arr, num) {
+  for(num in arr){
+    if(num >= num[0]){
+      arr.push(num);
+      console.log(arr, num);
+      return num; 
+    }
+    console.log("w")
+  }
+  arr.push(num)
+    console.log(arr,"www")
+    
+    return num;
+  }
+
+getIndexToIns([40, 60], 50);
+
+
+//Math.max(...[11, 10, 10])
+
+/**var p = [35,2,65,7,8,9,12,121,33,99];
+
+Array.prototype.max = function() {
+  return Math.max.apply(null, this);
+};
+
+Array.prototype.min = function() {
+  return Math.min.apply(null, this);
+};
+
+
+alert("Max value is: "+p.max()+"\nMin value is: "+ p.min()); */
+
+
+
+
+
+
