@@ -410,3 +410,28 @@ this.getWeight = function(){
 })();
 
 //makeNest();
+
+//Use an IIFE to Create a Module------------------------
+// mixture of a (IIFE(instant nameless function) and Mixin)
+/**
+ * The advantage of the module pattern is that all of the 
+ * motion behaviors can be packaged into a single object
+ *  that can then be used by other parts of your code.
+ */
+let funModule = (function(){
+  return {
+     isCuteMixin : function(obj) {
+      obj.isCute = function() {
+        return true;
+      };
+    },
+     singMixin : function(obj) {
+      obj.sing = function() {
+        console.log("Singing to an awesome tune");
+      };
+    }
+  }
+})();
+//Here is an example using it:
+funModule.isCuteMixin(duck);
+duck.isCute();
