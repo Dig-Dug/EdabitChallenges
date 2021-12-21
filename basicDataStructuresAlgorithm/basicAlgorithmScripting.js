@@ -215,31 +215,32 @@ and returns the first element in it that passes a 'truth test'.
  if func(x) is true. If no element passes the test, 
  return undefined. */
 
- function findElement(arr, func) {
-  let num = 0;
-  for(num in arr){
-if(arr.length & num % 2 == 0){
-    console.log("w")
-    return num;
-  } else {
-    console.log("we")
-    return undefined;
-  }
+function findElement(arr, func) {
 
-  }
-  
-  
+  arr.forEach(function (num) {
+
+    if (func(num) == true) {
+      const found = arr.find(num => num % 2 === 0);
+      console.log("edo", num, found);
+      return found;
+    } else {
+      return undefined;
+    }
+ }
+  )
 }
-/**We need to return the element from an array that passes a function.
- Both the function and the array are passed into our function 
-findElement(arr, func). Looking through the array can be done
- with a for loop. */
+/**
+let words = ['one', 'two', 'three', 'four']
+words.forEach(function(word) {
+  console.log(word)
+  if (word === 'two') {
+    words.shift() //'one' will delete from array
+  }
+}) // one // two // four
 
- /**num is passed to the function. We will need to set 
- it to the elements we want to check with the function. */
+console.log(words);  //['two', 'three', 'four']
+ */
 
-/**Do not forget, if none of the numbers in the array pass the test,
-  it should return undefined. */
 findElement([1, 2, 3, 4], num => num % 2 === 0);
 
 
