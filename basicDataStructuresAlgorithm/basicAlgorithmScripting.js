@@ -215,20 +215,19 @@ and returns the first element in it that passes a 'truth test'.
  if func(x) is true. If no element passes the test, 
  return undefined. */
 
-function findElement(arr, func) {
-
-  arr.forEach(function (num) {
+ function findElement(arr, func) {
+  let num = 0;
+  for(num in arr) {
 
     if (func(num) == true) {
-      const found = arr.find(num => num % 2 === 0);
-      console.log("edo", num, found);
-      return found;
+      num = arr.find(num => num % 2 === 0);
+      console.log("edo", num);
+      return num;
     } else {
       return undefined;
-    }
- }
-  )
-}
+    } 
+ } 
+  }
 /**
 let words = ['one', 'two', 'three', 'four']
 words.forEach(function(word) {
@@ -252,12 +251,13 @@ Boolean primitives are true and false. */
 
 /**You will need to check for the type of the parameter to see if
  *  it is a boolean. */
-function booWho(bool) {
-  if( typeof bool === NaN ? true : false ){
+ function booWho(bool) {
+  if( typeof bool == "boolean" ? true : false ){
     return true;
      }
        return false;
      }
+
 booWho(null);
 
 /**if( typeof null === 'object' ? true : false ){
@@ -276,17 +276,24 @@ For the purpose of this exercise,
 
  function titleCase(str) {
 
-//str.replace(charAt , up);
-let o = str.split(" ");
-o = str.toLowerCase();
-let i = str.charAt(0).toUpperCase();
-str.replace(i, str) 
-//o.charo();
 
-//o.split("");
-//o.replace(charAt, up);
-console.log(str,  o, i)
- return str;
+  //str.replace(charAt , up);
+  let o = str.split(" ");
+  o = str.toLowerCase();
+  /*  for(o in str){
+    console.log(str.charAt().toUpperCase())
+    return
+  }  */
+  let i = o.charAt(0).toUpperCase();
+  str.replace(o, i) 
+  //o.charo();
+  let newS = i;
+  //o.split(""); 
+  //newS.replace(i, str);
+  console.log(str);
+  console.log(o);
+  console.log(i, newS);
+    return str;
  }
  
  titleCase("I'm a little tea pot");
