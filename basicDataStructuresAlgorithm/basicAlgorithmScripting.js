@@ -147,7 +147,9 @@ largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 85
 
 console.log(str.substring(1, 3));
 // expected output: "oz"
-
+/**const paragraph = 'The quick brownbarked.';
+const regex = /[A-Z]/g;
+const found = str.match(regex); */
 console.log(str.substring(2));
 // expected output: "zilla" */
 
@@ -155,8 +157,20 @@ function confirmEnding(str, target) {
   str = target.substring("") ? true : false;
   return str;
 }
-/**REGULAR EXPRESSIONS!!!!
- * let last = /n$/;
+function confirmEnding(str, target) {
+  let reg = /[a-z]{2,5}$/; 
+  
+  if(target = str.match(reg)){
+   console.log(str.match(reg))
+    console.log("wsk");
+     return true
+  }else{ 
+  console.log("www");
+   return false
+  }
+  }
+/**REGULAR EXPRESSIONS!!!!   const regex = /[a-z]{2,5}$/; 2 to 5
+ * let last = /n$/;  
   let lost = last.test(target);
   console.log(lost)
 
