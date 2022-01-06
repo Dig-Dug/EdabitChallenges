@@ -281,12 +281,19 @@ booWho(null);
 
 
 /**Title Case a Sentence___________________________
-Return the provided string with the first letter of each word
- capitalized. Make sure the rest of the word is in lower case.
-
-For the purpose of this exercise,
- you should also capitalize connecting words 
- like the and of. */
+/**Hint 1
+You should start by splitting the string into an array of words.
+Split the sentence.
+Hint 2
+You should make the word lowercase before making the first letter uppercase.
+Use replace method on each word to capitalize the first letter of 
+each word.
+Hint 3
+You will need to create a new string with pieces of the previous
+one and at the end merge everything into a single string again.
+In replace method, give first argument as the position of the first 
+letter using charAt. For second argument write a function
+ to return the capitalized letter as the replacement. */
 
  function titleCase(str) {
 
@@ -314,12 +321,35 @@ For the purpose of this exercise,
 
 
  //_________________________Slice and Splice___________________
+/**Hint 1
+Create a copy of the second array inside of the function. 
+This will ensure that the original array is not mutated.
+ This can be done by using the slice operation on the second array, 
+ and assign it to a variable.
 
+Hint 2
+Loop through all of the items in the first array. 
+For each item in the first array splice it into the
+ copied array in the index given as argument.
+
+Hint 3
+Increment the index after performing the splice. */
  function frankenSplice(arr1, arr2, n) {
 
-  console.log(arr1,arr2,n)
+/*   console.log(arr1,arr2,n)
   arr2 = [...arr1];
-  return arr2;
+  return arr2; */
+  let r = arr2.slice() // copy
+  
+  let i= 0
+  for(n in arr1){
+    arr1.splice(r, i += 1)
+    n++; 
+    r.push(n)
+console.log(r)
+
+  }
+  return r;
 }
 
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
@@ -330,13 +360,17 @@ frankenSplice([1, 2, 3], [4, 5, 6], 1);
  false, null, 0, "", undefined, and NaN. */
 
  function bouncer(arr) {
-  console.log(arr)
+/*   console.log(arr)
   if (arr.includes(NaN,undefined,null,0,"",false)){
     console.log(arr,"ww ")
        return arr.splice(NaN,undefined,null,0,"");
      }
   console.log(arr,"qq")
-  return arr;
+  return arr; */
+  return arr.filter(function(el) {
+    console.log(el)
+      return el !== false, null, 0, "", undefined, NaN
+    })
 }
       
 
@@ -347,20 +381,28 @@ bouncer([7, "ate", "", false, 9]);
 
 //Where do I Belong___________________________
 // sort -> where value(, i ) [i,] return #
+/**Hint 1
+The first thing to do is sort the array from lower to bigger,
+ just to make the code easier. This is where sort comes in, 
+ it needs a callback function so you have to create it.
 
-function getIndexToIns(arr, num) {
-  for(num in arr){
-    if(num >= num[0]){
-      arr.push(num);
-      console.log(arr, num);
-      return num; 
-    }
-    console.log("w")
-  }
-  arr.push(num)
-    console.log(arr,"www")
+Hint 2
+Once the array is sorted, then just check for the first number 
+that is bigger and return the index.
+
+Hint 3
+If there is no index for that number then you will have to
+ deal with that case too. */
+
+  function getIndexToIns(arr, num) {
+    let a = arr.sort();
+    console.log(a);
+    let i = 0;
+  for(i in a){ 
     
-    return num;
+    console.log(num > a[i]);
+    //return num; 
+  }
   }
 
 getIndexToIns([40, 60], 50);
@@ -385,12 +427,29 @@ alert("Max value is: "+p.max()+"\nMin value is: "+ p.min()); */
 
 //Mutations-----------------------------
 //true(if string.contains(0, 1))
-
+/**Hint 1
+If everything is lowercase it will be easier to compare.
+Hint 2
+Our strings might be easier to work with if they were 
+arrays of characters.
+Hint 3
+A loop might help. Use indexOf() to check if the letter
+ of the second word is on the first. */
 function mutation(arr) {
-  let r = arr.split(" ")
-  console.log(arr, r)
-  return arr;
-}
+  let r = [...arr]
+  //r.split(" ");
+  let i = "";
+  let j = ""
+  for(i in arr){ console.log(arr[i])
+    for(j in arr){
+      if(arr.indexOf(i) == arr.indexOf(j))
+ console.log(arr[j], "w")
+ return true;
+  }} return false;
+ //console.log(r.split(" "))
+ 
+ }
+
 
 mutation(["hello", "hey"]);
 
@@ -398,3 +457,12 @@ mutation(["hello", "hey"]);
  * let text = "How are you doing today?";
    const myArray = text.split(" ");
  */
+
+
+
+//Chunky Monkey----------------------------------
+function chunkArrayInGroups(arr, size) {
+  return arr;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
