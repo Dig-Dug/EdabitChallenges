@@ -153,10 +153,19 @@ const found = str.match(regex); */
 console.log(str.substring(2));
 // expected output: "zilla" */
 
+//https://regex101.com/
+
 function confirmEnding(str, target) {
   str = target.substring("") ? true : false;
   return str;
 }
+function confirmEnding(str, target) {
+  let t = /[\s\S]{7}\z/;
+console.log(target = str.match(t)  ? true : false
+   )
+return target =  str.match(t) ? true : false
+}
+
 function confirmEnding(str, target) {
   let reg = /[a-z]{2,5}$/; 
   
@@ -462,7 +471,11 @@ mutation(["hello", "hey"]);
 
 //Chunky Monkey----------------------------------
 
-/**Our goal for this Algorithm is to split arr (first argument) into smaller chunks of arrays with the length provided by size (second argument). There are 4 green checks (objectives) our code needs to pass in order to complete this Algorithm:
+/**Our goal for this Algorithm is to split arr (first argument) 
+into smaller chunks of arrays with the length provided
+ by size (second argument). 
+ There are 4 green checks (objectives) our code needs 
+ to pass in order to complete this Algorithm:
 
 (['a', 'b', 'c', 'd'], 2) is expected to be [['a', 'b'], ['c', 'd']]
 ([0, 1, 2, 3, 4, 5], 3) is expected to be [[0, 1, 2], [3, 4, 5]]
@@ -484,15 +497,21 @@ this Algorithm is understanding how a for loop, size,
 Array.slice() and Array.push() all work together. */
 
 //push slice
-function chunkArrayInGroups(arr, size) {
-  //arr/ size => arr(size) arr(size)
-  let i = [];
-  i = arr.push()
-  for(i in arr){
-let o = arr.slice(i)
-console.log(i, o)
+function chunkArrayInGroups(arr, size)  { 
+  let i = [];let z = 0
+    //i = arr.push()
+    for( z in arr){
+  let o = arr.slice(size)
+  console.log(arr.slice(size))
+  if(o = size){
+    //console.log(o)
+   /*  arr =  i.push(o)
+    console.log(i, arr);
+    return i; */
   }
-  return arr;
-}
+  //console.log(i,arr, o)
+    }
+    return arr; 
+  }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
