@@ -292,9 +292,9 @@ booWho(null);
 /**Title Case a Sentence___________________________
 /**Hint 1
 You should start by splitting the string into an array of words.
-Split the sentence.
+Split the sentence. //sp
 Hint 2
-You should make the word lowercase before making the first letter uppercase.
+You should make the word lowercase//low before making the first letter uppercase.
 Use replace method on each word to capitalize the first letter of 
 each word.
 Hint 3
@@ -305,28 +305,21 @@ letter using charAt. For second argument write a function
  to return the capitalized letter as the replacement. */
 
  function titleCase(str) {
+  let low = str.toLowerCase();
+  let sp = low.split(" ");
+  //down map it "const uppercased = names.map(name => name.toUpperCase());" 
+  sp.forEach(re => console.log(re.charAt(0).toUpperCase())); 
 
 
-  //str.replace(charAt , up);
-  let o = str.split(" ");
-  o = str.toLowerCase();
-  /*  for(o in str){
-    console.log(str.charAt().toUpperCase())
-    return
-  }  */
-  let i = o.charAt(0).toUpperCase();
-  str.replace(o, i) 
-  //o.charo();
-  let newS = i;
-  //o.split(""); 
-  //newS.replace(i, str);
-  console.log(str);
-  console.log(o);
-  console.log(i, newS);
-    return str;
- }
- 
- titleCase("I'm a little tea pot");
+
+console.log(sp)
+  
+
+  return str;
+}
+
+titleCase("I'm a little tea pot");
+//titleCase("sHoRt AnD sToUt")
 
 
  //_________________________Slice and Splice___________________
@@ -458,6 +451,22 @@ function mutation(arr) {
  //console.log(r.split(" "))
  
  }
+ function mutation(arr) {
+  //.toLowerCase()
+  let low = arr.map(name => name.toLowerCase().split(" "));
+  let i = 0;
+  for(i in arr){
+    if(low.indexOf(0) === low.indexOf(1)){
+      console.log(low.indexOf(0) == low.indexOf(1));
+      return true; 
+    }else{
+      return false;
+    }
+    
+  }
+  //console.log(arr, low);
+  return arr;
+  }
 
 
 mutation(["hello", "hey"]);
