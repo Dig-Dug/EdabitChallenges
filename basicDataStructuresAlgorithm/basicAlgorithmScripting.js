@@ -155,16 +155,7 @@ console.log(str.substring(2));
 
 //https://regex101.com/
 
-function confirmEnding(str, target) {
-  str = target.substring("") ? true : false;
-  return str;
-}
-function confirmEnding(str, target) {
-  let t = /[\s\S]{7}\z/;
-console.log(target = str.match(t)  ? true : false
-   )
-return target =  str.match(t) ? true : false
-}
+
 
 function confirmEnding(str, target) {
   let reg = /[a-z]{2,5}$/; 
