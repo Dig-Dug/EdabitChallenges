@@ -498,20 +498,12 @@ Array.slice() and Array.push() all work together. */
 
 //push slice
 function chunkArrayInGroups(arr, size)  { 
-  let i = [];let z = 0
-    //i = arr.push()
-    for( z in arr){
-  let o = arr.slice(size)
-  console.log(arr.slice(size))
-  if(o = size){
-    //console.log(o)
-   /*  arr =  i.push(o)
-    console.log(i, arr);
-    return i; */
-  }
-  //console.log(i,arr, o)
-    }
-    return arr; 
+  let o = arr.splice(0, size);
+  let i = arr.splice(-0,size);
+  var two = [o,i];  
+  console.log(o,i)
+  console.log(two)
+      return two; 
   }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
