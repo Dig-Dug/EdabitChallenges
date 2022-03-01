@@ -77,6 +77,8 @@ const Window = function(tabs) {
 // When you join two windows into one window
 Window.prototype.join = function(otherWindow) {
   this.tabs = this.tabs.concat(otherWindow.tabs);
+  //{ tabs: [ 'Netflix', 'YouTube' ] }
+//{ tabs: [ 'GMail', 'Docs', 'freeCodeCamp', 'new tab' ] }
   return this;
 };
 
@@ -92,10 +94,12 @@ Window.prototype.tabClose = function(index) {
   // Only change code below this line
 
   const tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
-  const tabsAfterIndex = this.tabs.splice(index + 1); // Get the tabs after the tab
-
+  //[ 'Netflix', 'YouTube' ]
+[ 'GMail' ]
+const tabsAfterIndex = this.tabs.splice(1, index + 4); // Get the tabs after the tab
+//[ 'GMail', 'Work mail', 'Docs', 'freeCodeCamp' ]
   this.tabs = tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
-
+//[ 'Netflix', 'YouTube' ][ 'GMail', 'Docs', 'freeCodeCamp' ]
   // Only change code above this line
 
   return this;
@@ -112,7 +116,9 @@ const finalTabs = socialWindow
   .join(videoWindow.tabClose(2)) // Close third tab in video window, and join
   .join(workWindow.tabClose(1).tabOpen());
 console.log(finalTabs.tabs);
-
+/**
+ *['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']
+ */
   //Avoid Mutations and Side Effects Using Functional Programming___--------
   // The global variable
 let fixedValue = 4;
@@ -140,40 +146,42 @@ return fixedValueo;
   // Only change code above this line
 }
 
-/*  Refactor Global Variables Out of Functions öööööööööööööööööö*/
+/*  Refactor Global Variables Out of Functions -------------------------*/
 /**If you’re having trouble with changing bookList, 
 try using a copy of the array in your functions. */
 // The global variable
 const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
 
 // Change code below this line
-function add (bookName) {
-
-  bookList.push(bookName);
-  return bookList;
-  
+function add(bookList, o) {
+  let newL = [...bookList];
+    newL.push(o);
+    console.log(newL);
+    return newL;
   // Change code above this line
 }
 
 // Change code below this line
-function remove (bookName) {
-  const book_index = bookList.indexOf(bookName);
-  if (book_index >= 0) {
-
-    bookList.splice(book_index, 1);
-    return bookList;
+function remove(bookList, o) {
+  //console.log(bookName);
+  const book_index = bookList.indexOf(o); 
+  if (book_index > 0) { 
+ let z = [...bookList];
+    z.splice(book_index , book_index);
+   console.log(z);
+    return z; 
 
     // Change code above this line
     }
 }
 
-const newBookList = add(bookList, 'A Brief History of Time');
-const newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
-const newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
 
-console.log(bookList);
-console.log(newBookList);//0,1,2,3,miss
-console.log(newerBookList);//0,miss,1,2
+add(bookList, "A Brief History of Time");
+remove(bookList, "On The Electrodynamics of Moving Bodies");
+remove(add(bookList, "A Brief History of Time"));
+//["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae", "A Brief History of Time"]
+//["The Hound of the Baskervilles", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"]
+//["The Hound of the Baskervilles", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae", "A Brief History of Time"]
 
 //Use the map Method to Extract Data from an Array-----------------
 //params(currentElement, indexOfElement, array) 3

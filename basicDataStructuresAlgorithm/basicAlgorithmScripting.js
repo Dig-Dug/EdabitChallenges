@@ -507,3 +507,17 @@ function chunkArrayInGroups(arr, size)  {
   }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+
+var newArray = [];
+let i = 0;
+for( i in arr){
+
+}
+/**
+const animals = ['pigs', 'goats', 'sheep'];
+const count = animals.push('cows');
+console.log(count);  // expected output: 4
+console.log(animals);
+// expected output: Array ["pigs", "goats", "sheep", "cows"]
+*/
