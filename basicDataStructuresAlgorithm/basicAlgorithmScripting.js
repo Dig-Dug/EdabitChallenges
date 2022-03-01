@@ -159,6 +159,8 @@ console.log(str.substring(2));
 
 function confirmEnding(str, target) {
   let reg = /[a-z]{2,5}$/; 
+
+  console.log(reg.test(str));
   
   if(target = str.match(reg)){
    console.log(str.match(reg))
@@ -169,6 +171,13 @@ function confirmEnding(str, target) {
    return false
   }
   }
+/**
+ *GIVES SOME False and True
+ * target = /[a-z]{6,7}$/; 
+  console.log( target.test(str));
+  let z =  str = target.test(str)? true : false;
+ return z;  
+ */
 /**REGULAR EXPRESSIONS!!!!   const regex = /[a-z]{2,5}$/; 2 to 5
  * let last = /n$/;  
   let lost = last.test(target);
@@ -301,8 +310,13 @@ letter using charAt. For second argument write a function
   //down map it "const uppercased = names.map(name => name.toUpperCase());" 
   sp.forEach(re => console.log(re.charAt(0).toUpperCase())); 
 
-
-
+  //console.log(p.replace('dog', 'monkey'));
+//const array3 = array1.concat(array2);
+/**
+ * let low = str.toLowerCase()
+  let sp = str.split(" ");
+let u = str.replace(low.charAt(0), sp.map(n => n.toUpperCase()))
+ */
 console.log(sp)
   
 
