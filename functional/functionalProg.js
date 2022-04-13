@@ -185,6 +185,12 @@ remove(add(bookList, "A Brief History of Time"));
 
 //Use the map Method to Extract Data from an Array-----------------
 //params(currentElement, indexOfElement, array) 3
+/**
+ * When the callback is used, it is passed three arguments. 
+ * The first argument is the current element being processed.
+ * the second is the index of that element and the 
+ * third is the array upon which the map method was called.
+ */
 const users = [
     { name: 'John', age: 34 },
     { name: 'Amy', age: 20 },
@@ -309,17 +315,17 @@ const watchList = [
   ];
   
   // Only change code below this line
-  
-  let ratings = [...watchList];
-  const z = ratings.map(title => title.Title); 
-  let r = ratings.map(rating => rating.imdbRating);
-  let zr = [z , r];
-   
-  console.log(JSON.stringify(zr))
+  function show(){
+    // console.log(ratings)
+    const ratings = 
+    watchList.map(({ Title,imdbRating })=>({Title,imdbRating})); 
+        console.log(JSON.stringify(ratings)); 
+     return ratings;
+   }
+   show(watchList);
   // Only change code above this line
   
   console.log(JSON.stringify(ratings));
-
 
 
   //Implement map on a Prototype---------------------------------
