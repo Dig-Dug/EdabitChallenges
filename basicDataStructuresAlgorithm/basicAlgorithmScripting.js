@@ -154,23 +154,36 @@ console.log(str.substring(2));
 // expected output: "zilla" */
 
 //https://regex101.com/
-
-
+const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+const last = str.charAt(str.length - 1);
 
 function confirmEnding(str, target) {
-  let reg = /[a-z]{2,5}$/; 
+
+  let reg = /[a-z]{0,7}$/; 
 
   console.log(reg.test(str));
   
-  if(target = str.match(reg)){
-   console.log(str.match(reg))
-    console.log("wsk");
-     return true
-  }else{ 
-  console.log("www");
-   return false
+  if(str = target.match(reg)){
+
+     return true;
   }
+  return false
+
   }
+  /*
+  let uu = target.charAt(target.length -2);
+let ff = str.charAt(str.length -2);
+for(let i = 0; i < str.length; i++){
+if(uu == ff){
+  
+ console.log(uu );
+  return true}
+return false
+  };
+ 
+} */
 /**
  *GIVES SOME False and True
  * target = /[a-z]{6,7}$/; 
