@@ -315,17 +315,15 @@ const watchList = [
   ];
   
   // Only change code below this line
-  function show(){
-    // console.log(ratings)
-    const ratings = 
-    watchList.map(({ Title,imdbRating })=>({Title,imdbRating})); 
-        console.log(JSON.stringify(ratings)); 
-     return ratings;
-   }
-   show(watchList);
+  const ratings = watchList.map(item => ({
+    title: item["Title"],
+    rating: item["imdbRating"]
+  }));
+  
+  console.log(ratings)
   // Only change code above this line
   
-  console.log(JSON.stringify(ratings));
+
 
 
   //Implement map on a Prototype---------------------------------
