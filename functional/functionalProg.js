@@ -513,3 +513,89 @@ let r = [...watchList]
  }))});
  */
 console.log(filteredList);
+
+
+
+//Return Part of an Array Using the slice Method...................
+function sliceArray(anim, beginSlice, endSlice) {
+  // Only change code below this line
+
+let r = anim.slice(beginSlice, endSlice);
+console.log(r)
+return r
+  // Only change code above this line
+}
+
+const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
+
+
+//Remove Elements from an Array Using slice Instead of splice-------
+function nonMutatingSplice(cities) {
+  // Only change code below this line
+ 
+ 
+ let r = cities.slice(0,3);
+ console.log(r)
+  //return cities.splice(3);
+return r  //[ 'Chicago', 'Delhi', 'Islamabad' ]
+  // Only change code above this line
+} 
+
+const inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
+
+
+//Combine Two Arrays Using the concat Method------------------
+
+function nonMutatingConcat(original, attach) {
+  // Only change code below this line
+
+let r = original.concat(attach);
+console.log(r); //[ 1, 2, 3, 4, 5 ]
+return r;
+ // Only change code above this line
+}
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingConcat(first, second);
+
+
+//Add Elements to the End of an Array Using concat Instead of push-------
+function nonMutatingPush(original, newItem) {
+  // Only change code below this line
+  
+  let r = original.concat(newItem)
+  console.log(r); //[ 1, 2, 3, 4, 5 ]
+  return r;
+
+  // Only change code above this line
+}
+
+const first5 = [1, 2, 3];
+const second5 = [4, 5];
+nonMutatingPush(first, second);
+
+
+//Use the reduce Method to Analyze Data----------------------
+
+
+
+//Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
+
+
+const squareList = arr => {
+  // Only change code below this line
+  arr.filter(function(item) {
+    return (typeof item === "number")
+  });
+  let a = Math.sqrt(arr)
+    console.log(a)
+    
+    
+    return arr;
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);

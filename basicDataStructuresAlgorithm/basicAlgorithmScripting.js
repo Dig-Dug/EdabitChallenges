@@ -317,6 +317,10 @@ In replace method, give first argument as the position of the first
 letter using charAt. For second argument write a function
  to return the capitalized letter as the replacement. */
 
+/**let result = text.replace(/blue|house|car/gi, function (x) {
+  return x.toUpperCase();
+}); */
+
  function titleCase(str) {
   let low = str.toLowerCase();
   let sp = low.split(" ");
@@ -329,6 +333,15 @@ letter using charAt. For second argument write a function
  * let low = str.toLowerCase()
   let sp = str.split(" ");
 let u = str.replace(low.charAt(0), sp.map(n => n.toUpperCase()))
+ */
+
+/**
+ * const arr = str.split(" ");
+for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+}
+const str2 = arr.join(" ");
+console.log(str2);
  */
 console.log(sp)
   
@@ -371,7 +384,18 @@ console.log(r)
   }
   return r;
 }
+/**let r = arr2.slice() 
+let uu = arr1.slice();
+  let i= 0
+  
+  for(i in arr1){
+  let u =  uu.splice( n , i , r)
+    i++; 
+   r.push(i)
+console.log(u)
 
+ }
+  return uu; */
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
 
 
@@ -393,10 +417,20 @@ frankenSplice([1, 2, 3], [4, 5, 6], 1);
     })
 }
       
-
+//const result = words.filter(word => word.length > 6);
 
 
 bouncer([7, "ate", "", false, 9]);
+
+/**if( arr.includes(false, null, 0, "", undefined, NaN )){
+ return arr.filter(function(el) {
+    console.log(el)
+      return el !== false, null, 0, "", undefined, NaN
+    })}
+   
+    {return arr}
+}
+ */
 
 
 //Where do I Belong___________________________
@@ -416,13 +450,18 @@ If there is no index for that number then you will have to
 
   function getIndexToIns(arr, num) {
     let a = arr.sort();
-    console.log(a);
-    let i = 0;
-  for(i in a){ 
+    console.log(a)
+      let i = 0;
+      let count = 0;
+    for(i in a){ 
+     
+      console.log(num > a[i], count);
+   
+    }
     
-    console.log(num > a[i]);
+  
     //return num; 
-  }
+  
   }
 
 getIndexToIns([40, 60], 50);
@@ -485,7 +524,20 @@ function mutation(arr) {
   //console.log(arr, low);
   return arr;
   }
-
+  function mutation(arr) {
+    let cop = [...arr];
+    const o = cop.map(name => name.toLowerCase().split(''));
+    for(let i = 0; i < arr.length; i++){
+      console.log(o[i]);
+    
+      console.log(o.indexOf(0) == o.indexOf(1))
+      if(o.indexOf(0) == o.indexOf(1)){
+        return true;
+      } else if(o.indexOf(0) != o.indexOf(1)) {return false
+      }
+    }
+    
+    }
 
 mutation(["hello", "hey"]);
 
