@@ -524,6 +524,7 @@ function mutation(arr) {
   //console.log(arr, low);
   return arr;
   }
+  
   function mutation(arr) {
     let cop = [...arr];
     const o = cop.map(name => name.toLowerCase().split(''));
