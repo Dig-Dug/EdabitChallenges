@@ -729,11 +729,17 @@ let r = [...watchList];
  averageRating  = r.map(item => ({
    title: item["Title"],
   director: item["Director"],
-  rating: item["imdbRating"]
+  rating: parseInt(item["imdbRating"])
  }));
   averageRating = averageRating.filter(el => el.director == "Christopher Nolan");
  
  console.log(averageRating)
+
+/* averageRating.reduce(getSum, 0);
+ let getSum = (rating, num) => { 
+  console.log(rating + Math.round(num))
+  return rating + Math.round(num)}
+console.log(getSum); */
 
 
   // Only change code above this line
@@ -742,7 +748,30 @@ let r = [...watchList];
 
 console.log(getRating(watchList));
 
-/**
+/**PARSE
+ * ['1','2','3'].map(function(num) { return parseInt(num, 10); });
+ * myString = '129' 
+console.log(parseInt(myString)) // expected result: 129
+**PARSE
+var arr = ["1", "2", "3"];
+arr = arr.map(Number);
+console.log(arr); // [1, 2, 3]
+
+ * REDUCE
+ * const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+);
+
+ * AVERAGE:
+const average = (array) => array.reduce((a, b) => a + b) / array.length;
+console.log(average([1,2,3,4,5]));
+
+
 let filteredList;
 let r = [...watchList];
 
