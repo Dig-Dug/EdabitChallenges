@@ -827,3 +827,76 @@ function filtrate(el) {
 }
 
 console.log(arr.filter(filtrate)); */
+
+
+//Sort an Array Alphabetically using the sort Method--------------*****
+
+function alphabeticalOrder(arr) {
+  // Only change code below this line
+  return arr.sort(function(a,b){  //callback function
+    return a && b > 0 ? 1 : a < b ? -1:0;
+  })
+  // Only change code above this line
+}
+
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+                //['a', 'a', 'c', 'd', 'g', 'z']
+
+
+// a,b < 0 ? a,b  -1
+// a,b > 0 ? b,a   1
+// a,b = 0 ? a,b   0
+/**function ascendingOrder(arr) {
+  return arr.sort(function(a, b) {
+    return a - b;
+  });
+}
+
+ascendingOrder([1, 5, 2, 3, 4]); */
+
+
+
+//Return a Sorted Array Without Changing the Original Array*************
+//remember that slice and concat return a new array
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+  // Only change code below this line
+let i = [...arr];
+i.concat(arr)
+return i.sort(function(a,b){
+  return a - b;
+})
+  // Only change code above this line
+}
+
+console.log(nonMutatingSort(globalArray)); //2,3,5,6,9
+
+
+
+//Split a String into an Array Using the split Method******************
+function splitify(str) {
+  // Only change code below this line
+let o = str.split(/[- ,]/); 
+console.log(o) //[ 'Hello', 'World', 'I', 'am', 'code' ]
+// Only change code above this line
+}
+
+splitify("Hello World,I-am code"); 
+
+/**
+const otherString = "How9are7you2today"; 
+const byDigits = otherString.split(/\d/); //["How", "are", "you", "today"]
+ */
+
+
+//Combine an Array into a String Using the join Method-----------------------
+
+function sentensify(str) {
+  // Only change code below this line
+
+
+  // Only change code above this line
+}
+
+sentensify("May-the-force-be-with-you");
