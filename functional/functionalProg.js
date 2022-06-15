@@ -784,20 +784,46 @@ filteredList = filteredList.filter(el => el.rating > 8.0,
 */
 
 //Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
-
+/**
+ You will need to filter() the realNumberArray for 
+positive integers (decimals are not integers).
+Hint 2
+You will need to map() the values from your filter()
+ function to the variable squaredIntegers.
+Hint 3
+Remember the magic of chaining functions. */
 
 const squareList = arr => {
   // Only change code below this line
-  arr.filter(function(item) {
-    return (typeof item === "number")
-  });
-  let a = Math.sqrt(arr)
-    console.log(a)
-    
-    
-    return arr;
+  const io = arr.filter(i => i > 0);
+  let squaredIntegers = io.map(i => i * i);   
+  console.log(squaredIntegers); 
+  return squaredIntegers;
   // Only change code above this line
 };
 
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
 console.log(squaredIntegers);
+
+
+/**Math.sqrt...............
+ * function calcHypotenuse(a, b) {
+  return (Math.sqrt((a * a) + (b * b)));
+}
+
+console.log(calcHypotenuse(3, 4));
+// expected output: 5
+ const roots = numbers.map((num) => Math.sqrt(num));
+
+ parseInt(el, 10) === el)
+*/
+
+/**isInteger----------------
+ * 
+var arr = [2, 5, 5.5, 3, 6.8, 0 , -5];
+
+function filtrate(el) {
+  return (parseInt(el, 10) === el) && el > 0;
+}
+
+console.log(arr.filter(filtrate)); */
