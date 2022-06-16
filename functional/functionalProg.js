@@ -892,11 +892,55 @@ const byDigits = otherString.split(/\d/); //["How", "are", "you", "today"]
 
 //Combine an Array into a String Using the join Method-----------------------
 
+/**
+Array.prototype.join() 
+String.prototype.split() 
+Regular Expressions 
+**/
+
 function sentensify(str) {
   // Only change code below this line
-
+  let or = [];
+  or.push(str);
+  let u = or.join().split(/[-,.]/); 
+  let g = u.join(' ')
+  console.log(g)
+  return g;
 
   // Only change code above this line
 }
 
 sentensify("May-the-force-be-with-you");
+
+
+/**const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// expected output: "Fire,Air,Water"
+
+console.log(elements.join(''));
+// expected output: "FireAirWater"
+
+console.log(elements.join('-'));
+// expected output: "Fire-Air-Water"
+ 
+var str = 'How are you';
+var replaced = str.split(' ').join('_');
+
+*/
+
+
+//Apply Functional Programming to Convert Strings to URL Slugs***********
+
+// Only change code below this line
+function urlSlug(title) {
+  let u = [];
+  u.push(title.toLowerCase())
+  let r = u.join('-'); 
+  let o = r.split(' ').join('-'); 
+  //(/\s+/)
+  console.log(r, o);
+  return o;
+  }
+// Only change code above this line
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
