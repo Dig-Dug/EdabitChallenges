@@ -938,9 +938,24 @@ function urlSlug(title) {
   u.push(title.toLowerCase())
   let r = u.join('-'); 
   let o = r.split(' ').join('-'); 
-  //(/\s+/)
+  //let o = r.split(/\s+/g).join('-').trim(); 
+  //split(/\s+/) .split(/\s+/g, '');
   console.log(r, o);
   return o;
   }
 // Only change code above this line
 urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
+
+
+
+//Use the every Method to Check that Every Element in an Array Meets a Criteria
+
+function checkPositive(arr) {
+  // Only change code below this line
+  let f = (c) => c > 0;
+  console.log(arr.every(f)); //false
+  return arr.every(f); 
+ // Only change code above this line
+}
+
+checkPositive([1, 2, 3, -4, 5]);
