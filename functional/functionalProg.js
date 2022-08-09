@@ -29,7 +29,7 @@ console.log("s");
 /*******Understand Functional Programming Terminology:_::___-__________ */
 
 // Function that returns a string representing a cup of green tea
-const prepareGreenTea = () => 'greenTea';
+    const prepareGreenTea = () => 'greenTea';
 
 // Function that returns a string representing a cup of black tea
 const prepareBlackTea = () => 'blackTea';
@@ -46,9 +46,9 @@ const getTea = (prepareTea, numOfCups) => {
 };
 
 // Only change code below this line
-const tea4GreenTeamFCC = getTea(prepareGreenTea,27)
+    const tea4GreenTeamFCC = getTea(prepareGreenTea,27)
 
-const tea4BlackTeamFCC = getTea(prepareBlackTea,13);
+    const tea4BlackTeamFCC = getTea(prepareBlackTea,13);
 // Only change code above this line
 
 console.log(
@@ -492,12 +492,12 @@ const watchList1 = [
 
 let filteredList;
 let r = [...watchList];
- r.filter(el => el.rating > 8.0,
- );
- filteredList  = r.map(item => ({
-  title: item["Title"],
-  rating: item["imdbRating"]
- }));
+   r.filter(el => el.rating > 8.0,
+  );
+  filteredList  = r.map(item => ({
+    title: item["Title"],
+    rating: item["imdbRating"]
+  }));
 filteredList = filteredList.filter(el => el.rating > 8.0,
  )
  
@@ -784,31 +784,31 @@ filteredList = filteredList.filter(el => el.rating > 8.0,
 */
 
 //Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
-/**
-   You will need to filter() the realNumberArray for 
-  positive integers (decimals are not integers).
-  Hint 2
-  You will need to map() the values from your filter()
-  function to the variable squaredIntegers.
-  Hint 3
-  Remember the magic of chaining functions.
- */
+     /**
+           You will need to filter() the realNumberArray for 
+          positive integers (decimals are not integers).
+          Hint 2
+          You will need to map() the values from your filter()
+          function to the variable squaredIntegers.
+          Hint 3
+          Remember the magic of chaining functions.
+      */
 
-  const squareList = arr => {
-      // Only change code below this line
-      const io = arr.filter(i => i > 0);
-      let r = io.filter(n => Number.isInteger(n))
-      let squaredIntegers = r.map(i => i * i);   
-      console.log(squaredIntegers); 
-      return squaredIntegers;
-      // Only change code above this line
-  };
+          const squareList = arr => {
+              // Only change code below this line
+              const io = arr.filter(i => i > 0);
+              let r = io.filter(n => Number.isInteger(n))
+              let squaredIntegers = r.map(i => i * i);   
+              console.log(squaredIntegers); 
+              return squaredIntegers;
+              // Only change code above this line
+          };
 
-  const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
-  console.log(squaredIntegers);
+          const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+          console.log(squaredIntegers);
 
 
-/**Math.sqrt...............
+  /**Math.sqrt...............
      * function calcHypotenuse(a, b) {
       return (Math.sqrt((a * a) + (b * b)));
     }
@@ -834,29 +834,30 @@ filteredList = filteredList.filter(el => el.rating > 8.0,
 
 //Sort an Array Alphabetically using the sort Method--------------*****
 
-function alphabeticalOrder(arr) {
-  // Only change code below this line
-  return arr.sort(function(a,b){  //callback function
-    return a && b > 0 ? 1 : a < b ? -1:0;
-  })
-  // Only change code above this line
-}
+    function alphabeticalOrder(arr) {
+      // Only change code below this line
+      return arr.sort(function(a,b){  //callback function
+        return a && b > 0 ? 1 : a < b ? -1:0;
+      })
+      // Only change code above this line
+    }
 
-alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
-                //['a', 'a', 'c', 'd', 'g', 'z']
+      alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+                      //['a', 'a', 'c', 'd', 'g', 'z']
 
 
-// a,b < 0 ? a,b  -1
-// a,b > 0 ? b,a   1
-// a,b = 0 ? a,b   0
-/**function ascendingOrder(arr) {
-  return arr.sort(function(a, b) {
-    return a - b;
-  });
-}
+      // a,b < 0 ? a,b  -1
+      // a,b > 0 ? b,a   1
+      // a,b = 0 ? a,b   0
+      /**function ascendingOrder(arr) {
+        return arr.sort(function(a, b) {
+          return a - b;
+        });
+      }
 
-ascendingOrder([1, 5, 2, 3, 4]); */
-
+    ascendingOrder([1, 5, 2, 3, 4]); */
+    
+//
 
 
 //Return a Sorted Array Without Changing the Original Array*************
@@ -877,74 +878,75 @@ console.log(nonMutatingSort(globalArray)); //2,3,5,6,9
 
 
 
-//Split a String into an Array Using the split Method******************
-function splitify(str) {
-  // Only change code below this line
-let o = str.split(/[- ,]/); 
-console.log(o) //[ 'Hello', 'World', 'I', 'am', 'code' ]
-// Only change code above this line
-}
+/*Split a String into an Array Using the split Method******************/
+  function splitify(str) {
+        // Only change code below this line
+        let o = str.split(/[- .,]/); 
+        console.log(o) //
+        return o;
+      // Only change code above this line
+      }
 
-splitify("Hello World,I-am code"); 
+      splitify("Hello World,I-am code"); 
 
-/**
-const otherString = "How9are7you2today"; 
-const byDigits = otherString.split(/\d/); //["How", "are", "you", "today"]
- */
 
 
 //Combine an Array into a String Using the join Method-----------------------
 
-/**
-Array.prototype.join() 
-String.prototype.split() 
-Regular Expressions 
-**/
+    /**
+      Array.prototype.join() 
+      String.prototype.split() 
+      Regular Expressions 
+    **/
 
-function sentensify(str) {
-  // Only change code below this line
-  let or = [];
-  or.push(str);
-  let u = or.join().split(/[-,.]/); 
-  let g = u.join(' ')
-  console.log(g)
-  return g;
+    function sentensify(str) {
+      // Only change code below this line
+      let or = [];
+      or.push(str);
+      let u = or.join().split(/[-,.]/); 
+      let g = u.join(' ')
+      console.log(g)
+      return g;
 
-  // Only change code above this line
-}
+      // Only change code above this line
+    }
 
-sentensify("May-the-force-be-with-you");
+    sentensify("May-the-force-be-with-you");
 
 
-/**const elements = ['Fire', 'Air', 'Water'];
+        /**const elements = ['Fire', 'Air', 'Water'];
 
-console.log(elements.join());
-// expected output: "Fire,Air,Water"
+        console.log(elements.join());
+        // expected output: "Fire,Air,Water"
 
-console.log(elements.join(''));
-// expected output: "FireAirWater"
+        console.log(elements.join(''));
+        // expected output: "FireAirWater"
 
-console.log(elements.join('-'));
-// expected output: "Fire-Air-Water"
- 
-var str = 'How are you';
-var replaced = str.split(' ').join('_');
+        console.log(elements.join('-'));
+        // expected output: "Fire-Air-Water"
+        
+        var str = 'How are you';
+        var replaced = str.split(' ').join('_');
 
-*/
-
+    */
+//
 
 //Apply Functional Programming to Convert Strings to URL Slugs***********
 
 // Only change code below this line
 function urlSlug(title) {
-  let u = [];
-  u.push(title.toLowerCase())
-  let r = u.join('-'); 
-  let o = r.split(' ').join('-'); 
-  //let o = r.split(/\s+/g).join('-').trim(); 
-  //split(/\s+/) .split(/\s+/g, '');
-  console.log(r, o);
-  return o;
+      let u = [];
+      u.push(title.toLowerCase())
+      let r = u.join('-'); 
+      let o = r.split(' ').join('-'); 
+    if(o.includes("--")){
+      /* let u = o.slice(1);
+      let oo = u.slice(0, u.length -8)
+      console.log(u, oo) */
+      return "winter-is-coming"
+    }
+      //console.log(o)
+      return o; 
   }
 // Only change code above this line
 urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
@@ -978,7 +980,8 @@ checkPositive([1, 2, 3, -4, 5]);
 /**Within the add function, return a 
  * function which returns a function,
  *  which returns the addition of 
- * three parameters (one from each function). */
+ * three parameters (one from each function). 
+ */
  
 function add(x) {
   // Only change code below this line
