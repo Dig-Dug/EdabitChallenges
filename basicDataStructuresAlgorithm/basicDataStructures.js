@@ -56,10 +56,10 @@ arr.splice(1,4) //sum to the value of 10
 // Only change code above this line
 console.log(arr); //10
 
-/*********Add Items Using splice()______________ */
-const numbers = [10, 11, 12, 12, 15];
-const startIndex = 3; //second 12 is removed
-const amountToDelete = 1; // # of elements to remove
+//*********Add Items Using splice()______________ */
+    const numbers = [10, 11, 12, 12, 15];
+    const startIndex = 3; //second 12 is removed
+    const amountToDelete = 1; // # of elements to remove
 //
 numbers.splice(startIndex, amountToDelete, 13, 14); //left args(13,14)
 //inserted at same index

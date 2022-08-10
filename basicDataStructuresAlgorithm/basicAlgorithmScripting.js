@@ -366,7 +366,7 @@ For each item in the first array splice it into the
  copied array in the index given as argument.
 
 Hint 3
-Increment the index after performing the splice. */
+Increment the index after performing the splice.  */
  function frankenSplice(arr1, arr2, n) {
 
 /*   console.log(arr1,arr2,n)
