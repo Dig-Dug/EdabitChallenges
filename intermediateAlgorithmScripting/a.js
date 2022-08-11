@@ -41,7 +41,7 @@ a callback function.
 Hint 3
 The best way to go about the callback function is
  to check if the number from the new merged array
-  is not in both original arrays and return it. */
+  is not in both original arrays and  return it. */
  function diffArray(arr1, arr2){
   const newArr = [];
   return newArr;
