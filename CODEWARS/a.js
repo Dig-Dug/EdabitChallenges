@@ -110,8 +110,6 @@ function invert(array){
 
 
 
-
-
 /**Sentence Smash....--------------------------------------------
     Write a function that takes an array of words and smashes
     them together into a sentence and returns the sentence. 
@@ -152,6 +150,131 @@ class Kata {
     return(length * width * height)
   }
 }
+
+
+/**Area or Perimeter-------------------------------------------
+  * You are given the length and width of a 4-sided polygon.
+  The polygon can either be a rectangle or a square.
+  If it is a square, return its area. If it is a rectangle, 
+  return its perimeter.
+
+  Example(Input1, Input2 --> Output):
+
+  6, 10 --> 32
+  3, 3 --> 9
+  Note: for the purposes of this kata you will assume 
+  that it is a square if its length and width are equal,
+  otherwise it is a rectangle. 
+ */
+const areaOrPerimeter = function(l , w) {
+    let r = 0;
+    if(l !== w){
+      r = (l + w)*2 ; //perimeter
+      console.log(r, "<---")
+    }
+    return l == w ? l * w : r;
+};
+
+/**Convert a Number to a String!---------------------------
+ 
+   * We need a function that can transform a number (integer) 
+   * into a string.
+   What ways of achieving this do you know?
+    Examples (input --> output):
+    123  --> "123"
+    999  --> "999"
+    -100 --> "-100"
+    * 
+*/
+
+function numberToString(num) {
+  return num.toString();
+}
+
+/**Opposites Attract.........................................
+   * 
+   * Timmy & Sarah think they are in love,
+   *  but around where they live, they will only know once 
+   * they pick a flower each. If one of the flowers has an 
+   * even number of petals and the other has an odd number of petals
+   *  it means they are in love.
+    Write a function that will take the number of petals of each flower
+    and return true if they are in love and false if they aren't.
+  * 
+*/
+
+function lovefunc(flower1, flower2){
+  // moment of truth
+}
+
+
+/**Transportation on vacation..............................
+     * Every day you rent the car costs $40.
+     *  If you rent the car for 7 or more days,
+     *  you get $50 off your total. Alternatively,
+     *  if you rent the car for 3 or more days, you 
+     * get $20 off your total.
+       Write a code that gives out the total 
+      amount for different days(d).
+
+*/
+
+
+function rentalCarCost(d) {
+  // Your solution here
+}
+
+/**Sum without highest and lowest number.....................................
+   * Sum all the numbers of a given array ( cq. list ), 
+   * except the highest and the lowest element 
+   * ( by value, not by index! ).
+   The highest or lowest element respectively
+    is a single element at each edge, even if
+     there are more than one with the same value.
+    Mind the input validation.
+
+  Example
+  { 6, 2, 1, 8, 10 } => 16
+  { 1, 1, 11, 2, 3 } => 6 
+  * 
+  * 
+ * */
+
+
+//Grasshopper - Personalized Message..................................
+function greet (name, owner) {
+
+    return name == owner ? 'Hello boss': 'Hello guest';
+}
+
+
+//Calculate average-----------------------------------------------
+function find_average(array) {
+  if(array != NaN ){
+  let lon = array.length;
+ let sum = array.reduce((a, b) => a + b, 0);
+  
+  //console.log(lon,"opopo");
+  console.log(sum/lon)
+  return sum/lon;
+  }else {
+    return 0;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
