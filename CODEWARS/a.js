@@ -264,6 +264,41 @@ function find_average(array) {
 
 
 
+//Beginner - Reduce but Grow-----------------------------------
+/**
+   *Given a non-empty array of integers, return the result 
+  of multiplying the values together in order. Example:
+
+  [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+ */
+
+function grow(x){
+  return x.reduce((a, b)=> a*b, 1)
+}
+
+
+
+
+//Square Every Digit--------------------------------------
+function squareDigits(num){
+    let r = num.toString().split("");
+    var rr = r.map(Number);
+
+    let nn = rr.filter(numbersOnly);
+    
+    return nn;
+  //return Math.pow(num, 2);
+}
+function numbersOnly(value) {
+          // it will show all the values.
+
+          if (typeof (value) === 'number') {
+            let r = Math.pow(value,2)
+            console.log (r);  
+            return r;
+          }
+}
 
 
 
