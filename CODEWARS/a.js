@@ -301,7 +301,52 @@ function numbersOnly(value) {
 }
 
 
+//SUm of Positive-----------------------------------------
+function positiveSum(arr) {
+  let z = arr.filter(a => a > -1) //only positive values
+  let r = z.reduce((a, b) => a + b, 0 );
+   console.log(z,"wwww")
+  return r //15
+}
 
+//TEST assert.strictEqual(positiveSum([1,2,3,4,5]),15);
+
+
+
+//String ends with?_______________------------------------
+/**Complete the solution so that it returns true if the
+   *  first argument(string) passed in ends with the
+   *  2nd argument (also a string).
+
+  Examples:
+
+  solution('abc', 'bc') // returns true
+  solution('abc', 'd') // returns false
+ */
+
+function solution(str, ending){
+    console.log(str.endsWith(ending));
+      return str.endsWith(ending)
+}
+
+
+/**Sum of two lowest positive integers--------------------
+  Create a function that returns the sum of the two lowest positive 
+  numbers given an array of minimum 4 positive integers. 
+  No floats or non-positive integers will be passed.
+  For example, when an array is passed like [19, 5, 42, 2, 77], 
+  the output should be 7.
+  [10, 343445353, 3453445, 3453545353453] should return 3453455.
+*/
+function sumTwoSmallestNumbers(numbers) { 
+  let aa = Math.min.apply(null,numbers)
+  let min1 = numbers.filter(a => a != aa && a >= 0 &&
+  a % 1 == 0);
+  let bb = Math.min.apply(null,min1)
+ // console.log(aa, min1, bb)
+  return aa + bb;
+  
+}
 
 
 
