@@ -344,9 +344,46 @@ function sumTwoSmallestNumbers(numbers) {
   a % 1 == 0);
   let bb = Math.min.apply(null,min1)
  // console.log(aa, min1, bb)
+ /** numbers.sort((a,b) => a - b);
+     return numbers[0] + numbers[1]; */
   return aa + bb;
-  
+
 }
+
+
+function greet(name){
+  console.log(name)
+  return "Hello, " + name + " how are you doing today?"
+}
+function stringToArray(string){
+  let r = string.split(" ")
+  return r
+}
+
+//Vowel Counter-----------------------------------------------------
+function getCount(str) {
+  let vowels = ['a','e','i','o','u'];
+ let count = []
+   for(let i = 0; i < str.length; i++){
+    let r = str[i];
+     if (count[r]){
+       
+       count[r] += 1
+       
+       console.log(count)
+       
+     }else{count[r] = 1}
+     }return count
+}
+
+
+
+
+
+
+
+
+
 
 
 
