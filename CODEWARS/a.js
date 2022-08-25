@@ -376,7 +376,67 @@ function getCount(str) {
      }return count
 }
 
+//Calculate BMI--------------------------------------------------
+function bmi(weight, height) {
+    let bmi = Math.round(weight/(height * height));
+    
+  console.log(bmi, weight,height)
+  /* return bmi <= 18.5? "Underweight": 25.0 ? "Normal": 
+    30.0? "Overweight" : bmi > 30 ? "Obese": "";*/
+    switch(bmi){
+        case(bmi <= 18.5):return "Underweight";
+          case(bmi <= 25.5):return "Normal";
+          case(bmi <= 30):return "Overweight";
+          case(bmi > 30):return "Obese";
+    }
+}
 
+//Sum mixed Array------------------------------------
+function sumMix(x){
+  //pors(x)
+    //let f = x.filter(a => a != "Number")
+    let o;
+     let f = [];
+    for(n in x){
+      let r = x.reduce((a,b)=> a + b, 0)
+      
+      //console.log(r)
+      f = parseInt(x[n])
+     
+    console.log(f)
+      
+    }
+    //console.log(f)
+    return f
+    //console.log(x)
+}
+  
+/*
+  function pors(x, base) {
+    const parsed = parseInt(x, base);
+    for(n in x){
+    if (isNaN(parsed)) { return 0; }
+    console.log(parsed + n)
+    return parsed;
+  }}
+*/
+
+//Third angle of triangle_---------------------------------------
+function otherAngle(a, b) {
+  let degree = 180; //degree
+  let sum = a + b; // sum of two known angles
+  return degree - sum ; //find third angle
+}
+
+//const otherAngle = (a,b) => 180 - a - b
+
+//Isograms---------------------------------------------------
+function isIsogram(str){
+
+  let s = str.split("");
+  let f = s.filter((a, b) => s.indexOf(a) != a); //werks!!!
+  console.log(f)
+}
 
 
 
