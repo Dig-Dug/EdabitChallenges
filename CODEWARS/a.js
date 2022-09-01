@@ -438,6 +438,18 @@ function isIsogram(str){
   console.log(f)
 }
 
+//*******************
+let multiply = (a,b) =>{
+  return a * b;
+}
+//+++++++++++++++++++++
+//L1:Set Alarm-----------------------------------
+function setAlarm(e, v){
+  
+  console.log(e,v)
+  return e && v == true? false : e  == false && v == true ?
+    false : e == true && v == false ? true : false;
+  }
 
 
 
