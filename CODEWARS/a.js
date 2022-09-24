@@ -445,12 +445,31 @@ let multiply = (a,b) =>{
 //+++++++++++++++++++++
 //L1:Set Alarm-----------------------------------
 function setAlarm(e, v){
-  
   console.log(e,v)
   return e && v == true? false : e  == false && v == true ?
-    false : e == true && v == false ? true : false;
-  }
+  false : e == true && v == false ? true : false;
+}
+//WOW!!!!
+const setAlarm = (employed, vacation) => employed && !vacation;
+//Welcome!:________________________________________
 
+function hoopCount (n) {
+  console.log(n => 10 ? "Great, now move on to tricks":"Keep at it until you get it" )
+    return n >= 10 ? "Great, now move on to tricks":"Keep at it until you get it"
+}
+
+//Get the Middle Character--------------------------------
+function getMiddle(s)
+{
+  let mid = [...s];
+  let l = 0;
+  
+ for (let i = s.length - 1; i >= 0; i--) {
+    let r = s[i];
+    let ll = s[l++]
+   console.log(r, ll);
+ }  
+}
 
 
 
