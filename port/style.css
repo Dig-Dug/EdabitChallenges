@@ -1,0 +1,40 @@
+h1 {
+    color: blueviolet
+}
+
+body {
+    /*  background-image: url('26021401.jpg'); */
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+
+.blk {
+    border-top-right-radius: 50px;
+    height: 1250px;
+    position: absolute;
+    width: 50%;
+    z-index: 1;
+    background: #E6A445
+}
+
+.blk1 {bottom: -238px;
+   height: 1000px;
+    position: relative;
+    left: 1200px;
+}
+.blk2 {bottom: 244px;
+   height: 245px;
+    position: relative;
+    left: 1200px;
+    background: black;
+}
+.blk3 {
+    bottom: 1003px;
+   height: 245px;
+    position: relative;
+    left: 1200px;
+    background: black;
+}
