@@ -2,9 +2,10 @@ h1 {
     color: blueviolet
 }
 
-body {
+    html,body {
     /*  background-image: url('26021401.jpg'); */
-
+    margin:0;
+    padding:0;
     overflow-y: hidden;
     overflow-x: hidden;
 }
@@ -26,14 +27,16 @@ body {
     left: 1200px;
 }
 .blk2 {bottom: 244px;
-   height: 245px;
+   height: 235px;   
+    z-index: 1;
+   width: 100%;
     position: relative;
-    left: 1200px;
+    
     background: black;
 }
 .blk3 {
-    bottom: 1003px;
-   height: 245px;
+    bottom: 1008px;
+    height: 297px;
     position: relative;
     left: 1200px;
     background: black;
