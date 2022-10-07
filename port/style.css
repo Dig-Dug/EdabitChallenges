@@ -1,8 +1,37 @@
-h1 {
-    color: blueviolet
+@font-face {
+    font-family: 'Pieces';
+    src: url(FontsFree-Net-Maison-Neue-Bold.ttf);
+  }
+
+@font-face {
+    font-family: 'kai';
+    src: url(KairosPro-CondensedBold.otf);
+  }
+
+
+.name{
+    position: absolute;
+    font-family: 'kai';
+    z-index: 2; top: 999;     top: 725px;
+    font-size: 136px;
+    left: 34px;
+}
+.web{
+    position: absolute;
+    font-family: 'kai';
+    color: rgb(255, 255, 255);
+    font-size: 96px;
+    left: 34px;bottom: 96px
+}
+.web:nth-child(2) {
+   color: #B900AC;
+   left: 248px;
+}.web:nth-child(3) {
+  
+   left: 318px;
 }
 
-    html,body {
+html,body {
     /*  background-image: url('26021401.jpg'); */
     margin:0;
     padding:0;
@@ -10,10 +39,34 @@ h1 {
     overflow-x: hidden;
 }
 
-
+a{ 
+    position: relative;
+    top: 167px;
+    left: 173px;text-decoration: none;
+    font-family: 'pieces';
+    font-size: 79px; z-index: 2; color: aliceblue;
+}
+a:hover{
+    border-left: 20px  white;
+    background-color: #0043B9;    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+a:hover::after{
+    color: #805111;
+}
+.triangle{
+    width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  
+  border-right:10px solid blue; 
+}
 
 .blk {
     border-top-right-radius: 50px;
+
+        top: 0px;
     height: 1250px;
     position: absolute;
     width: 50%;
@@ -22,7 +75,7 @@ h1 {
 }
 
 .blk1 {bottom: -238px;
-   height: 1000px;
+   height: 1000px;top: 205px;
     position: relative;
     left: 1200px;
 }
@@ -35,9 +88,19 @@ h1 {
     background: black;
 }
 .blk3 {
-    bottom: 1008px;
+    bottom: 1086px;
     height: 297px;
     position: relative;
     left: 1200px;
     background: black;
+}
+
+.links{
+position: absolute;
+        display: grid;
+        grid-template-columns: ;
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+  
 }
