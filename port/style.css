@@ -116,7 +116,7 @@ position: absolute;
 
 
 /*----------------------------------------------------------*/
-.contkt {left: 1344px;
+.contkt {left: 1290px;
     position: absolute;
     display: grid;
     right: -555px;
@@ -130,26 +130,27 @@ position: absolute;
 .Frm {font-family: 'Source Code Pro';
     position: relative;
     height: 40px;
-    width: 350px;
+    width: 221px;
     right: 6px;
 }
 .Frm1 {font-family: 'Source Code Pro';
     position: relative;
-    height: 120px;
-    width: 350px;
+    
     right: 6px;
     overflow-x: hidden;
 }
 input:hover {
 	font-family: 'Source Code Pro';
-	background: #6163a0;
+	background: #ce8a2d;
 	color: #e2dedb;
 }
 
-textarea {
-	width: 470px;
+textarea {left: 259px;
+    bottom: 27px;
+	width: 221px;
+    height: 15px;
 	max-width: 470px;
-	height: 110px;
+	
 	max-height: 110px;
 	padding: 15px;
 	font-family: 'Source Code Pro';
@@ -166,6 +167,24 @@ textarea {
 }
 
 textarea:hover {
-	background: #6163a0;
+	background: #0f5026;
 	color: #e2dedb;
+}
+#email{
+    position: relative;
+    left: 13px;
+    top: 19px;
+}
+#message{
+    position: relative;
+    left: 248px;
+    bottom: 46px;
+}
+#submit{
+    position: relative;
+    left: 260px;
+    bottom: 13px;
+}
+#submit:hover{
+    background: #ce8a2d;
 }
