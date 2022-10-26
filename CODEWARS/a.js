@@ -471,7 +471,19 @@ function getMiddle(s)
  }  
 }
 
+//Sum of the first nth term of Series--------------------------
 
+function SeriesSum(n)
+{
+ 
+  let nu = n.toFixed(2);  //Math.round((num + Number.EPSILON) * 100) / 100 
+  //amount % 1 === 0 ? amount : amount.toFixed(2);
+   
+  let s = nu.toString();
+  console.log(s,  nu)
+  return s = 0 ? '0.00' : s;
+}
+//-------------------------
 
 
 
