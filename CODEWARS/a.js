@@ -485,8 +485,36 @@ function SeriesSum(n)
 }
 //-------------------------
 
-
-
+//Remove exclamation marks-----------------------------
+function removeExclamationMarks(s) {
+  let r = s.split('');
+  let o = "!"
+  let t = r.filter(function(a){
+    return a !== "!";
+  });
+  //console.log(t)
+  let j = t.join('')
+  console.log(j)
+  return j;
+}
+/**
+ function removeExclamationMarks(s) {
+  return s.replace(/!/gi, '');
+}
+ */
+//////////////////////////////////////////////////
+//Total amount of points
+function points(games) {
+  let r = 1; 
+   for(let i of games){
+      r += i;
+     i+= 1
+   console.log(i)
+   }
+    return  i
+  
+}
+/////////////////////////////
 
 
 
