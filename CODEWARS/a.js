@@ -515,6 +515,31 @@ function points(games) {
   
 }
 /////////////////////////////
+//list filtering
+function filter_list(l) {
+  
+  let r = l.filter(Number.isInteger)
+  console.log(r)
+  return r;
+  }
+//returns only numbers
+
+//Count the divisors of a number--------------------
+//Count the number of divisors of a positive integer n.
+
+function getDivisorsCnt(n){
+  var divisors = 0;
+    mod = n;
+    while (mod > 0){
+      if(n % mod === 0){
+        divisors++;
+      }
+      mod--;
+    }
+    return divisors;
+
+}
+//----------------------------------------
 
 
 
