@@ -560,6 +560,53 @@ function sortByLength (array){
   }
 
 
+  //Highest and Lowest----------------------
+  function highAndLow(numbers){
+    let copy = numbers.split(' ');
+    let max = Math.max(...copy)
+    let min = Math.min(...copy)
+    let newNumbers = [];
+    newNumbers.push(max, min); 
+    let highLow = newNumbers.join(' ');
+    return  highLow;
+  }
+  //(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4") =>  "42 -9");
+/**
+ * function highAndLow(numbers){
+  numbers = numbers.split(' ').map(Number);
+  return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+}
+ */
+
+//The highest profit wins!
+function minMax(arr){
+  let nArr = [];
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
+  nArr.push(min,max)
+  console.log(nArr)
+  return  nArr // fix me!
+}
+/**
+ * function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)];
+}
+ */
+
+
+/**
+Player starts at a given position & moves twice the value of the dice roll.
+Calculate the final position.-----------------------------------------**/
+function move (position, roll) {
+  console.log(position, roll)
+  return position + roll*2
+}
+///////////////////////////////////////////////////////////
+
+
+
+
+
 
 
 
