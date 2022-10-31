@@ -1,13 +1,13 @@
 /**Reversed Strings------------------------------------- */
 
-function solution(str){
-    let z = str.split("");
-    let rr = z.reverse().join("");
-      console.log(rr);
-      return rr
+function solution(str) {
+  let z = str.split("");
+  let rr = z.reverse().join("");
+  console.log(rr);
+  return rr;
 }
 
-  solution('world') //'dlrow'
+solution("world"); //'dlrow'
 
 /**Are You Playing Banjo?:_-------------------------------
          * Create a function which answers the question
@@ -23,19 +23,16 @@ function solution(str){
         Names given are always valid strings.
 */
 
-
 function areYouPlayingBanjo(name) {
-        // Implement me
-        if(name.startsWith("r")){
-          return name + " plays banjo";
-        }else if(name.startsWith("R")){
-        return name + " plays banjo";  
-        }
-        
-        return name + " does not play banjo";
+  // Implement me
+  if (name.startsWith("r")) {
+    return name + " plays banjo";
+  } else if (name.startsWith("R")) {
+    return name + " plays banjo";
+  }
+
+  return name + " does not play banjo";
 }
-
-
 
 /**Can you find the needle in the haystack?----------------
          * 
@@ -55,13 +52,12 @@ function areYouPlayingBanjo(name) {
 */
 
 function findNeedle(haystack) {
-    for (n in haystack) {
-        console.log(n)
-        if (haystack[n] == 'needle') {
-          return "found the needle at position " + n;
-        }
-        }
-
+  for (n in haystack) {
+    console.log(n);
+    if (haystack[n] == "needle") {
+      return "found the needle at position " + n;
+    }
+  }
 }
 
 /**Find Maximum and Minimum Values of a List-----------------
@@ -81,15 +77,15 @@ function findNeedle(haystack) {
     	* 
 */
 
-var min = function(list){
-    let r = Math.min(...list);
-    return r
-}
-  
-var max = function(list){
-    let rr = Math.max(...list)
-    return rr;
-}
+var min = function (list) {
+  let r = Math.min(...list);
+  return r;
+};
+
+var max = function (list) {
+  let rr = Math.max(...list);
+  return rr;
+};
 
 /**Invert values ----------------------------------------------
      * Given a set of numbers,
@@ -104,11 +100,7 @@ var max = function(list){
     Do not mutate the input array/list.
 */
 
-function invert(array){
-    
-}
-
-
+function invert(array) {}
 
 /**Sentence Smash....--------------------------------------------
     Write a function that takes an array of words and smashes
@@ -123,34 +115,32 @@ function invert(array){
   'hello world this is great' 
 */
 
-function smash (words) {
-  let rr = 0
-  
-  let u = ""
-  for(let r =0; r < words.length; r+= 1){
-    u = words[r]
-   r++
-   console.log(u)
-   //return u
-  }
-   return u
-};
+function smash(words) {
+  let rr = 0;
 
+  let u = "";
+  for (let r = 0; r < words.length; r += 1) {
+    u = words[r];
+    r++;
+    console.log(u);
+    //return u
+  }
+  return u;
+}
 
 /**Volume of a Cuboid-------------.....--------------------------
- *  Bob needs a fast way to calculate the volume of a 
+ *  Bob needs a fast way to calculate the volume of a
  *  cuboid with three values: the length, width and height of the
  *  cuboid. Write a function to help Bob with this calculation.
-*/
+ */
 
 class Kata {
   static getVolumeOfCuboid(length, width, height) {
     // your code here
-    console.log(length,width,height)
-    return(length * width * height)
+    console.log(length, width, height);
+    return length * width * height;
   }
 }
-
 
 /**Area or Perimeter-------------------------------------------
   * You are given the length and width of a 4-sided polygon.
@@ -166,13 +156,13 @@ class Kata {
   that it is a square if its length and width are equal,
   otherwise it is a rectangle. 
  */
-const areaOrPerimeter = function(l , w) {
-    let r = 0;
-    if(l !== w){
-      r = (l + w)*2 ; //perimeter
-      console.log(r, "<---")
-    }
-    return l == w ? l * w : r;
+const areaOrPerimeter = function (l, w) {
+  let r = 0;
+  if (l !== w) {
+    r = (l + w) * 2; //perimeter
+    console.log(r, "<---");
+  }
+  return l == w ? l * w : r;
 };
 
 /**Convert a Number to a String!---------------------------
@@ -203,10 +193,9 @@ function numberToString(num) {
   * 
 */
 
-function lovefunc(flower1, flower2){
+function lovefunc(flower1, flower2) {
   // moment of truth
 }
-
 
 /**Transportation on vacation..............................
      * Every day you rent the car costs $40.
@@ -218,7 +207,6 @@ function lovefunc(flower1, flower2){
       amount for different days(d).
 
 */
-
 
 function rentalCarCost(d) {
   // Your solution here
@@ -240,29 +228,24 @@ function rentalCarCost(d) {
   * 
  * */
 
-
 //Grasshopper - Personalized Message..................................
-function greet (name, owner) {
-
-    return name == owner ? 'Hello boss': 'Hello guest';
+function greet(name, owner) {
+  return name == owner ? "Hello boss" : "Hello guest";
 }
-
 
 //Calculate average-----------------------------------------------
 function find_average(array) {
-  if(array != NaN ){
-  let lon = array.length;
- let sum = array.reduce((a, b) => a + b, 0);
-  
-  //console.log(lon,"opopo");
-  console.log(sum/lon)
-  return sum/lon;
-  }else {
-    return 0;}
+  if (array != NaN) {
+    let lon = array.length;
+    let sum = array.reduce((a, b) => a + b, 0);
 
+    //console.log(lon,"opopo");
+    console.log(sum / lon);
+    return sum / lon;
+  } else {
+    return 0;
+  }
 }
-
-
 
 //Beginner - Reduce but Grow-----------------------------------
 /**
@@ -273,45 +256,39 @@ function find_average(array) {
 
  */
 
-function grow(x){
-  return x.reduce((a, b)=> a*b, 1)
+function grow(x) {
+  return x.reduce((a, b) => a * b, 1);
 }
 
-
-
-
 //Square Every Digit--------------------------------------
-function squareDigits(num){
-    let r = num.toString().split("");
-    var rr = r.map(Number);
+function squareDigits(num) {
+  let r = num.toString().split("");
+  var rr = r.map(Number);
 
-    let nn = rr.filter(numbersOnly);
-    
-    return nn;
+  let nn = rr.filter(numbersOnly);
+
+  return nn;
   //return Math.pow(num, 2);
 }
 function numbersOnly(value) {
-          // it will show all the values.
+  // it will show all the values.
 
-          if (typeof (value) === 'number') {
-            let r = Math.pow(value,2)
-            console.log (r);  
-            return r;
-          }
+  if (typeof value === "number") {
+    let r = Math.pow(value, 2);
+    console.log(r);
+    return r;
+  }
 }
-
 
 //SUm of Positive-----------------------------------------
 function positiveSum(arr) {
-  let z = arr.filter(a => a > -1) //only positive values
-  let r = z.reduce((a, b) => a + b, 0 );
-   console.log(z,"wwww")
-  return r //15
+  let z = arr.filter((a) => a > -1); //only positive values
+  let r = z.reduce((a, b) => a + b, 0);
+  console.log(z, "wwww");
+  return r; //15
 }
 
 //TEST assert.strictEqual(positiveSum([1,2,3,4,5]),15);
-
-
 
 //String ends with?_______________------------------------
 /**Complete the solution so that it returns true if the
@@ -324,11 +301,10 @@ function positiveSum(arr) {
   solution('abc', 'd') // returns false
  */
 
-function solution(str, ending){
-    console.log(str.endsWith(ending));
-      return str.endsWith(ending)
+function solution(str, ending) {
+  console.log(str.endsWith(ending));
+  return str.endsWith(ending);
 }
-
 
 /**Sum of two lowest positive integers--------------------
   Create a function that returns the sum of the two lowest positive 
@@ -338,79 +314,80 @@ function solution(str, ending){
   the output should be 7.
   [10, 343445353, 3453445, 3453545353453] should return 3453455.
 */
-function sumTwoSmallestNumbers(numbers) { 
-  let aa = Math.min.apply(null,numbers)
-  let min1 = numbers.filter(a => a != aa && a >= 0 &&
-  a % 1 == 0);
-  let bb = Math.min.apply(null,min1)
- // console.log(aa, min1, bb)
- /** numbers.sort((a,b) => a - b);
+function sumTwoSmallestNumbers(numbers) {
+  let aa = Math.min.apply(null, numbers);
+  let min1 = numbers.filter((a) => a != aa && a >= 0 && a % 1 == 0);
+  let bb = Math.min.apply(null, min1);
+  // console.log(aa, min1, bb)
+  /** numbers.sort((a,b) => a - b);
      return numbers[0] + numbers[1]; */
   return aa + bb;
-
 }
 
-
-function greet(name){
-  console.log(name)
-  return "Hello, " + name + " how are you doing today?"
+function greet(name) {
+  console.log(name);
+  return "Hello, " + name + " how are you doing today?";
 }
-function stringToArray(string){
-  let r = string.split(" ")
-  return r
+function stringToArray(string) {
+  let r = string.split(" ");
+  return r;
 }
 
 //Vowel Counter-----------------------------------------------------
 function getCount(str) {
-  let vowels = ['a','e','i','o','u'];
- let count = []
-   for(let i = 0; i < str.length; i++){
+  let vowels = ["a", "e", "i", "o", "u"];
+  let count = [];
+  for (let i = 0; i < str.length; i++) {
     let r = str[i];
-     if (count[r]){
-       
-       count[r] += 1
-       
-       console.log(count)
-       
-     }else{count[r] = 1}
-     }return count
+    if (count[r]) {
+      count[r] += 1;
+
+      console.log(count);
+    } else {
+      count[r] = 1;
+    }
+  }
+  return count;
 }
 
 //Calculate BMI--------------------------------------------------
 function bmi(weight, height) {
-    let bmi = Math.round(weight/(height * height));
-    
-  console.log(bmi, weight,height)
+  let bmi = Math.round(weight / (height * height));
+
+  console.log(bmi, weight, height);
   /* return bmi <= 18.5? "Underweight": 25.0 ? "Normal": 
     30.0? "Overweight" : bmi > 30 ? "Obese": "";*/
-    switch(bmi){
-        case(bmi <= 18.5):return "Underweight";
-          case(bmi <= 25.5):return "Normal";
-          case(bmi <= 30):return "Overweight";
-          case(bmi > 30):return "Obese";
-    }
+  switch (bmi) {
+    case bmi <= 18.5:
+      return "Underweight";
+    case bmi <= 25.5:
+      return "Normal";
+    case bmi <= 30:
+      return "Overweight";
+    case bmi > 30:
+      return "Obese";
+  }
 }
 
 //Sum mixed Array------------------------------------
-function sumMix(x){
+function sumMix(x) {
   //pors(x)
-    //let f = x.filter(a => a != "Number")
-    let o;
-     let f = [];
-    for(n in x){
-      let r = x.reduce((a,b)=> a + b, 0)
-      
-      //console.log(r)
-      f = parseInt(x[n])
-     
-    console.log(f)
-      
-    }
-    //console.log(f)
-    return f
-    //console.log(x)
+  //let f = x.filter(a => a != "Number")
+  let o;
+  let f = [];
+  for (n in x) {
+    let r = x.reduce((a, b) => a + b, 0);
+
+    //console.log(r)
+    f = parseInt(x[n]);
+
+    console.log(f);
+  }
+  //console.log(f)
+  return f;
+  //console.log(x)
 }
-  
+
 /*
   function pors(x, base) {
     const parsed = parseInt(x, base);
@@ -425,76 +402,81 @@ function sumMix(x){
 function otherAngle(a, b) {
   let degree = 180; //degree
   let sum = a + b; // sum of two known angles
-  return degree - sum ; //find third angle
+  return degree - sum; //find third angle
 }
 
 //const otherAngle = (a,b) => 180 - a - b
 
 //Isograms---------------------------------------------------
-function isIsogram(str){
-
+function isIsogram(str) {
   let s = str.split("");
   let f = s.filter((a, b) => s.indexOf(a) != a); //werks!!!
-  console.log(f)
+  console.log(f);
 }
 
 //*******************
-let multiply = (a,b) =>{
+let multiply = (a, b) => {
   return a * b;
-}
+};
 //+++++++++++++++++++++
 //L1:Set Alarm-----------------------------------
-function setAlarm(e, v){
-  console.log(e,v)
-  return e && v == true? false : e  == false && v == true ?
-  false : e == true && v == false ? true : false;
+function setAlarm(e, v) {
+  console.log(e, v);
+  return e && v == true
+    ? false
+    : e == false && v == true
+    ? false
+    : e == true && v == false
+    ? true
+    : false;
 }
 //WOW!!!!
 const setAlarm = (employed, vacation) => employed && !vacation;
 //Welcome!:________________________________________
 
-function hoopCount (n) {
-  console.log(n => 10 ? "Great, now move on to tricks":"Keep at it until you get it" )
-    return n >= 10 ? "Great, now move on to tricks":"Keep at it until you get it"
+function hoopCount(n) {
+  console.log((n) =>
+    10 ? "Great, now move on to tricks" : "Keep at it until you get it"
+  );
+  return n >= 10
+    ? "Great, now move on to tricks"
+    : "Keep at it until you get it";
 }
 
 //Get the Middle Character--------------------------------
-function getMiddle(s)
-{
+function getMiddle(s) {
   let mid = [...s];
   let l = 0;
-  
- for (let i = s.length - 1; i >= 0; i--) {
+
+  for (let i = s.length - 1; i >= 0; i--) {
     let r = s[i];
-    let ll = s[l++]
-   console.log(r, ll);
- }  
+    let ll = s[l++];
+    console.log(r, ll);
+  }
 }
 
 //Sum of the first nth term of Series--------------------------
 
-function SeriesSum(n)
-{
- 
-  let nu = n.toFixed(2);  //Math.round((num + Number.EPSILON) * 100) / 100 
+function SeriesSum(n) {
+  let nu = n.toFixed(2); //Math.round((num + Number.EPSILON) * 100) / 100
   //amount % 1 === 0 ? amount : amount.toFixed(2);
-   
+
   let s = nu.toString();
-  console.log(s,  nu)
-  return s = 0 ? '0.00' : s;
+  console.log(s, nu);
+  return (s = 0 ? "0.00" : s);
 }
 //-------------------------
 
 //Remove exclamation marks-----------------------------
 function removeExclamationMarks(s) {
-  let r = s.split('');
-  let o = "!"
-  let t = r.filter(function(a){
+  let r = s.split("");
+  let o = "!";
+  let t = r.filter(function (a) {
     return a !== "!";
   });
   //console.log(t)
-  let j = t.join('')
-  console.log(j)
+  let j = t.join("");
+  console.log(j);
   return j;
 }
 /**
@@ -505,72 +487,70 @@ function removeExclamationMarks(s) {
 //////////////////////////////////////////////////
 //Total amount of points
 function points(games) {
-  let r = 1; 
-   for(let i of games){
-      r += i;
-     i+= 1
-   console.log(i)
-   }
-    return  i
-  
+  let r = 1;
+  for (let i of games) {
+    r += i;
+    i += 1;
+    console.log(i);
+  }
+  return i;
 }
 /////////////////////////////
 //list filtering
 function filter_list(l) {
-  
-  let r = l.filter(Number.isInteger)
-  console.log(r)
+  let r = l.filter(Number.isInteger);
+  console.log(r);
   return r;
-  }
+}
 //returns only numbers
 
 //Count the divisors of a number--------------------
 //Count the number of divisors of a positive integer n.
 
-function getDivisorsCnt(n){
+function getDivisorsCnt(n) {
   var divisors = 0;
-    mod = n;
-    while (mod > 0){
-      if(n % mod === 0){
-        divisors++;
-      }
-      mod--;
+  mod = n;
+  while (mod > 0) {
+    if (n % mod === 0) {
+      divisors++;
     }
-    return divisors;
-
+    mod--;
+  }
+  return divisors;
 }
 //----------------------------------------
 //Function 2 - squaring an argument
-function square(s){
+function square(s) {
   //const square = (n) => n * n;
-  return s ** 2  
+  return s ** 2;
 }
 //////////////////////////////////
 //Find the next perfect square!-------------------------
 function findNextSquare(sq) {
   // Return the next square if sq is a perfect square, -1 otherwise
-  return Math.sqrt(sq)%1 ===0 ? Math.pow(Math.sqrt(sq)+1,2) : -1;
+  return Math.sqrt(sq) % 1 === 0 ? Math.pow(Math.sqrt(sq) + 1, 2) : -1;
 }
 
 //////Sort array by string length
-function sortByLength (array){
+function sortByLength(array) {
   // Return an array containing the same strings, ordered from shortest to longest
- //["Beg", "Life", "I", "To"] => ["I", "To", "Beg", "Life"]
-  return array.sort(function(a, b){return a.length - b.length});
-  }
+  //["Beg", "Life", "I", "To"] => ["I", "To", "Beg", "Life"]
+  return array.sort(function (a, b) {
+    return a.length - b.length;
+  });
+}
 
-
-  //Highest and Lowest----------------------
-  function highAndLow(numbers){
-    let copy = numbers.split(' ');
-    let max = Math.max(...copy)
-    let min = Math.min(...copy)
-    let newNumbers = [];
-    newNumbers.push(max, min); 
-    let highLow = newNumbers.join(' ');
-    return  highLow;
-  }
-  //(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4") =>  "42 -9");
+//Highest and Lowest----------------------
+function highAndLow(numbers) {
+  let copy = numbers.split(" ");
+  let max = Math.max(...copy);
+  let min = Math.min(...copy);
+  let newNumbers = [];
+  newNumbers.push(max, min);
+  let highLow = newNumbers.join(" ");
+  return highLow;
+}
+//(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4") =>  "42 -9");
 /**
  * function highAndLow(numbers){
   numbers = numbers.split(' ').map(Number);
@@ -579,13 +559,13 @@ function sortByLength (array){
  */
 
 //The highest profit wins!
-function minMax(arr){
+function minMax(arr) {
   let nArr = [];
   let min = Math.min(...arr);
   let max = Math.max(...arr);
-  nArr.push(min,max)
-  console.log(nArr)
-  return  nArr // fix me!
+  nArr.push(min, max);
+  console.log(nArr);
+  return nArr; // fix me!
 }
 /**
  * function minMax(arr){
@@ -593,26 +573,11 @@ function minMax(arr){
 }
  */
 
-
 /**
 Player starts at a given position & moves twice the value of the dice roll.
 Calculate the final position.-----------------------------------------**/
-function move (position, roll) {
-  console.log(position, roll)
-  return position + roll*2
+function move(position, roll) {
+  console.log(position, roll);
+  return position + roll * 2;
 }
 ///////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
