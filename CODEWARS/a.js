@@ -540,6 +540,24 @@ function getDivisorsCnt(n){
 
 }
 //----------------------------------------
+//Function 2 - squaring an argument
+function square(s){
+  //const square = (n) => n * n;
+  return s ** 2  
+}
+//////////////////////////////////
+//Find the next perfect square!-------------------------
+function findNextSquare(sq) {
+  // Return the next square if sq is a perfect square, -1 otherwise
+  return Math.sqrt(sq)%1 ===0 ? Math.pow(Math.sqrt(sq)+1,2) : -1;
+}
+
+//////Sort array by string length
+function sortByLength (array){
+  // Return an array containing the same strings, ordered from shortest to longest
+ //["Beg", "Life", "I", "To"] => ["I", "To", "Beg", "Life"]
+  return array.sort(function(a, b){return a.length - b.length});
+  }
 
 
 
