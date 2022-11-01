@@ -599,9 +599,11 @@ Player starts at a given position & moves twice the value of the dice roll.
 Calculate the final position.-----------------------------------------**/
 function move (position, roll) {
   console.log(position, roll)
-  return position + roll*2
+   return position + roll*2
 }
 ///////////////////////////////////////////////////////////
+
+
 
 
 
