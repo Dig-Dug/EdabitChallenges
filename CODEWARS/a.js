@@ -596,3 +596,48 @@ var countSheep = function (num) {
     console.log(`${num}... sheep`)
     return num == 0 ? '' : `${num} sheep...`
 }
+
+//Descending order-------------------------------------------
+function descendingOrder(n) {
+    //is n =  > 0 ? n--
+    let b = [n]
+    return n >= 0
+        ? b.toString().split('').reverse().join('') * Math.sign(n)
+        : undefined
+}
+/*
+let rev = 0;
+let num = 123456;
+let lastDigit;
+
+while(num != 0){
+	lastDigit = num % 10;
+  rev = rev * 10 + lastDigit;
+  num = Math.floor(num/10);
+}
+
+console.log("Reverse number : "+rev);
+*/
+
+//Counting sheep...--------------------return count of true in array
+function countSheeps(arrayOfSheeps) {
+    return arrayOfSheeps.filter(Boolean).length
+}
+//Sum The Strings------------------------
+function sumStr(a, b) {
+    let c = parseInt(a) + parseInt(b)
+    return c.toString()
+}
+//*+++++++++++++++++++
+//Return Negative
+function makeNegative(num) {
+    let numm = num
+    for (let i = 0; i <= num; i++) {
+        console.log('--', i, numm)
+        numm--
+        while (i == numm) {
+            return i
+        }
+        //console.log(num)
+    }
+}
