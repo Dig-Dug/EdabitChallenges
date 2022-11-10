@@ -589,3 +589,10 @@ function validatePIN(pin) {
     //return pin.length = 4? true : pin.length = 6 ? true : true;
     return t.test(pin)
 }
+
+//If you can't sleep, just count sheep!!
+var countSheep = function (num) {
+    //console.log(Number.isInteger(num))
+    console.log(`${num}... sheep`)
+    return num == 0 ? '' : `${num} sheep...`
+}
