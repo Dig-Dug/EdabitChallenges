@@ -641,3 +641,26 @@ function makeNegative(num) {
         //console.log(num)
     }
 }
+
+//////////////////////
+function helloWorld() {
+    let str = 'Hello World!'
+    console.log(str)
+}
+
+helloWorld()
+//Sum of A Sequence.-----------------
+const sequenceSum = (b, e, s) => {
+    console.log(b, e, s)
+    let c = 0,
+        r = 0
+    while ((b = e)) {
+        b + s
+        c = b
+        r = c + b
+        console.log(r, '<--')
+        return r
+    }
+    return b > s ? 0 : r
+}
+//sequenceSum(begin=0,end=45,step=5) 0+5+10+15+20+25+30+35+40+45 == 225
