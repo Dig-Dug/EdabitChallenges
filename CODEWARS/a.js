@@ -664,3 +664,15 @@ const sequenceSum = (b, e, s) => {
     return b > s ? 0 : r
 }
 //sequenceSum(begin=0,end=45,step=5) 0+5+10+15+20+25+30+35+40+45 == 225
+
+function booleanToString(b) {
+    let r = b.toString()
+    console.log(r) //the string "true"
+    // return `${b}` <--works too
+    return r
+}
+//String Repeat----------------------
+function repeatStr(n, s) {
+    let r = s.repeatStr(n) // repeatStr(3, "*") <-- ***
+    return r
+}
