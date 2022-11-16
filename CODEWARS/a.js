@@ -676,3 +676,33 @@ function repeatStr(n, s) {
     let r = s.repeatStr(n) // repeatStr(3, "*") <-- ***
     return r
 }
+//
+let zeroFuel = (d, m, f) => {
+    return f * m >= d ? true : false
+}
+
+//Thinkful - Logic Drills: Traffic light-----------
+function updateLight(current) {
+    //your code here!
+    switch (current) {
+        case 'green':
+            return 'yellow'
+        case 'yellow':
+            return 'red'
+        case 'red':
+            return 'green'
+    }
+}
+/**
+     const updateLight = current => ({
+     green: 'yellow',
+    yellow: 'red',
+    red: 'green',
+    })[current] 
+*/
+//Find the smallest integer in the array------------
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+        return Math.min(...args)
+    }
+}
