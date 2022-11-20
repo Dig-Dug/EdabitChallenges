@@ -706,3 +706,36 @@ class SmallestIntegerFinder {
         return Math.min(...args)
     }
 }
+
+//Sum Arrays-------------------------
+function sumArrays(array) {
+    'use strict'
+    return array.reduce((a, b) => a + b, 0)
+}
+//Detect Pangram (from a-z in sentence)
+function isPangram(s) {
+    let l = s.toLowerCase()
+    for (let c of 'abcdefghijklmnopqrstuvwxyz') {
+        if (!l.includes(c)) {
+            return false
+        }
+    }
+    return true
+}
+
+//Grade Book--finds average of 3 scores
+function getGrade(s1, s2, s3) {
+    console.log(s1, s2, s3)
+    let ave = (s1 + s2 + s3) / 3
+    console.log(ave)
+    return ave <= 100 && ave >= 90
+        ? 'A'
+        : ave <= 90 && ave >= 80
+        ? 'B'
+        : ave <= 80 && ave >= 70
+        ? 'C'
+        : ave <= 70 && ave >= 60
+        ? 'D'
+        : 'F'
+}
+//////////////////////////////
