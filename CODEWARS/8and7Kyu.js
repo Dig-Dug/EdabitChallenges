@@ -739,3 +739,44 @@ function getGrade(s1, s2, s3) {
         : 'F'
 }
 //////////////////////////////
+//Remove First and last Character------------
+function removeChar(str) {
+    let i = str.substring(0) //1st char
+    let r = i.substring(0, i.length - 1) //last char
+    return r
+} // OR
+const removeChar = (str) => str.slice(1, -1)
+
+//Shortest Word----------------
+function findShort(s) {
+    let r = s.split(' ')
+    let i = r.map((e) => {
+        return e.length
+    })
+    let min = Math.min(...i)
+    return min
+} //OR
+function findShort(s) {
+    return Math.min.apply(
+        null,
+        s.split(' ').map((w) => w.length)
+    )
+}
+
+//Beginner-Lost Without a Map
+function maps(x) {
+    console.log(x)
+    let r = x.map((e) => {
+        return e * 2 //[1, 2, 3] --> [2, 4, 6] return doubled
+    })
+    return r
+} //OR
+function maps(x) {
+    return x.map((n) => n * 2)
+}
+
+//Array.Diff removes duplicated elements in 2 arrays
+function arrayDiff(a, b) {
+    let o = a.filter((a) => !b.includes(a))
+    return o // <-- ([1,2],[1]) == [2]
+}
