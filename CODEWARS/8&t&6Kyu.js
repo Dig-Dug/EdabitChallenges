@@ -14,4 +14,8 @@ function solution(s) {
   var str = 'MaEfSdsfSsdfsAdfssdGsdfEsdf';
   var newmsg = str.replace(/[a-z]/g, '');
   var old = str.replace(/[A-Z]/g, '');
-  */
+  
+*/
+
+
+
