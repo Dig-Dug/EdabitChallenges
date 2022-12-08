@@ -235,16 +235,13 @@ function greet(name, owner) {
 
 //Calculate average-----------------------------------------------
 function find_average(array) {
-    if (array != NaN) {
-        let lon = array.length
-        let sum = array.reduce((a, b) => a + b, 0)
-
-        //console.log(lon,"opopo");
-        console.log(sum / lon)
-        return sum / lon
-    } else {
+    if (array.length == 0) {
+        console.log(array)
         return 0
     }
+    let a = array.reduce((a, b) => a + b, 0) / array.length
+    console.log(a)
+    return a
 }
 
 //Beginner - Reduce but Grow-----------------------------------
