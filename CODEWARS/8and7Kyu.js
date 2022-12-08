@@ -367,33 +367,13 @@ function bmi(weight, height) {
 }
 
 //Sum mixed Array------------------------------------
+//Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
 function sumMix(x) {
-    //pors(x)
-    //let f = x.filter(a => a != "Number")
-    let o
-    let f = []
-    for (n in x) {
-        let r = x.reduce((a, b) => a + b, 0)
-
-        //console.log(r)
-        f = parseInt(x[n])
-
-        console.log(f)
-    }
-    //console.log(f)
-    return f
-    //console.log(x)
+    let r = x.map(function (x) {
+        return parseInt(x, 10)
+    })
+    return r.reduce((a, b) => a + b, 0) //[1,2,'2','3'];
 }
-
-/*
-  function pors(x, base) {
-    const parsed = parseInt(x, base);
-    for(n in x){
-    if (isNaN(parsed)) { return 0; }
-    console.log(parsed + n)
-    return parsed;
-  }}
-*/
 
 //Third angle of triangle_---------------------------------------
 function otherAngle(a, b) {
