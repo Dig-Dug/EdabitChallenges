@@ -17,5 +17,31 @@ function solution(s) {
   
 */
 
-
-
+//Double Char
+//"abcd" <-- aabbccdd
+function doubleChar(str) {
+    let rr = str.split('')
+    b = []
+    for (var i = 0; i < rr.length; ++i) {
+        b.push(rr[i])
+        b.push(rr[i])
+    }
+    rr = b
+    let s
+    for (let i = 0; i < b.length; i++) {
+        s = b.toString()
+    }
+    let n = s.replace(/,/g, '')
+    console.log(n)
+    return n
+}
+//waaaaaaay better
+const doubleChar = (str) =>
+    str
+        .split('')
+        .map((c) => c + c)
+        .join('')
+//OR
+function doubleChar(str) {
+    return str.replace(/(.)/g, '$1$1')
+}
