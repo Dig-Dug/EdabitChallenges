@@ -349,20 +349,17 @@ function getCount(str) {
 
 //Calculate BMI--------------------------------------------------
 function bmi(weight, height) {
-    let bmi = Math.round(weight / (height * height))
-
-    console.log(bmi, weight, height)
-    /* return bmi <= 18.5? "Underweight": 25.0 ? "Normal": 
-    30.0? "Overweight" : bmi > 30 ? "Obese": "";*/
-    switch (bmi) {
-        case bmi <= 18.5:
-            return 'Underweight'
-        case bmi <= 25.5:
-            return 'Normal'
-        case bmi <= 30:
-            return 'Overweight'
-        case bmi > 30:
-            return 'Obese'
+    let bmi = weight / (height * height)
+    let fix = bmi.toFixed(1)
+    console.log(bmi, weight, height, fix)
+    if (fix <= 18.5) {
+        return 'Underweight'
+    } else if (fix <= 25.0) {
+        return 'Normal'
+    } else if (fix <= 30.0) {
+        return 'Overweight'
+    } else if (fix > 30) {
+        return 'Obese'
     }
 }
 

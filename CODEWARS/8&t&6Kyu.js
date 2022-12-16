@@ -45,3 +45,30 @@ const doubleChar = (str) =>
 function doubleChar(str) {
     return str.replace(/(.)/g, '$1$1')
 }
+///The Feast of Many Beasts---2 string begin and end equal-
+function feast(beast, dish) {
+    let p = beast.substring(0, 1)
+    let f = dish.substring(0, 1)
+    let pf = beast.substring(beast.length - 1)
+    let ff = dish.substring(dish.length - 1)
+    console.log(p, f, pf, ff)
+    return p == f && pf == ff ? true : false
+    //
+}
+//OTHER
+function feast(beast, dish) {
+    return (
+        beast[0] === dish[0] &&
+        beast[beast.length - 1] === dish[dish.length - 1]
+    )
+}
+
+//Beginner - Lost Without a Map
+function maps(x) {
+    let two = 2
+    let a = x.map((y) => y * 2)
+    console.log(a) //[1,2,3] => [2,4,6]
+    return a
+}
+//or
+return x.map((y) => y * 2)
