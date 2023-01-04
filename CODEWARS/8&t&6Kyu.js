@@ -80,7 +80,32 @@ return x.map((y) => y * 2)
  * rounded down to the integer (= floored). */
 
 function cockroachSpeed(s) {
-    let r = s * 27.778 //real formula
+    let r = s * 27.778
     let floor = Math.floor(r)
     return floor
+}
+//or this
+const cockroachSpeed = (s) => Math.floor(s / 0.036)
+//Sum the Strings
+function sumStr(a, b) {
+    let sum = +a + +b //unary plus operator
+    let summ = sum.toString()
+    console.log(summ)
+    return summ
+}
+//OR
+function sumStr(a, b) {
+    return String(Number(a) + Number(b))
+}
+//Return any positive number to negative;
+function makeNegative(num) {
+    let z = -Math.abs(num)
+    return z
+}
+
+//Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).
+function twiceAsOld(dad, son) {
+    let d = son * 2
+    let ab = Math.abs(dad - d) //make sure all is positive
+    return ab
 }
