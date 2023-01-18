@@ -754,3 +754,66 @@ function arrayDiff(a, b) {
     let o = a.filter((a) => !b.includes(a))
     return o // <-- ([1,2],[1]) == [2]
 }
+//Simple Multiplication
+//This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+function simpleMultiplication(number) {
+    return number % 2 == 0 ? number * 8 : number * 9
+}
+//OR
+function simpleMultiplication(n) {
+    return n * (n % 2 ? 9 : 8)
+}
+//Reversed Words
+function reverseWords(str) {
+    //complete the solution so that it reverses all of the words within the string passed in.
+    return str.split(' ').reverse().join(' ')
+}
+//Filter out the geese
+function gooseFilter(birds) {
+    var geese = [
+        'African',
+        'Roman Tufted',
+        'Toulouse',
+        'Pilgrim',
+        'Steinbacher',
+    ]
+    let rr = birds.filter((a) => !geese.includes(a)) //remove geese strings :D
+    return rr
+}
+
+//Invert Values
+function invert(array) {
+    //https://www.freecodecamp.org/news/find-the-additive-inverse-of-numbers-javascript/
+    return array.map((num) => num * -1)
+}
+//Add Length
+function addLength(str) {
+    let r = str.split(' ')
+    let rr = []
+    let l
+    for (i in r) {
+        l = r[i].length
+        rr.push(r[i] + ' ' + l)
+        r.push(l)
+        rr.join(r)
+        for (o in r) {
+            rr.join(`${r}`) //"apple ban" --> ["apple 5", "ban 3"]
+        }
+    }
+    return rr
+}
+
+//OR
+function addLength(str) {
+    return str.split(' ').map(function (v) {
+        return v + ' ' + v.length
+    })
+}
+//How many lightsabers do you own?
+function howManyLightsabersDoYouOwn(name) {
+    return name == 'Zach' ? 18 : 0
+}
+//Vowel Remover
+function shortcut(string) {
+    return string.replace(/[aeiou]/gi, '') //no aeiou
+}
