@@ -821,3 +821,21 @@ function shortcut(string) {
 function isDivisible(n, x, y) {
     return n % x == 0 && n % y == 0 ? true : false
 }
+//Fun with ES6 Classes #1 - People, people, people
+class Person {
+    // Get coding in ES6 :D
+    constructor(firstName, lastName, age, gender) {
+        this.firstName = 'John'
+        this.lastName = 'Doe'
+        this.age = 0
+        this.gender = 'Male'
+    }
+
+    sayFullName() {
+        return this.firstName + ' ' + this.lastName
+    }
+    static greetExtraTerrestrials(raceName) {
+        console.log(raceName)
+        return 'Welcome to Planet Earth ' + raceName
+    }
+}
