@@ -873,3 +873,11 @@ function problem(x) {
     let r = x * 50 + 6
     return typeof x === 'string' ? 'Error' : r
 }
+
+//if x squared is more than 1000, return It's hotter than the sun!!, else, return Help yourself to a honeycomb Yorkie for the glovebox.
+function apple(x) {
+    let r = Math.sqrt(1000)
+    return r > x
+        ? 'Help yourself to a honeycomb Yorkie for the glovebox.'
+        : "It's hotter than the sun!!"
+}
