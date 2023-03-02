@@ -856,3 +856,20 @@ function switchItUp(number) {
     }
     return numbers[number]
 }
+
+//Return the average of the given array rounded down to its nearest integer.
+function getAverage(marks) {
+    //TODO : calculate the downward rounded average of the marks array
+
+    let result = marks.reduce((x, y) => {
+        return x + y
+    })
+    //result/marks.length;
+    return Math.floor(result / marks.length)
+}
+
+//Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+function problem(x) {
+    let r = x * 50 + 6
+    return typeof x === 'string' ? 'Error' : r
+}
