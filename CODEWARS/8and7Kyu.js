@@ -881,3 +881,21 @@ function apple(x) {
         ? 'Help yourself to a honeycomb Yorkie for the glovebox.'
         : "It's hotter than the sun!!"
 }
+
+/**
+ * text before = "abc"
+character   = "z"
+text after  = "zzz"
+ */
+function contamination(text, char) {
+    let lon = text.length
+
+    console.log(lon, char)
+    console.log(char.repeat(lon))
+    return text === '' || char === '' ? '' : char.repeat(lon)
+}
+//remove whitespace from string
+function noSpace(x) {
+    let noWhitespace = x.replace(/\s/g, '')
+    return noWhitespace
+}
