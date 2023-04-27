@@ -900,4 +900,14 @@ function noSpace(x) {
     return noWhitespace
 }
 
-//CHECK CHECK :D
+//remove the time // array of 3 strings remove the last
+function shortenToDate(longDate) {
+    let s = longDate.split(' ')
+    let ss = s.pop()
+    let r = s.join(' ').slice(0, -1) // last comma out
+    return r
+}
+//OR
+function shortenToDate(longDate) {
+    return longDate.split(',')[0]
+}
