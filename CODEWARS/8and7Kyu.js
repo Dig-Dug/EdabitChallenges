@@ -899,3 +899,5 @@ function noSpace(x) {
     let noWhitespace = x.replace(/\s/g, '')
     return noWhitespace
 }
+
+//CHECK CHECK :D
