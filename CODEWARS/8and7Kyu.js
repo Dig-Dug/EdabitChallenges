@@ -911,3 +911,55 @@ function shortenToDate(longDate) {
 function shortenToDate(longDate) {
     return longDate.split(',')[0]
 }
+
+function mil() {
+    var websites = []
+    for (let i = 0; i < 10; i++) {
+        websites.push('websites')
+    }
+    return websites
+}
+//Kata example twist
+// add the value "codewars" to the websites array 1,000 times
+var websites = []
+
+for (let i = 0; i < 1000; i++) {
+    websites.push('codewars')
+}
+console.log(websites)
+//Grasshopper - Messi goals function
+function goals(l, c, ch) {
+    let r = [3]
+    let sum = 0
+    for (let i = 0; i < r; i++) {
+        sum += l + c + ch
+        console.log(sum)
+        return sum
+    }
+}
+// ES6 String addition
+function joinStrings(s1, s2) {
+    return `${s1} ${s2}`
+}
+//Difference of volumes of cuboids
+function findDifference(a, b) {
+    let volCub1 = [...a].reduce((a, b) => a * b, 1)
+    let volCub2 = [...b].reduce((a, b) => a * b, 1)
+
+    let differenceOfVolumes = volCub1 - volCub2
+    return Math.abs(differenceOfVolumes) //<--in case of negative results
+}
+//OR
+function find_difference(a, b) {
+    return Math.abs(
+        a.reduce((previous, current) => previous * current) -
+            b.reduce((previous, current) => previous * current)
+    )
+}
+function find_difference(a, b) {
+    return Math.abs(a[0] * a[1] * a[2] - b[0] * b[1] * b[2])
+}
+//String templates
+function buildString(...template) {
+    return `I like ${template.join(', ')}!`
+}
