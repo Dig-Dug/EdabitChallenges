@@ -963,3 +963,10 @@ function find_difference(a, b) {
 function buildString(...template) {
     return `I like ${template.join(', ')}!`
 }
+//Miles per gallon to kms per liter
+function converter(mpg) {
+    let miles = 1.609344
+    let lit = 4.546091
+    let conversion = (mpg * miles) / lit
+    return Math.round(conversion * 100) / 100
+}
