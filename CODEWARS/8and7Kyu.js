@@ -970,3 +970,7 @@ function converter(mpg) {
     let conversion = (mpg * miles) / lit
     return Math.round(conversion * 100) / 100
 }
+//CheckForFactor
+function checkForFactor(base, factor) {
+    return base % factor == 0 ? true : false
+}

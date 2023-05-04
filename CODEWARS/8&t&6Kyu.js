@@ -109,3 +109,7 @@ function twiceAsOld(dad, son) {
     let ab = Math.abs(dad - d) //make sure all is positive
     return ab
 }
+//OR
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+    return Math.abs(dadYearsOld - 2 * sonYearsOld)
+}
