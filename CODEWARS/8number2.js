@@ -53,3 +53,30 @@ function countPositivesSumNegatives(input) {
     }
     return all
 }
+
+//Check if element is in array
+let check = (a, x) => {
+    return a.includes(x) ? true : false
+}
+//Return the day
+function whatday(num) {
+    let days = {
+        1: 'Sunday',
+        2: 'Monday',
+        3: 'Tuesday',
+        4: 'Wednesday',
+        5: 'Thursday',
+        6: 'Friday',
+        7: 'Saturday',
+    }
+    let m = 'Wrong, please enter a number between 1 and 7'
+    for (let i = 0; i < num; i++) {
+        if ((days[i] = num)) {
+            console.log(days[i], days[num], '<----')
+            return days[num]
+        }
+    }
+    if (num > 7) {
+        return 'Wrong, please enter a number between 1 and 7'
+    }
+}
