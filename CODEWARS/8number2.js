@@ -80,4 +80,10 @@ function whatday(num) {
         return 'Wrong, please enter a number between 1 and 7'
     }
 }
-//
+//How good are you really?
+function betterThanAverage(classPoints, yourPoints) {
+    let cp =
+        classPoints.reduce((partialSum, a) => partialSum + a, 0) /
+        classPoints.length // average of given array(class room members)
+    return cp < yourPoints // true
+}
