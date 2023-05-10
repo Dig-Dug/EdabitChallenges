@@ -87,3 +87,13 @@ function betterThanAverage(classPoints, yourPoints) {
         classPoints.length // average of given array(class room members)
     return cp < yourPoints // true
 }
+//Take the derivative
+function derive(coe, exp) {
+    let r = exp - 1
+    let de = coe * exp
+    return `${de}` + 'x^' + `${r}`
+}
+//
+function include(arr, item) {
+    return arr.includes(item) ? true : false
+}
