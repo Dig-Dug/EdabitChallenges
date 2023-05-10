@@ -97,3 +97,31 @@ function derive(coe, exp) {
 function include(arr, item) {
     return arr.includes(item) ? true : false
 }
+/**C#
+using System;
+using System.Linq;
+
+
+public class Kata
+{
+  public static bool Include(int[] arr, int item)
+  {
+    return arr.Contains(item);
+    return false;
+  }
+}
+ */
+//Grasshopper Debug
+function weatherInfo(celsius) {
+    var c = convertToCelsius(celsius)
+    console.log(celsius, '::::')
+    if (c > 0) {
+        return `${c} is above freezing temperature`
+    } else {
+        return c + ' is freezing temperature'
+    }
+}
+function convertToCelsius(temperature) {
+    var celsius = (temperature - 32) * (5 / 9)
+    return celsius
+}
