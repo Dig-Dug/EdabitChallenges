@@ -125,3 +125,7 @@ function convertToCelsius(temperature) {
     var celsius = (temperature - 32) * (5 / 9)
     return celsius
 }
+//Type of sum
+function typeOfSum(a, b) {
+    return typeof (a + b)
+}
