@@ -129,3 +129,31 @@ function convertToCelsius(temperature) {
 function typeOfSum(a, b) {
     return typeof (a + b)
 }
+//Conditional statement switch
+function howManydays(month) {
+    switch (month) {
+        case 2:
+            return 28
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            return 30
+    }
+    return 31
+}
+//Convert boolean values to string
+function boolToWord(bool) {
+    return bool ? 'Yes' : 'No'
+}
+//The wide mouthed frog
+function mouthSize(animal) {
+    let r = animal.toUpperCase()
+    return animal == 'alligator' || r == 'ALLIGATOR' ? 'small' : 'wide'
+}
+/*PHP
+function mouth_size($animal) {
+    $r = strtoupper($animal);
+    return $animal == 'alligator' || $r == 'ALLIGATOR' ? 'small' : 'wide';
+
+} */
