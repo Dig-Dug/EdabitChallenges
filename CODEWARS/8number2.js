@@ -157,3 +157,11 @@ function mouth_size($animal) {
     return $animal == 'alligator' || $r == 'ALLIGATOR' ? 'small' : 'wide';
 
 } */
+//Return multiplication without using "*"
+function billboard(name, price = 30) {
+    return name.length / (1 / price)
+}
+//Array plus array
+function arrayPlusArray(arr1, arr2) {
+    return arr1.reduce((a, b) => a + b, 0) + arr2.reduce((a, b) => a + b, 0)
+}
