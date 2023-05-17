@@ -165,3 +165,8 @@ function billboard(name, price = 30) {
 function arrayPlusArray(arr1, arr2) {
     return arr1.reduce((a, b) => a + b, 0) + arr2.reduce((a, b) => a + b, 0)
 }
+//Bin to dec
+function binToDec(bin) {
+    var digit = parseInt(bin, 2)
+    return digit
+}
