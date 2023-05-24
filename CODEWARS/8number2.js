@@ -170,3 +170,28 @@ function binToDec(bin) {
     var digit = parseInt(bin, 2)
     return digit
 }
+//Find numbers which are divisible by given number
+function divisibleBy(n, d) {
+    let r = n.filter((a) => a % d == 0)
+    return r
+}
+//Short long Short
+function solution(a, b) {
+    //Test.assertEquals(solution('45', '1'), '1451');
+    let s = ''
+    if (a.length > b.length) {
+        s = b + a + b //1451
+        return s
+    } else {
+        s = a + b + a
+        return s
+    }
+}
+//OR
+function solution(a, b) {
+    return a.length < b.length ? a + b + a : b + a + b
+}
+//Hex To Decimal
+function hexToDec(h) {
+    return parseInt(h, 16)
+}
