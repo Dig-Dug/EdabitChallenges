@@ -195,3 +195,24 @@ function solution(a, b) {
 function hexToDec(h) {
     return parseInt(h, 16)
 }
+//Get character from ascii value
+function getChar(c) {
+    return String.fromCharCode(c)
+}
+// assert.strictEqual(correctTail("Fox", "x"), true);
+function correctTail(b, t) {
+    return b.substring(b.length - 1) == t ? true : false
+}
+//Merge 2 sorted arrays into one
+function mergeArrays(arr1, arr2) {
+    let z = [...arr1, ...arr2]
+    z.sort((a, b) => a - b) //sort in every order
+    let rr = z.filter((e, i) => {
+        return z.indexOf(e) === i
+    }) //filter duplicates
+    return rr
+}
+//OR
+function mergeArrays(arr1, arr2) {
+    return Array.from(new Set(arr1.concat(arr2).sort((a, b) => a - b)))
+}
