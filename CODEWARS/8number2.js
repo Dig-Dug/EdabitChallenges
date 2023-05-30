@@ -216,3 +216,13 @@ function mergeArrays(arr1, arr2) {
 function mergeArrays(arr1, arr2) {
     return Array.from(new Set(arr1.concat(arr2).sort((a, b) => a - b)))
 }
+//first char of string to uppercase
+function capitalizeWord(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1)
+}
+//Configure package json for a node application
+const configuration = {
+    name: 'my-awesome-package',
+    version: '1.0.0',
+    author: 'Your Name <email@example.com>',
+}
