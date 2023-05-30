@@ -226,3 +226,13 @@ const configuration = {
     version: '1.0.0',
     author: 'Your Name <email@example.com>',
 }
+//find position
+function position(letter) {
+    let r = letter.charCodeAt(letter) - 96 //all alphabet  UTF code
+    return 'Position of alphabet: ' + r
+}
+//OR
+function position(letter) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    return 'Position of alphabet: ' + (alphabet.indexOf(letter) + 1)
+}
