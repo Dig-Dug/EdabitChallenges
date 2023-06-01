@@ -236,3 +236,17 @@ function position(letter) {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz'
     return 'Position of alphabet: ' + (alphabet.indexOf(letter) + 1)
 }
+//Reverse list order (not using reverse method)
+function reverseList(list) {
+    let r = []
+    for (let i = list.length; i >= 1; i--) {
+        r.push(i)
+    }
+    console.log(r)
+    return r
+}
+//Welcome to the city
+//['John', 'Smith'], 'Phoenix', 'Arizona'), 'Hello, John Smith! Welcome to Phoenix, Arizona!'
+function sayHello(name, city, state) {
+    return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
+}
