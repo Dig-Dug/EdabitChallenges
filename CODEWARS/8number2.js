@@ -250,3 +250,17 @@ function reverseList(list) {
 function sayHello(name, city, state) {
     return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
 }
+//Freudian Translator, replace everything in string w. sex
+function toFreud(string) {
+    let r = string.split(' ')
+    let wjo = r
+        .map(function (x) {
+            return x.replace(/[a-z,A-Z][^ ]*$/g, 'sex')
+        })
+        .join(' ')
+    console.log(wjo)
+    return wjo
+}
+
+//OR
+var toFreud = (s) => s.replace(/[^ ]+/g, 'sex')
