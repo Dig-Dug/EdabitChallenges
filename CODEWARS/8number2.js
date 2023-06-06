@@ -264,3 +264,17 @@ function toFreud(string) {
 
 //OR
 var toFreud = (s) => s.replace(/[^ ]+/g, 'sex')
+//remove all Numbers, string cleaning
+function stringClean(s) {
+    let r = s.replaceAll(/[\d-]+/g, '')
+    return r
+}
+//Regex Basic - is it a Digit?
+String.prototype.digit = function () {
+    return this.match(/^[0-9]$/) ? true : false
+}
+//Convert dollar to Chinese Yuan
+function usdcny(usd) {
+    let y = 6.75
+    return (usd * y).toFixed(2) + ' Chinese Yuan'
+}
