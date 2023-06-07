@@ -278,3 +278,15 @@ function usdcny(usd) {
     let y = 6.75
     return (usd * y).toFixed(2) + ' Chinese Yuan'
 }
+//Drink about
+function peopleWithAgeDrink(old) {
+    return old < 14
+        ? 'drink toddy'
+        : old < 18
+        ? 'drink coke'
+        : old < 21
+        ? 'drink beer'
+        : old < 30
+        ? 'drink whisky'
+        : 'drink whisky'
+}
