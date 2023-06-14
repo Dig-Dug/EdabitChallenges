@@ -310,3 +310,9 @@ function take(arr, n) {
     let r = arr.slice(0, n)
     return r //[0, 1, 2, 3, 5, 8, 13], 3), [0, 1, 2], "should return the first 3 items"
 }
+//Ensure Question
+function ensureQuestion(s) {
+    let ss = s.replace('/?', '/')
+    let r = '?'
+    return s.includes('?') ? ss : s + r
+}
