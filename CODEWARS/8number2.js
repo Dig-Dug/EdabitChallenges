@@ -290,3 +290,23 @@ function peopleWithAgeDrink(old) {
         ? 'drink whisky'
         : 'drink whisky'
 }
+//Find Prime Factors
+function primeFactors(n) {
+    console.log(n)
+    let arr = []
+    let i = 2
+    while (i <= n) {
+        if (n % i == 0) {
+            n = n / i
+            arr.push(i)
+        } else {
+            i++
+        }
+    }
+    return arr
+}
+//Take the first N element
+function take(arr, n) {
+    let r = arr.slice(0, n)
+    return r //[0, 1, 2, 3, 5, 8, 13], 3), [0, 1, 2], "should return the first 3 items"
+}
