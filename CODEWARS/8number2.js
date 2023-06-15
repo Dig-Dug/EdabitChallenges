@@ -316,3 +316,21 @@ function ensureQuestion(s) {
     let r = '?'
     return s.includes('?') ? ss : s + r
 }
+//Remove all exclamation marks at the end of sentence
+function remove(string) {
+    return string.replace(/!+$/, '')
+}
+//Generate rate of integers
+function generateRange(min, max, step) {
+    let n = []
+    for (let i = min; i <= max; i += step) {
+        n.push(i)
+    }
+    return n
+}
+//Do you speak english?
+function spEng(sentence) {
+    let p = /english/i
+    let r = sentence.match(p)
+    return r ? true : false
+}
