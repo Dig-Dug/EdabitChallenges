@@ -334,3 +334,15 @@ function spEng(sentence) {
     let r = sentence.match(p)
     return r ? true : false
 }
+//Template strings
+var TempleStrings = function (obj, feature) {
+    return `${obj} are ${feature}`
+}
+//incorrect division method
+const solve = (x, y) => {
+    return x / y
+}
+//Are arrow functions odd
+function odds(values) {
+    return values.filter((a) => a % 2 != 0)
+}
