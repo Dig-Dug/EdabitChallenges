@@ -365,3 +365,41 @@ assert.strictEqual(tripleTrouble("aaaaaa","bbbbbb","cccccc"), "abcabcabcabcabcab
 assert.strictEqual(tripleTrouble("burn", "reds", "roll"), "brrueordlnsl");
 assert.strictEqual(tripleTrouble("Sea","urn","pms"), "Supermans"); 
 assert.strictEqual(tripleTrouble("LLh","euo","xtr"), "LexLuthor"); */
+//OR
+function tripleTrouble(one, two, three) {
+    var result = ''
+    for (let i = 0; i < one.length; i++) {
+        result += one.charAt(i) + two.charAt(i) + three.charAt(i)
+    }
+    return result
+}
+//Dollars and Cents
+function formatMoney(amount) {
+    let r = '$' + amount.toFixed(2)
+    console.log(r) // $39.99
+    return r
+}
+//Hashtable & Objects
+// Add rooms here
+let names = { name: 'd', n: 12, s: 23 }
+let description = { description: '', n: 12, s: 23 }
+let completed = { completed: '', n: 12, s: 23 }
+var rooms = {
+    name: names,
+    description: description,
+    completed: completed,
+}
+//Find the Difference in Age between Oldest and Youngest Family Members
+function differenceInAges(ages) {
+    let r = Math.min(...ages)
+    let rf = Math.max(...ages)
+    let dif = rf - r
+    let re = []
+    re.push(r, rf, dif)
+    return re //differenceInAges([82, 15, 6, 38, 35]), [6, 82, 76]);
+}
+/* let max = Math.max(...ages),
+min = Math.min(...ages)
+diff = max - min
+
+return [min, max, diff] */
