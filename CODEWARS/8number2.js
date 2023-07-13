@@ -346,3 +346,22 @@ const solve = (x, y) => {
 function odds(values) {
     return values.filter((a) => a % 2 != 0)
 }
+//Triple Trouble
+function tripleTrouble(o, t, tt) {
+    let r = []
+    let zt
+    let z = o.split(''),
+        p = t.split(''),
+        oo = tt.split('')
+    for (i in o) {
+        r.push(z[i], p[i], oo[i])
+        zt = r.join('')
+    }
+    console.log(zt)
+    return zt
+}
+/* assert.strictEqual(tripleTrouble("aaa","bbb","ccc"), "abcabcabc");
+assert.strictEqual(tripleTrouble("aaaaaa","bbbbbb","cccccc"), "abcabcabcabcabcabc");
+assert.strictEqual(tripleTrouble("burn", "reds", "roll"), "brrueordlnsl");
+assert.strictEqual(tripleTrouble("Sea","urn","pms"), "Supermans"); 
+assert.strictEqual(tripleTrouble("LLh","euo","xtr"), "LexLuthor"); */
