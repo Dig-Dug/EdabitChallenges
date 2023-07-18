@@ -403,3 +403,8 @@ min = Math.min(...ages)
 diff = max - min
 
 return [min, max, diff] */
+
+//Get ASCII value of character
+function getASCII(c) {
+    return c.charCodeAt(0)
+}
