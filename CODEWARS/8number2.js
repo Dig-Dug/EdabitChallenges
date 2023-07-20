@@ -408,3 +408,10 @@ return [min, max, diff] */
 function getASCII(c) {
     return c.charCodeAt(0)
 }
+
+var quote = function (fighter) {
+    let r = fighter.toLowerCase()
+    return r == 'george saint pierre'
+        ? 'I am not impressed by your performance.'
+        : "I'd like to take this chance to apologize.. To absolutely NOBODY!"
+}
