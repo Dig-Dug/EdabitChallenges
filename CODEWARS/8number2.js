@@ -415,3 +415,18 @@ var quote = function (fighter) {
         ? 'I am not impressed by your performance.'
         : "I'd like to take this chance to apologize.. To absolutely NOBODY!"
 }
+
+//Health cannot go below 0
+function combat(health, damage) {
+    let d = health - damage
+    return d < 0 ? 0 : d
+}
+//Basic Data Types Objects
+function animal(obj) {
+    return 'This ' + obj.color + ' ' + obj.name + ' has ' + obj.legs + ' legs.'
+} //"This white dog has 4 legs."
+let obj = {
+    name: String,
+    legs: Number,
+    color: String,
+}
