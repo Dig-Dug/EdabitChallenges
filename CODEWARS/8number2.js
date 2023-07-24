@@ -430,3 +430,16 @@ let obj = {
     legs: Number,
     color: String,
 }
+//: Replace all vowel to exclamation mark in the sentence
+function replace(s) {
+    return s.replace(/[aeiou]/gi, '!')
+}
+//Potenciation
+function power(x, y) {
+    let pot = x ** y
+    return pot
+}
+//Is integer safe to use?
+function SafeInteger(n) {
+    return n > Number.MAX_SAFE_INTEGER ? false : true
+}
