@@ -496,3 +496,16 @@ if (typeof a !== 'number' || typeof b !== 'number') {
 } else {
     return (a % b) + (b % a)
 }
+//Type Coercion
+//https://www.c-sharpcorner.com/article/avascript-type-coercion-explained-how-to-avoid-common-pitfalls/#:~:text=Type%20coercion%20is%20the%20process,to%20values%20of%20different%20types.
+function add(a, b) {
+    return a == b ? true : a === b ? true : false
+}
+//Round number 2 decimal places
+function twoDecimalPlaces(n) {
+    return Math.round(n * 100) / 100
+}
+//Printing Array elements with Comma delimiters
+function printArray(a) {
+    return a.toString()
+}
