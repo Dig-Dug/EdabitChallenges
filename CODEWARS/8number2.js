@@ -443,3 +443,56 @@ function power(x, y) {
 function SafeInteger(n) {
     return n > Number.MAX_SAFE_INTEGER ? false : true
 }
+
+//Obejct prototypes
+function Counter(value) {
+    this.value = 0
+}
+
+Counter.prototype.increase = function () {
+    return this.value++
+}
+
+Counter.prototype.getValue = function () {
+    return this.value
+}
+
+Counter.prototype.reset = function () {
+    return (this.value = 0)
+}
+//---------------
+function doTurn() {
+    rollDice()
+    move()
+    combat()
+    getCoins()
+    buyHealth()
+    printStatus()
+}
+//Whose Move?
+function whoseMove(lastPlayer, win) {
+    return win == true && lastPlayer == 'white'
+        ? 'white'
+        : win == true && lastPlayer == 'black'
+        ? 'black'
+        : win == false && lastPlayer == 'white'
+        ? 'black'
+        : 'white'
+}
+//OR
+function whoseMove(lastPlayer, win) {
+    return win ? lastPlayer : lastPlayer == 'white' ? 'black' : 'white'
+}
+//Push object into array
+let items = []
+items.push({ a: 'b', c: 'd' })
+//Reverse words in a string
+function reverse(string) {
+    return string.split(' ').reverse().join(' ')
+}
+//function myFirstKata(a, b) {
+if (typeof a !== 'number' || typeof b !== 'number') {
+    return false
+} else {
+    return (a % b) + (b % a)
+}
