@@ -509,3 +509,14 @@ function twoDecimalPlaces(n) {
 function printArray(a) {
     return a.toString()
 }
+
+//Leo Di Caprio & Oscars
+function leo(o) {
+    return o == 88
+        ? 'Leo finally won the oscar! Leo is happy'
+        : o == 86
+        ? 'Not even for Wolf of wallstreet?!'
+        : o > 88
+        ? 'Leo got one already!'
+        : 'When will you give Leo an Oscar?'
+}
