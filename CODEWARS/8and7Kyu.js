@@ -974,3 +974,18 @@ function converter(mpg) {
 function checkForFactor(base, factor) {
     return base % factor == 0 ? true : false
 }
+
+//Make backronym
+//preload variable: dict
+
+var makeBackronym = function (string) {
+    //let tt = dict["string"] = string.length
+    let rr = string.split('')
+    //console.log(dict,rr[1])
+    let on
+    for (i in rr) {
+        on = Object.values(dict)
+        //console.log(rr,dict[rr],on )
+        console.log(on[i])
+    }
+}

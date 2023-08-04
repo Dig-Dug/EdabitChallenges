@@ -520,5 +520,24 @@ function leo(o) {
         ? 'Leo got one already!'
         : 'When will you give Leo an Oscar?'
 }
+//See source code of Function...functionname.toString
 
+console.log(blackBox.toString)
+//
+//Running around Circles
+// Define your circular object here
+let circular = {
+    a: 'Hellow',
+    b: ' World',
+    get r() {
+        return circular.a + circular.b
+    },
+}
+console.log(circular.r) //Hello World
+return circular.r
 
+//Generate user links
+function generateLink(user) {
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+    return 'http://www.codewars.com/users/' + encodeURIComponent(user)
+}
