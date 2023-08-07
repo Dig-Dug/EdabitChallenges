@@ -541,3 +541,39 @@ function generateLink(user) {
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
     return 'http://www.codewars.com/users/' + encodeURIComponent(user)
 }
+//sum squares
+function sumSquares(array) {
+    return array.reduce((a, b) => a + b ** 2, 0)
+}
+//I need squares
+let squaresOnly = (aw) => {
+    let r
+    let rr = []
+    let i = 0
+    for (let i = 0; i < 10; i++) {
+        r = Math.pow(aw[i], 2)
+        rr.push(r)
+        console.log(rr)
+        if (i > 2) {
+            return rr
+        }
+    }
+}
+
+//Object syntax debug
+var rooms = {
+    first: {
+        description: 'This is the first room',
+        items: {
+            chair: 'The old chair looks comfortable',
+            lamp: 'This lamp looks ancient',
+        },
+    },
+    second: {
+        description: 'This is the second room',
+        items: {
+            couch: 'This couch looks like it would hurt your back',
+            table: 'On the table there is an unopened bottle of water',
+        },
+    },
+}
