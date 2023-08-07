@@ -989,3 +989,20 @@ var makeBackronym = function (string) {
         console.log(on[i])
     }
 }
+//Decimal Time Conversion
+function toIndustrial(time) {
+    let t = new Date()
+    let rr = t.getMinutes().toFixed(2)
+
+    let r = parseFloat(time).toFixed(2)
+    console.log(time, r, '--Industrial', rr)
+    return r
+}
+
+function toNormal(time) {
+    let t = new Date()
+
+    let r = parseFloat(time).toFixed(2)
+    console.log(time, '<<<---normal', t)
+    return r
+}
