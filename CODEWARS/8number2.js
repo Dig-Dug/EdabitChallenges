@@ -611,3 +611,8 @@ class Labrador extends Dog {
         super(name, age, gender, 'Labrador', 'Large', master, true)
     }
 }
+
+//Grasshopper - Array Mean
+var findAverage = function (nums) {
+    return nums.reduce((a, b) => a + b, 0) / nums.length
+}
