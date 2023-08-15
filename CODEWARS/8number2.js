@@ -577,3 +577,37 @@ var rooms = {
         },
     },
 }
+
+//Training JS #11: loop statement --break,continue
+function grabDoll(dolls) {
+    var bag = []
+    //coding here
+    for (let i = 0; i < dolls.length; i++) {
+        if (dolls[i] == 'Hello Kitty' || dolls[i] == 'Barbie doll') {
+            bag.push(dolls[i])
+            if (bag.length === 3) break
+        }
+        continue
+    }
+    return bag
+}
+
+//SpeedCode #3 × Fun with ES6 Classes #5 - Dogs and Classes
+class Dog {
+    constructor(name, age, gender, species, size, master, loyal) {
+        this.name = name
+        this.age = age
+        this.gender = gender
+        this.species = species
+        this.legs = 4
+        this.size = size
+        this.master = master
+        this.loyal = loyal
+    }
+}
+
+class Labrador extends Dog {
+    constructor(name, age, gender, master) {
+        super(name, age, gender, 'Labrador', 'Large', master, true)
+    }
+}
