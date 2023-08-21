@@ -623,3 +623,39 @@ var ArrowFunc = function (arr) {
     console.log(rr)
     return rr
 }
+
+//Barking Mad
+function Dog(breed) {
+    this.breed = breed
+}
+
+var snoopy = new Dog('Beagle')
+
+snoopy.bark = function () {
+    return 'Woof'
+}
+
+var scoobydoo = new Dog('Great Dane')
+
+scoobydoo.bark = function () {
+    return 'Woof'
+}
+//This is a Problem
+function NameMe(first, last) {
+    this.firstName = first
+    this.lastName = last
+    this.name = first + ' ' + last
+    return this.name
+}
+//Shifty closures
+var name = 'Abe'
+var greet_abe = function () {
+    return 'Hello, ' + name + '!'
+}
+
+var greet_ben = function () {
+    name = 'Ben'
+    return 'Hello, ' + name + '!'
+}
+const greet_abe = () => 'Hello, Abe!'
+const greet_ben = () => 'Hello, Ben!'
