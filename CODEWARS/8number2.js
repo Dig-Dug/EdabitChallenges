@@ -616,3 +616,10 @@ class Labrador extends Dog {
 var findAverage = function (nums) {
     return nums.reduce((a, b) => a + b, 0) / nums.length
 }
+
+//Take an arrow to the knee
+var ArrowFunc = function (arr) {
+    let rr = arr.map((i) => (arr[i] = String.fromCharCode(i))).join('')
+    console.log(rr)
+    return rr
+}
