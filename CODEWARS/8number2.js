@@ -659,3 +659,18 @@ var greet_ben = function () {
 }
 const greet_abe = () => 'Hello, Abe!'
 const greet_ben = () => 'Hello, Ben!'
+//Removing Elements
+function removeEveryOther(arr) {
+    let r = arr.filter(function (_, i) {
+        return i % 2 === 0
+    })
+    return r
+}
+/////
+function removeEveryOther(arr) {
+    var newArr = []
+    for (var i = 0; i < arr.length; i += 2) {
+        newArr.push(arr[i])
+    }
+    return newArr
+}
