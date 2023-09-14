@@ -762,3 +762,7 @@ function twoSort(s) {
     rrrr = rrrr.substring(0, rrrr.length - 3)
     return rrrr //b***i***t***c***o****i***n
 }
+//ORRRRRRRRRRR
+function twoSort(s) {
+    return s.sort()[0].split('').join('***');
+  }
