@@ -760,9 +760,17 @@ function twoSort(s) {
     }
     rrrr = rrr.join('')
     rrrr = rrrr.substring(0, rrrr.length - 3)
-    return rrrr //b***i***t***c***o****i***n
+    return rrrr //b***i***t***c***o****i* **n
 }
 //ORRRRRRRRRRR
 function twoSort(s) {
-    return s.sort()[0].split('').join('***');
-  }
+    return s.sort()[0].split('').join('***')
+}
+
+//Reverse bits in an integer
+function reverseBits(n) {
+    let bi = n.toString(2).split('').reverse().join('')
+    let r = parseInt(bi, 2)
+    //return parseInt(n.toString(2).split("").reverse().join(""), 2);
+    return r
+}
