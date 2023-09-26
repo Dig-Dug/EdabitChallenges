@@ -774,3 +774,16 @@ function reverseBits(n) {
     //return parseInt(n.toString(2).split("").reverse().join(""), 2);
     return r
 }
+//Ninja vs Samurai:Strike
+class Warrior {
+    constructor(name, health) {
+        this.name = name
+        this.health = 100
+    }
+    getWarrior() {
+        return this.strike()
+    }
+    strike(enemy, swings) {
+        return (enemy.health = Math.max(0, enemy.health - swings * 10))
+    }
+}
