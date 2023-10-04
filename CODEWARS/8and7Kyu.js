@@ -1006,3 +1006,36 @@ function toNormal(time) {
     console.log(time, '<<<---normal', t)
     return r
 }
+//Neutralization
+/**Examples
+ ("--++--", "++--++") ➞ "000000"
+
+("-+-+-+", "-+-+-+") ➞ "-+-+-+"
+ */
+function neutralise(s1, s2) {
+    let r = [...s1]
+    let rr = [...s2]
+    let n = []
+    for (i in r) {
+        if (r[i] == rr[i]) {
+            n.push(r[i])
+            continue
+        }
+        if (n[i] !== r[i]) {
+            n.push('0')
+        }
+    }
+    let rrr = n.join('')
+    return rrr
+}
+//OR
+function neutralise(s1, s2) {
+    let res = ''
+    for (let i = 0; i < s1.length; i++) {
+        res += s1[i] !== s2[i] ? '0' : s1[i]
+    }
+    return res
+}
+//OR
+const neutralise = (str1, str2) =>
+    str1.replace(/./g, (chr, idx) => +(chr === str2[idx]) && chr)
