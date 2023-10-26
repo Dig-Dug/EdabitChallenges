@@ -804,3 +804,8 @@ function distanceBetweenPoints(a, b) {
     //https://www.calculator.net/distance-calculator.html
     return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
 }
+
+//Is the string Uppercase?????
+String.prototype.isUpperCase = function () {
+    return this.valueOf().toUpperCase() === this.valueOf()
+}
