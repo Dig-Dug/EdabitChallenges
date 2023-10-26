@@ -787,3 +787,20 @@ class Warrior {
         return (enemy.health = Math.max(0, enemy.health - swings * 10))
     }
 }
+
+//-------------
+function colorOf(r, g, b) {
+    let rr = r.toString(16).padStart(2, '0')
+    let gg = g.toString(16).padStart(2, '0')
+    let bb = b.toString(16).padStart(2, '0')
+    return `#${rr}${gg}${bb}` //#ff0000 something like that hexa thing for colors
+}
+//Distance between Points in 2D
+function distanceBetweenPoints(a, b) {
+    let x2 = a.x,
+        x1 = b.x,
+        y2 = b.y,
+        y1 = a.y
+    //https://www.calculator.net/distance-calculator.html
+    return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
+}
