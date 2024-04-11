@@ -809,3 +809,17 @@ function distanceBetweenPoints(a, b) {
 String.prototype.isUpperCase = function () {
     return this.valueOf().toUpperCase() === this.valueOf()
 }
+
+//Training on Classy classes
+class Person {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+    }
+    getInfo() {
+        console.log(this.name + ' age is ' + this.age)
+        return this.name + ' age is ' + this.age
+    }
+}
+let r = new Person('John', 34)
+return r.getInfo
