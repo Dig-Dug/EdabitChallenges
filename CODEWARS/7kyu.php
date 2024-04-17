@@ -1,5 +1,5 @@
 //Vowel Count Return the number (count) of vowels in the given string.
-
+<?php 
 function getCount($str) {
   $vowelsCount = 0;
   // enter your magic here

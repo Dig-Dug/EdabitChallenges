@@ -52,3 +52,33 @@ function sumArrayBetter($array)
 {
     return array_sum($array) - max($array) - min($array);
 }
+
+//turn string into number
+function stringToNumber($str)
+{
+    $num = (int)$str;
+    return $num;
+    //return (int)$str;
+}
+//The opposite
+function numberToString($num)
+{
+    return (string)$num;
+}
+//Double each element in array
+function maps($x)
+{
+    foreach ($x as $n) {
+        $nn[] = $n * 2;
+    }
+    return $nn;
+}
+
+function monkeyCount($n)
+{
+    $arr = array();
+    for ($a = 1; $a <= $n; $a++) {
+        array_push($arr, $a);
+    }
+    return $arr;
+}
