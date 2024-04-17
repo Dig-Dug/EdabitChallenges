@@ -73,7 +73,7 @@ function maps($x)
     }
     return $nn;
 }
-
+//Count the monkeys
 function monkeyCount($n)
 {
     $arr = array();
@@ -81,4 +81,6 @@ function monkeyCount($n)
         array_push($arr, $a);
     }
     return $arr;
+    //OR use Range
+    return range(1, $n); //<-------------THIS
 }
