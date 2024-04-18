@@ -84,3 +84,17 @@ function monkeyCount($n)
     //OR use Range
     return range(1, $n); //<-------------THIS
 }
+
+//Sort array and multiply elements in order
+function grow($a)
+{
+    sort($a);
+    return array_product($a);
+}
+
+
+//Counting sheep, how many  true booleans in array
+function countSheep($arr)
+{
+    return count(array_filter($arr));
+}
