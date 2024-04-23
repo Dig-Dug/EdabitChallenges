@@ -98,3 +98,8 @@ function countSheep($arr)
 {
     return count(array_filter($arr));
 }
+//Repeat string
+function repeatStr($n, $str)
+{
+    return str_repeat($str, $n);
+}
