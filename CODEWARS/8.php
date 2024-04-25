@@ -103,3 +103,61 @@ function repeatStr($n, $str)
 {
     return str_repeat($str, $n);
 }
+//Average number
+function get_average($a)
+{
+    $c = count($a);
+    $s = array_sum($a);
+    $ave = $s / $c;
+    return (int)$ave;
+}
+//OR
+return array_sum($a) / count($a);
+//Sum of positives
+function positive_sum($arr)
+{
+    return array_sum(array_filter($arr, function ($e) {
+        return $e > 0;
+    }));
+}
+//reverse string
+function solution($str)
+{
+    return strrev($str);
+}
+//Remove every second element
+function removeEveryOther($array)
+{
+    return array_filter($array, function ($i) {
+        return !($i % 2);
+    }, ARRAY_FILTER_USE_KEY);
+}
+//Sum mixed array
+function sum_mix($a)
+{
+    return array_sum($a);
+}
+
+//ääääääääääääääääääääää
+function combat($h, $d)
+{
+    return $h < $d ? 0 : $h - $d;
+}
+//Format 2 decimal places
+function twoDecimalPlaces($n)
+{
+    return round($n, 2);
+}
+//Remove the time
+function shortenToDate($l)
+{
+    $e = explode(" ", $l);
+    array_pop($e);
+    $ee = implode(" ", $e);
+    return trim($ee, ",");
+}
+//Much better
+function shortenToDateBetter($longDate)
+{
+    return explode(',', $longDate)[0];
+}

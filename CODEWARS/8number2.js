@@ -823,3 +823,17 @@ class Person {
 }
 let r = new Person('John', 34)
 return r.getInfo
+//Correct the mistakes
+function correct(string) {
+    let r = string.split('')
+    let rr
+    for (i in r) {
+        if (r[i] == '1' || r[i] == '0' || r[i] == '5') {
+            r[i] = r[i].replace('1', 'I')
+            r[i] = r[i].replace('0', 'O')
+            r[i] = r[i].replace('5', 'S')
+        }
+        rr = r.join('')
+    }
+    return rr
+}
