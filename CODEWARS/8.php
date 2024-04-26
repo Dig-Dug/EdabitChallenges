@@ -161,3 +161,8 @@ function shortenToDateBetter($longDate)
 {
     return explode(',', $longDate)[0];
 }
+//Better than the average
+function betterThanAverage($them, $your)
+{
+    return array_sum($them) / count($them) > $your ? false : true;
+}
